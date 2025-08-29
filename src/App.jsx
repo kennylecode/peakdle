@@ -14,7 +14,6 @@ function App() {
 
   const handleGameComplete = (gameData) => {
     setGameHistory([...gameHistory, gameData]);
-    setCurrentGameMode(null);
   };
 
   const handleBackToMenu = () => {

@@ -5,8 +5,8 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
     {
       id: 'edibles',
       name: 'Edibles',
-      description: 'Guess the edible item based on its stats: hunger, weight, stamina, status ailment, and location.',
-      stats: ['Hunger', 'Weight', 'Stamina', 'Status Ailment', 'Location']
+      description: 'Guess the edible item based on its stats: hunger, weight, stamina, status effects, and location.',
+      stats: ['Hunger', 'Weight', 'Stamina', 'Status Effects', 'Location']
     },
     {
       id: 'equipment',

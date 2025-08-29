@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Yellow Crispberry",
+    "imageUrl": "/images/yellow-crispberry.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  }, 
+  {
+    "name": "Red Crispberry",
+    "imageUrl": "/images/red-crispberry.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Green Crispberry",
+    "imageUrl": "/images/green-crispberry.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Scorchberry",
+    "imageUrl": "/images/scorchberry.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Hot"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Yellow Clusterberry",
+    "imageUrl": "/images/yellow-clusterberry.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Black Clusterberry",
+    "imageUrl": "/images/black-clusterberry.jpg",
+    "type": "Base",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Red Clusterberry",
+    "imageUrl": "/images/red-clusterberry.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Health"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Green Clusterberry",
+    "imageUrl": "/images/green-clusterberry.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Yellow Kingberry",
+    "imageUrl": "/images/yellow-kingberry.jpg",
+    "type": "Base",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Green Kingberry",
+    "imageUrl": "/images/green-kingberry.jpg",
+    "type": "Base",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Purple Kingberry",
+    "imageUrl": "/images/purple-kingberry.jpg",
+    "type": "Base",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 35,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Brown Berrynana",
+    "imageUrl": "/images/brown-berrynana.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Blue Berrynana",
+    "imageUrl": "/images/blue-berrynana.jpg",
+    "type": "Base",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Pink Berrynana",
+    "imageUrl": "/images/pink-berrynana.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Yellow Berrynana",
+    "imageUrl": "/images/yellow-berrynana.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Yellow Winterberry",
+    "imageUrl": "/images/yellow-winterberry.jpg",
+    "type": "Base",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 35,
+    "statusEffect": ["-Hot","+Health"],
+    "location": ["Alpine","Mesa"]
+  },
+  {
+    "name": "Orange Winterberry",
+    "imageUrl": "/images/orange-winterberry.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Napberry Winterberry",
+    "imageUrl": "/images/napberry-winterberry.jpg",
+    "type": "Base",
+    "hunger": 100,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Drowsy"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Medicinal Root",
+    "imageUrl": "/images/medicinal-root.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison","+Health"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Tick",
+    "imageUrl": "/images/tick.jpg",
+    "type": "Base",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Egg",
+    "imageUrl": "/images/egg.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Chicken",
+    "imageUrl": "/images/chicken.jpg",
+    "type": "Base",
+    "hunger": 45,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Marshmallow",
+    "imageUrl": "/images/marsh-mallow.jpg",
+    "type": "Base",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Half Coconut",
+    "imageUrl": "/images/half-coconut.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Honeycomb",
+    "imageUrl": "/images/honeycomb.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 50,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Weird Shroom",
+    "imageUrl": "/images/weird-shroom.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Button Shroom",
+    "imageUrl": "/images/button-shroom.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Bugle Shroom",
+    "imageUrl": "/images/bugle-shroom.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cluster Shroom",
+    "imageUrl": "/images/cluster-shroom.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Chubby Shroom",
+    "imageUrl": "/images/chubby-shroom.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Poisonous Button Shroom",
+    "imageUrl": "/images/poisonous-button-shroom.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Poisonous Bugle Shroom",
+    "imageUrl": "/images/poisonous-bugle-shroom.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Poisonous Cluster Shroom",
+    "imageUrl": "/images/poisonous-cluster-shroom.jpg",
+    "type": "Base",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Trail Mix",
+    "imageUrl": "/images/trail-mix.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Granola Bar",
+    "imageUrl": "/images/granola-bar.jpg",
+    "type": "Base",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 20,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Airline Food",
+    "imageUrl": "/images/airline-food.jpg",
+    "type": "Base",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Scout Cookies",
+    "imageUrl": "/images/scout-cookies.jpg",
+    "type": "Base",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Aloe Vera",
+    "imageUrl": "/images/aloe-vera.png",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Red Prickleberry",
+    "imageUrl": "/images/red-prickleberry.jpg",
+    "type": "Base",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": ["+Thorned"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Golden Prickleberry",
+    "imageUrl": "/images/golden-prickleberry.jpg",
+    "type": "Base",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Thorned","+Health"],
+    "location": ["Mesa"]
+  }
+]

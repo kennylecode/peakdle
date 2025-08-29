@@ -153,6 +153,24 @@ body {
   color: #4a5568;
 }
 
+.stat-card .arrow {
+  font-size: 1.4rem;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.stat-card .arrow.up {
+  color: #e53e3e;
+}
+
+.stat-card .arrow.down {
+  color: #38a169;
+}
+
+.stat-card .arrow.equal {
+  color: #48bb78;
+}
+
 .guess-input {
   display: flex;
   gap: 15px;
@@ -161,18 +179,35 @@ body {
   margin-bottom: 20px;
 }
 
-.guess-input input {
+.guess-input input,
+.guess-input select {
   padding: 12px 20px;
   border: 2px solid #e2e8f0;
   border-radius: 8px;
   font-size: 1rem;
   width: 300px;
   transition: border-color 0.3s ease;
+  background-color: white;
 }
 
-.guess-input input:focus {
+.guess-input input:focus,
+.guess-input select:focus {
   outline: none;
   border-color: #667eea;
+}
+
+.guess-input select:hover {
+  border-color: #cbd5e0;
+}
+
+.guess-input select option {
+  padding: 8px 12px;
+  background-color: white;
+  color: #4a5568;
+}
+
+.guess-input select option:hover {
+  background-color: #f7fafc;
 }
 
 .guess-input button {
@@ -193,6 +228,69 @@ body {
 .guess-input button:disabled {
   background: #a0aec0;
   cursor: not-allowed;
+}
+
+/* Custom Dropdown Styles */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background: white;
+  min-height: 40px;
+  transition: border-color 0.2s ease;
+}
+
+.dropdown-header:hover {
+  border-color: #667eea;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-option:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.dropdown-option img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  object-fit: cover;
+  border-radius: 2px;
 }
 
 .badge-game {

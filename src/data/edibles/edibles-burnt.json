@@ -1,0 +1,413 @@
+[
+  {
+    "name": "Burnt Yellow Crispberry",
+    "imageUrl": "/images/burnt-yellow-crispberry.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  }, 
+  {
+    "name": "Burnt Red Crispberry",
+    "imageUrl": "/images/burnt-red-crispberry.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Green Crispberry",
+    "imageUrl": "/images/burnt-green-crispberry.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Scorchberry",
+    "imageUrl": "/images/burnt-scorchberry.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Hot"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Yellow Clusterberry",
+    "imageUrl": "/images/burnt-yellow-clusterberry.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Black Clusterberry",
+    "imageUrl": "/images/burnt-black-clusterberry.jpg",
+    "type": "Burnt",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Red Clusterberry",
+    "imageUrl": "/images/burnt-red-clusterberry.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Health"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Green Clusterberry",
+    "imageUrl": "/images/burnt-green-clusterberry.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Yellow Kingberry",
+    "imageUrl": "/images/burnt-yellow-kingberry.jpg",
+    "type": "Burnt",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Green Kingberry",
+    "imageUrl": "/images/burnt-green-kingberry.jpg",
+    "type": "Burnt",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Purple Kingberry",
+    "imageUrl": "/images/burnt-purple-kingberry.jpg",
+    "type": "Burnt",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 35,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Brown Berrynana",
+    "imageUrl": "/images/burnt-brown-berrynana.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Blue Berrynana",
+    "imageUrl": "/images/burnt-blue-berrynana.jpg",
+    "type": "Burnt",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Pink Berrynana",
+    "imageUrl": "/images/burnt-pink-berrynana.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Yellow Berrynana",
+    "imageUrl": "/images/burnt-yellow-berrynana.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Yellow Winterberry",
+    "imageUrl": "/images/burnt-yellow-winterberry.jpg",
+    "type": "Burnt",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 35,
+    "statusEffect": ["-Hot","+Health"],
+    "location": ["Alpine","Mesa"]
+  },
+  {
+    "name": "Burnt Orange Winterberry",
+    "imageUrl": "/images/burnt-orange-winterberry.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Burnt Napberry Winterberry",
+    "imageUrl": "/images/burnt-napberry-winterberry.jpg",
+    "type": "Burnt",
+    "hunger": 100,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Drowsy"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Burnt Medicinal Root",
+    "imageUrl": "/images/burnt-medicinal-root.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison","+Health"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Tick",
+    "imageUrl": "/images/burnt-tick.jpg",
+    "type": "Burnt",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Egg",
+    "imageUrl": "/images/burnt-egg.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Burnt Chicken",
+    "imageUrl": "/images/burnt-chicken.jpg",
+    "type": "Burnt",
+    "hunger": 45,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Burnt Marshmallow",
+    "imageUrl": "/images/burnt-marsh-mallow.jpg",
+    "type": "Burnt",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Burnt Half Coconut",
+    "imageUrl": "/images/burnt-half-coconut.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Honeycomb",
+    "imageUrl": "/images/burnt-honeycomb.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 50,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Burnt Weird Shroom",
+    "imageUrl": "/images/burnt-weird-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Button Shroom",
+    "imageUrl": "/images/burnt-button-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Bugle Shroom",
+    "imageUrl": "/images/burnt-bugle-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Cluster Shroom",
+    "imageUrl": "/images/burnt-cluster-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Chubby Shroom",
+    "imageUrl": "/images/burnt-chubby-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Poisonous Button Shroom",
+    "imageUrl": "/images/burnt-poisonous-button-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Poisonous Bugle Shroom",
+    "imageUrl": "/images/burnt-poisonous-bugle-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Poisonous Cluster Shroom",
+    "imageUrl": "/images/burnt-poisonous-cluster-shroom.jpg",
+    "type": "Burnt",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Burnt Trail Mix",
+    "imageUrl": "/images/burnt-trail-mix.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Burnt Granola Bar",
+    "imageUrl": "/images/burnt-granola-bar.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 20,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Burnt Airline Food",
+    "imageUrl": "/images/burnt-airline-food.jpg",
+    "type": "Burnt",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Burnt Scout Cookies",
+    "imageUrl": "/images/burnt-scout-cookies.jpg",
+    "type": "Burnt",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Burnt Scorpion",
+    "imageUrl": "/images/burnt-scorpion.jpg",
+    "type": "Burnt",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Burnt Aloe Vera",
+    "imageUrl": "/images/burnt-aloe-vera.png",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Burnt Red Prickleberry",
+    "imageUrl": "/images/burnt-red-prickleberry.jpg",
+    "type": "Burnt",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": ["+Thorned"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Burnt Golden Prickleberry",
+    "imageUrl": "/images/burnt-golden-prickleberry.jpg",
+    "type": "Burnt",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Thorned","+Health"],
+    "location": ["Mesa"]
+  }
+]
+  

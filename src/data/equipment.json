@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Iron Pickaxe",
+    "weight": 3.5,
+    "statusAilment": "none",
+    "type": "mining",
+    "rarity": "common",
+    "range": 1
+  }
+]

@@ -1,0 +1,413 @@
+[
+  {
+    "name": "Cooked Yellow Crispberry",
+    "imageUrl": "/images/cooked-yellow-crispberry.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  }, 
+  {
+    "name": "Cooked Red Crispberry",
+    "imageUrl": "/images/cooked-red-crispberry.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Green Crispberry",
+    "imageUrl": "/images/cooked-green-crispberry.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Scorchberry",
+    "imageUrl": "/images/cooked-scorchberry.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Hot"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Yellow Clusterberry",
+    "imageUrl": "/images/cooked-yellow-clusterberry.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Black Clusterberry",
+    "imageUrl": "/images/cooked-black-clusterberry.jpg",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Red Clusterberry",
+    "imageUrl": "/images/cooked-red-clusterberry.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Health"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Green Clusterberry",
+    "imageUrl": "/images/cooked-green-clusterberry.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Yellow Kingberry",
+    "imageUrl": "/images/cooked-yellow-kingberry.jpg",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Green Kingberry",
+    "imageUrl": "/images/cooked-green-kingberry.jpg",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Purple Kingberry",
+    "imageUrl": "/images/cooked-purple-kingberry.jpg",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 35,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Brown Berrynana",
+    "imageUrl": "/images/cooked-brown-berrynana.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Blue Berrynana",
+    "imageUrl": "/images/cooked-blue-berrynana.jpg",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Pink Berrynana",
+    "imageUrl": "/images/cooked-pink-berrynana.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Yellow Berrynana",
+    "imageUrl": "/images/cooked-yellow-berrynana.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Yellow Winterberry",
+    "imageUrl": "/images/cooked-yellow-winterberry.jpg",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 35,
+    "statusEffect": ["-Hot","+Health"],
+    "location": ["Alpine","Mesa"]
+  },
+  {
+    "name": "Cooked Orange Winterberry",
+    "imageUrl": "/images/cooked-orange-winterberry.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Cooked Napberry Winterberry",
+    "imageUrl": "/images/cooked-napberry-winterberry.jpg",
+    "type": "Cooked",
+    "hunger": 100,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Drowsy"],
+    "location": ["Alpine"]
+  },
+  {
+    "name": "Cooked Medicinal Root",
+    "imageUrl": "/images/cooked-medicinal-root.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Poison","+Health"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Tick",
+    "imageUrl": "/images/cooked-tick.jpg",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Egg",
+    "imageUrl": "/images/cooked-egg.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Cooked Chicken",
+    "imageUrl": "/images/cooked-chicken.jpg",
+    "type": "Cooked",
+    "hunger": 45,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Caldera"]
+  },
+  {
+    "name": "Cooked Marshmallow",
+    "imageUrl": "/images/cooked-marsh-mallow.jpg",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Cooked Half Coconut",
+    "imageUrl": "/images/cooked-half-coconut.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Honeycomb",
+    "imageUrl": "/images/cooked-honeycomb.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 50,
+    "statusEffect": [],
+    "location": ["Tropics"]
+  },
+  {
+    "name": "Cooked Weird Shroom",
+    "imageUrl": "/images/cooked-weird-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Button Shroom",
+    "imageUrl": "/images/cooked-button-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Bugle Shroom",
+    "imageUrl": "/images/cooked-bugle-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Cluster Shroom",
+    "imageUrl": "/images/cooked-cluster-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Chubby Shroom",
+    "imageUrl": "/images/cooked-chubby-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": [],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Poisonous Button Shroom",
+    "imageUrl": "/images/cooked-poisonous-button-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Poisonous Bugle Shroom",
+    "imageUrl": "/images/cooked-poisonous-bugle-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Poisonous Cluster Shroom",
+    "imageUrl": "/images/cooked-poisonous-cluster-shroom.jpg",
+    "type": "Cooked",
+    "hunger": 5,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Poison"],
+    "location": ["Shore","Tropics"]
+  },
+  {
+    "name": "Cooked Trail Mix",
+    "imageUrl": "/images/cooked-trail-mix.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Cooked Granola Bar",
+    "imageUrl": "/images/cooked-granola-bar.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 20,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Cooked Airline Food",
+    "imageUrl": "/images/cooked-airline-food.jpg",
+    "type": "Cooked",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Cooked Scout Cookies",
+    "imageUrl": "/images/cooked-scout-cookies.jpg",
+    "type": "Cooked",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 40,
+    "statusEffect": [],
+    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+  },
+  {
+    "name": "Cooked Scorpion",
+    "imageUrl": "/images/cooked-scorpion.jpg",
+    "type": "Cooked",
+    "hunger": 15,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Cooked Aloe Vera",
+    "imageUrl": "/images/cooked-aloe-vera.png",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["-Hot"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Cooked Red Prickleberry",
+    "imageUrl": "/images/cooked-red-prickleberry.jpg",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": ["+Thorned"],
+    "location": ["Mesa"]
+  },
+  {
+    "name": "Cooked Golden Prickleberry",
+    "imageUrl": "/images/cooked-golden-prickleberry.jpg",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 0,
+    "statusEffect": ["+Thorned","+Health"],
+    "location": ["Mesa"]
+  }
+]
+  
