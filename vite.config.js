@@ -5,6 +5,17 @@ export default defineConfig({
   plugins: [react()],
   base: '/peakdle/',
   server: {
-    port: 3000
+    port: 3000,
+    headers: {
+      'X-Content-Type-Options': 'nosniff',
+      'Content-Type': 'text/javascript'
+    }
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
   }
 })
