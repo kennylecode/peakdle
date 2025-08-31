@@ -9,8 +9,8 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
       stats: ['Hunger', 'Weight', 'Stamina', 'Status Effects', 'Location']
     },
     {
-      id: 'equipment',
-      name: 'Equipment',
+      id: 'equipments',
+      name: 'Equipments',
       description: 'Identify the equipment piece using its stats: weight, status ailment, type, rarity, and range.',
       stats: ['Weight', 'Status Ailment', 'Type', 'Rarity', 'Range']
     },

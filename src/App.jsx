@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import GameModeSelector from './components/GameModeSelector';
 import EdiblesGame from './components/EdiblesGame';
-import EquipmentGame from './components/EquipmentGame';
+import EquipmentsGame from './components/EquipmentsGame';
 import BadgesGame from './components/BadgesGame';
 
 function App() {
@@ -24,8 +24,8 @@ function App() {
     switch (currentGameMode) {
       case 'edibles':
         return <EdiblesGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
-      case 'equipment':
-        return <EquipmentGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
+      case 'equipments':
+        return <EquipmentsGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
       case 'badges':
         return <BadgesGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
       default:
