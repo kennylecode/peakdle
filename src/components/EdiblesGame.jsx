@@ -7,7 +7,7 @@ import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
-  const srcPath = "src/data/edibles";
+  const srcPath = "/images/edibles/";
   const [targetEdible, setTargetEdible] = useState(null);
   const [guesses, setGuesses] = useState([]);
   const [gameWon, setGameWon] = useState(false);
