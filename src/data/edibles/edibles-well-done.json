@@ -221,7 +221,7 @@
   },
   {
     "name": "Well-Done Marshmallow",
-    "imageUrl": "/images/marsh-mallow.png",
+    "imageUrl": "/images/marshmallow.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Well-Done Scorpion",
-    "imageUrl": "/images/scorpion.png",
+    "imageUrl": "/images/cooked-scorpion.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,

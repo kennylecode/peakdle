@@ -221,7 +221,7 @@
   },
   {
     "name": "Burnt Marshmallow",
-    "imageUrl": "/images/marsh-mallow.png",
+    "imageUrl": "/images/marshmallow.png",
     "type": "Burnt",
     "hunger": 20,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Burnt Scorpion",
-    "imageUrl": "/images/scorpion.png",
+    "imageUrl": "/images/cooked-scorpion.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,

@@ -221,7 +221,7 @@
   },
   {
     "name": "Cooked Marshmallow",
-    "imageUrl": "/images/marsh-mallow.png",
+    "imageUrl": "/images/marshmallow.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Cooked Scorpion",
-    "imageUrl": "/images/scorpion.png",
+    "imageUrl": "/images/cooked-scorpion.png",
     "type": "Cooked",
     "hunger": 15,
     "weight": 2.5,

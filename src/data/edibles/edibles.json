@@ -221,7 +221,7 @@
   },
   {
     "name": "Marshmallow",
-    "imageUrl": "/images/marsh-mallow.png",
+    "imageUrl": "/images/marshmallow.png",
     "type": "Base",
     "hunger": 20,
     "weight": 2.5,

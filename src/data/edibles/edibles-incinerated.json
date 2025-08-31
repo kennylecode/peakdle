@@ -221,7 +221,7 @@
   },
   {
     "name": "Incinerated Marshmallow",
-    "imageUrl": "/images/marsh-mallow.png",
+    "imageUrl": "/images/marshmallow.png",
     "type": "Incinerated",
     "hunger": 20,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Incinerated Scorpion",
-    "imageUrl": "/images/scorpion.png",
+    "imageUrl": "/images/cooked-scorpion.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
