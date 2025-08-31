@@ -7,8 +7,11 @@
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
-  }, 
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
   {
     "name": "Burnt Red Crispberry",
     "imageUrl": "red-crispberry.png",
@@ -17,7 +20,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Green Crispberry",
@@ -26,158 +32,213 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Scorchberry",
     "imageUrl": "scorchberry.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Hot"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Hot"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Yellow Clusterberry",
     "imageUrl": "yellow-clusterberry.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Black Clusterberry",
     "imageUrl": "black-clusterberry.png",
     "type": "Burnt",
-    "hunger": 20,
+    "hunger": 35,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Red Clusterberry",
     "imageUrl": "red-clusterberry.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Health"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Health"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Green Clusterberry",
     "imageUrl": "green-clusterberry.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "-Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Yellow Kingberry",
     "imageUrl": "yellow-kingberry.png",
     "type": "Burnt",
-    "hunger": 30,
+    "hunger": 55,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Green Kingberry",
     "imageUrl": "green-kingberry.png",
     "type": "Burnt",
-    "hunger": 30,
+    "hunger": 55,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Purple Kingberry",
     "imageUrl": "purple-kingberry.png",
     "type": "Burnt",
-    "hunger": 30,
+    "hunger": 55,
     "weight": 5,
     "stamina": 35,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Brown Berrynana",
     "imageUrl": "brown-berrynana.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Blue Berrynana",
     "imageUrl": "blue-berrynana.png",
     "type": "Burnt",
-    "hunger": 30,
+    "hunger": 55,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Pink Berrynana",
     "imageUrl": "pink-berrynana.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Yellow Berrynana",
     "imageUrl": "yellow-berrynana.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Yellow Winterberry",
     "imageUrl": "yellow-winterberry.png",
     "type": "Burnt",
-    "hunger": 30,
+    "hunger": 55,
     "weight": 2.5,
     "stamina": 35,
-    "statusEffect": ["-Hot","+Health"],
-    "location": ["Alpine","Mesa"]
+    "statusEffect": [
+      "-Hot",
+      "+Health"
+    ],
+    "location": [
+      "Alpine",
+      "Mesa"
+    ]
   },
   {
     "name": "Burnt Orange Winterberry",
     "imageUrl": "orange-winterberry.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Burnt Napberry",
     "imageUrl": "napberry.png",
     "type": "Burnt",
-    "hunger": 100,
+    "hunger": 195,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Drowsy"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "+Drowsy"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Burnt Medicinal Root",
@@ -186,98 +247,133 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison","+Health"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Poison",
+      "+Health"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Tick",
     "imageUrl": "tick.png",
     "type": "Burnt",
-    "hunger": 20,
+    "hunger": 35,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Egg",
     "imageUrl": "egg.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Caldera"]
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Burnt Chicken",
     "imageUrl": "chicken.png",
     "type": "Burnt",
-    "hunger": 45,
+    "hunger": 85,
     "weight": 5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Caldera"]
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Burnt Marshmallow",
     "imageUrl": "marshmallow.png",
     "type": "Burnt",
-    "hunger": 20,
+    "hunger": 35,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Burnt Half Coconut",
     "imageUrl": "half-coconut.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Honeycomb",
     "imageUrl": "honeycomb.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 50,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Weird Shroom",
     "imageUrl": "weird-shroom.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Button Shroom",
     "imageUrl": "button-shroom.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Bugle Shroom",
     "imageUrl": "bugle-shroom.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Cluster Shroom",
@@ -287,37 +383,53 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Chubby Shroom",
     "imageUrl": "chubby-shroom.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Poisonous Button Shroom",
     "imageUrl": "poisonous-button-shroom.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Poisonous Bugle Shroom",
     "imageUrl": "poisonous-bugle-shroom.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Poisonous Cluster Shroom",
@@ -326,88 +438,135 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Burnt Trail Mix",
     "imageUrl": "trail-mix.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Burnt Granola Bar",
     "imageUrl": "granola-bar.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 25,
     "weight": 2.5,
     "stamina": 20,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Burnt Airline Food",
     "imageUrl": "airline-food.png",
     "type": "Burnt",
-    "hunger": 40,
+    "hunger": 75,
     "weight": 2.5,
     "stamina": 40,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Burnt Scout Cookies",
     "imageUrl": "scout-cookies.png",
     "type": "Burnt",
-    "hunger": 40,
+    "hunger": 75,
     "weight": 2.5,
     "stamina": 40,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Burnt Scorpion",
     "imageUrl": "cooked-scorpion.png",
     "type": "Burnt",
-    "hunger": 15,
+    "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Mesa"]
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Burnt Aloe Vera",
     "imageUrl": "aloe-vera.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Burnt Red Prickleberry",
     "imageUrl": "red-prickleberry.png",
     "type": "Burnt",
-    "hunger": 10,
+    "hunger": 15,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": ["+Thorned"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Burnt Golden Prickleberry",
     "imageUrl": "golden-prickleberry.png",
     "type": "Burnt",
-    "hunger": 20,
+    "hunger": 35,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Thorned","+Health"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned",
+      "+Health"
+    ],
+    "location": [
+      "Mesa"
+    ]
   }
 ]
-  

@@ -7,8 +7,11 @@
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
-  }, 
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
   {
     "name": "Red Crispberry",
     "imageUrl": "red-crispberry.png",
@@ -17,7 +20,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Green Crispberry",
@@ -26,8 +32,13 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Scorchberry",
@@ -36,8 +47,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Hot"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Hot"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Yellow Clusterberry",
@@ -47,7 +62,9 @@
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Black Clusterberry",
@@ -57,7 +74,9 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Red Clusterberry",
@@ -66,8 +85,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Health"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Health"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Green Clusterberry",
@@ -76,8 +99,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "-Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Yellow Kingberry",
@@ -86,8 +113,12 @@
     "hunger": 30,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Green Kingberry",
@@ -96,8 +127,12 @@
     "hunger": 30,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Purple Kingberry",
@@ -107,7 +142,9 @@
     "weight": 5,
     "stamina": 35,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Brown Berrynana",
@@ -117,7 +154,9 @@
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Blue Berrynana",
@@ -127,7 +166,9 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Pink Berrynana",
@@ -136,8 +177,12 @@
     "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Yellow Berrynana",
@@ -147,7 +192,9 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Yellow Winterberry",
@@ -156,8 +203,14 @@
     "hunger": 30,
     "weight": 2.5,
     "stamina": 35,
-    "statusEffect": ["-Hot","+Health"],
-    "location": ["Alpine","Mesa"]
+    "statusEffect": [
+      "-Hot",
+      "+Health"
+    ],
+    "location": [
+      "Alpine",
+      "Mesa"
+    ]
   },
   {
     "name": "Orange Winterberry",
@@ -166,8 +219,12 @@
     "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Napberry",
@@ -176,8 +233,12 @@
     "hunger": 100,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Drowsy"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "+Drowsy"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Medicinal Root",
@@ -186,8 +247,14 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison","+Health"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Poison",
+      "+Health"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Tick",
@@ -197,7 +264,9 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Egg",
@@ -207,7 +276,9 @@
     "weight": 5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Caldera"]
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Chicken",
@@ -217,7 +288,9 @@
     "weight": 5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Caldera"]
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Marshmallow",
@@ -227,7 +300,14 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Half Coconut",
@@ -236,8 +316,13 @@
     "hunger": 10,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Honeycomb",
@@ -247,7 +332,9 @@
     "weight": 2.5,
     "stamina": 50,
     "statusEffect": [],
-    "location": ["Tropics"]
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Weird Shroom",
@@ -257,7 +344,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Button Shroom",
@@ -267,7 +357,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Bugle Shroom",
@@ -277,7 +370,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Cluster Shroom",
@@ -287,7 +383,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Chubby Shroom",
@@ -297,7 +396,10 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Poisonous Button Shroom",
@@ -306,8 +408,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Poisonous Bugle Shroom",
@@ -316,8 +423,13 @@
     "hunger": 15,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Poisonous Cluster Shroom",
@@ -326,8 +438,13 @@
     "hunger": 5,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Trail Mix",
@@ -337,7 +454,14 @@
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Granola Bar",
@@ -347,7 +471,14 @@
     "weight": 2.5,
     "stamina": 20,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Airline Food",
@@ -357,7 +488,14 @@
     "weight": 2.5,
     "stamina": 40,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Scout Cookies",
@@ -367,7 +505,14 @@
     "weight": 2.5,
     "stamina": 40,
     "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Aloe Vera",
@@ -376,8 +521,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Red Prickleberry",
@@ -386,8 +535,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": ["+Thorned"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Golden Prickleberry",
@@ -396,7 +549,12 @@
     "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Thorned","+Health"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned",
+      "+Health"
+    ],
+    "location": [
+      "Mesa"
+    ]
   }
 ]

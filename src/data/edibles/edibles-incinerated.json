@@ -3,31 +3,46 @@
     "name": "Incinerated Yellow Crispberry",
     "imageUrl": "yellow-crispberry.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
-  }, 
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
   {
     "name": "Incinerated Red Crispberry",
     "imageUrl": "red-crispberry.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Green Crispberry",
     "imageUrl": "green-crispberry.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Scorchberry",
@@ -36,8 +51,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Hot"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Hot",
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Yellow Clusterberry",
@@ -46,18 +66,26 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Black Clusterberry",
     "imageUrl": "black-clusterberry.png",
     "type": "Incinerated",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Red Clusterberry",
@@ -66,8 +94,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Health"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Health",
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Green Clusterberry",
@@ -76,158 +109,236 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "-Poison",
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Yellow Kingberry",
     "imageUrl": "yellow-kingberry.png",
     "type": "Incinerated",
-    "hunger": 30,
+    "hunger": 50,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Green Kingberry",
     "imageUrl": "green-kingberry.png",
     "type": "Incinerated",
-    "hunger": 30,
+    "hunger": 50,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Purple Kingberry",
     "imageUrl": "purple-kingberry.png",
     "type": "Incinerated",
-    "hunger": 30,
+    "hunger": 50,
     "weight": 5,
     "stamina": 35,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Brown Berrynana",
     "imageUrl": "brown-berrynana.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Blue Berrynana",
     "imageUrl": "blue-berrynana.png",
     "type": "Incinerated",
-    "hunger": 30,
+    "hunger": 50,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Pink Berrynana",
     "imageUrl": "pink-berrynana.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Yellow Berrynana",
     "imageUrl": "yellow-berrynana.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Yellow Winterberry",
     "imageUrl": "yellow-winterberry.png",
     "type": "Incinerated",
-    "hunger": 30,
+    "hunger": 50,
     "weight": 2.5,
     "stamina": 35,
-    "statusEffect": ["-Hot","+Health"],
-    "location": ["Alpine","Mesa"]
+    "statusEffect": [
+      "-Hot",
+      "+Health",
+      "+Poison"
+    ],
+    "location": [
+      "Alpine",
+      "Mesa"
+    ]
   },
   {
     "name": "Incinerated Orange Winterberry",
     "imageUrl": "orange-winterberry.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "-Hot",
+      "+Poison"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Incinerated Napberry",
     "imageUrl": "napberry.png",
     "type": "Incinerated",
-    "hunger": 100,
+    "hunger": 190,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Drowsy"],
-    "location": ["Alpine"]
+    "statusEffect": [
+      "+Drowsy",
+      "+Poison"
+    ],
+    "location": [
+      "Alpine"
+    ]
   },
   {
     "name": "Incinerated Medicinal Root",
     "imageUrl": "medicinal-root.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Poison","+Health"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Poison",
+      "+Health",
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Tick",
     "imageUrl": "tick.png",
     "type": "Incinerated",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Egg",
     "imageUrl": "egg.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Caldera"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Incinerated Chicken",
     "imageUrl": "chicken.png",
     "type": "Incinerated",
-    "hunger": 45,
+    "hunger": 80,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Caldera"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Caldera"
+    ]
   },
   {
     "name": "Incinerated Marshmallow",
     "imageUrl": "marshmallow.png",
     "type": "Incinerated",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Incinerated Half Coconut",
@@ -236,8 +347,14 @@
     "hunger": 10,
     "weight": 5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "-Hot",
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Honeycomb",
@@ -246,8 +363,12 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 50,
-    "statusEffect": [],
-    "location": ["Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Weird Shroom",
@@ -256,8 +377,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Button Shroom",
@@ -266,28 +392,43 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Bugle Shroom",
     "imageUrl": "bugle-shroom.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Cluster Shroom",
     "imageUrl": "cluster-shroom.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Chubby Shroom",
@@ -296,8 +437,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": [],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Poisonous Button Shroom",
@@ -306,28 +452,43 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Poisonous Bugle Shroom",
     "imageUrl": "poisonous-bugle-shroom.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Poisonous Cluster Shroom",
     "imageUrl": "poisonous-cluster-shroom.png",
     "type": "Incinerated",
-    "hunger": 5,
+    "hunger": 0,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Poison"],
-    "location": ["Shore","Tropics"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
   },
   {
     "name": "Incinerated Trail Mix",
@@ -336,48 +497,88 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Incinerated Granola Bar",
     "imageUrl": "granola-bar.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 20,
-    "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Incinerated Airline Food",
     "imageUrl": "airline-food.png",
     "type": "Incinerated",
-    "hunger": 40,
+    "hunger": 70,
     "weight": 2.5,
     "stamina": 40,
-    "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Incinerated Scout Cookies",
     "imageUrl": "scout-cookies.png",
     "type": "Incinerated",
-    "hunger": 40,
+    "hunger": 70,
     "weight": 2.5,
     "stamina": 40,
-    "statusEffect": [],
-    "location": ["Shore","Tropics","Alpine","Mesa","Caldera","Kiln"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
   },
   {
     "name": "Incinerated Scorpion",
     "imageUrl": "cooked-scorpion.png",
     "type": "Incinerated",
-    "hunger": 15,
+    "hunger": 5,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Incinerated Aloe Vera",
@@ -386,8 +587,13 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["-Hot"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "-Hot",
+      "+Poison"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Incinerated Red Prickleberry",
@@ -396,18 +602,28 @@
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": ["+Thorned"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned",
+      "+Poison"
+    ],
+    "location": [
+      "Mesa"
+    ]
   },
   {
     "name": "Incinerated Golden Prickleberry",
     "imageUrl": "golden-prickleberry.png",
     "type": "Incinerated",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 0,
-    "statusEffect": ["+Thorned","+Health"],
-    "location": ["Mesa"]
+    "statusEffect": [
+      "+Thorned",
+      "+Health",
+      "+Poison"
+    ],
+    "location": [
+      "Mesa"
+    ]
   }
 ]
-  
