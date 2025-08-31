@@ -1,7 +1,7 @@
 [
   {
     "name": "Incinerated Yellow Crispberry",
-    "imageUrl": "/images/incinerated-yellow-crispberry.jpg",
+    "imageUrl": "/images/yellow-crispberry.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -11,7 +11,7 @@
   }, 
   {
     "name": "Incinerated Red Crispberry",
-    "imageUrl": "/images/incinerated-red-crispberry.jpg",
+    "imageUrl": "/images/red-crispberry.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Incinerated Green Crispberry",
-    "imageUrl": "/images/incinerated-green-crispberry.jpg",
+    "imageUrl": "/images/green-crispberry.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Incinerated Scorchberry",
-    "imageUrl": "/images/incinerated-scorchberry.jpg",
+    "imageUrl": "/images/scorchberry.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -41,7 +41,7 @@
   },
   {
     "name": "Incinerated Yellow Clusterberry",
-    "imageUrl": "/images/incinerated-yellow-clusterberry.jpg",
+    "imageUrl": "/images/yellow-clusterberry.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -51,7 +51,7 @@
   },
   {
     "name": "Incinerated Black Clusterberry",
-    "imageUrl": "/images/incinerated-black-clusterberry.jpg",
+    "imageUrl": "/images/black-clusterberry.png",
     "type": "Incinerated",
     "hunger": 20,
     "weight": 2.5,
@@ -61,7 +61,7 @@
   },
   {
     "name": "Incinerated Red Clusterberry",
-    "imageUrl": "/images/incinerated-red-clusterberry.jpg",
+    "imageUrl": "/images/red-clusterberry.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -71,7 +71,7 @@
   },
   {
     "name": "Incinerated Green Clusterberry",
-    "imageUrl": "/images/incinerated-green-clusterberry.jpg",
+    "imageUrl": "/images/green-clusterberry.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -81,7 +81,7 @@
   },
   {
     "name": "Incinerated Yellow Kingberry",
-    "imageUrl": "/images/incinerated-yellow-kingberry.jpg",
+    "imageUrl": "/images/yellow-kingberry.png",
     "type": "Incinerated",
     "hunger": 30,
     "weight": 5,
@@ -91,7 +91,7 @@
   },
   {
     "name": "Incinerated Green Kingberry",
-    "imageUrl": "/images/incinerated-green-kingberry.jpg",
+    "imageUrl": "/images/green-kingberry.png",
     "type": "Incinerated",
     "hunger": 30,
     "weight": 5,
@@ -101,7 +101,7 @@
   },
   {
     "name": "Incinerated Purple Kingberry",
-    "imageUrl": "/images/incinerated-purple-kingberry.jpg",
+    "imageUrl": "/images/purple-kingberry.png",
     "type": "Incinerated",
     "hunger": 30,
     "weight": 5,
@@ -111,7 +111,7 @@
   },
   {
     "name": "Incinerated Brown Berrynana",
-    "imageUrl": "/images/incinerated-brown-berrynana.jpg",
+    "imageUrl": "/images/brown-berrynana.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Incinerated Blue Berrynana",
-    "imageUrl": "/images/incinerated-blue-berrynana.jpg",
+    "imageUrl": "/images/blue-berrynana.png",
     "type": "Incinerated",
     "hunger": 30,
     "weight": 2.5,
@@ -131,7 +131,7 @@
   },
   {
     "name": "Incinerated Pink Berrynana",
-    "imageUrl": "/images/incinerated-pink-berrynana.jpg",
+    "imageUrl": "/images/pink-berrynana.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -141,7 +141,7 @@
   },
   {
     "name": "Incinerated Yellow Berrynana",
-    "imageUrl": "/images/incinerated-yellow-berrynana.jpg",
+    "imageUrl": "/images/yellow-berrynana.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -151,7 +151,7 @@
   },
   {
     "name": "Incinerated Yellow Winterberry",
-    "imageUrl": "/images/incinerated-yellow-winterberry.jpg",
+    "imageUrl": "/images/yellow-winterberry.png",
     "type": "Incinerated",
     "hunger": 30,
     "weight": 2.5,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Incinerated Orange Winterberry",
-    "imageUrl": "/images/incinerated-orange-winterberry.jpg",
+    "imageUrl": "/images/orange-winterberry.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -170,8 +170,8 @@
     "location": ["Alpine"]
   },
   {
-    "name": "Incinerated Napberry Winterberry",
-    "imageUrl": "/images/incinerated-napberry-winterberry.jpg",
+    "name": "Incinerated Napberry",
+    "imageUrl": "/images/napberry.png",
     "type": "Incinerated",
     "hunger": 100,
     "weight": 2.5,
@@ -181,7 +181,7 @@
   },
   {
     "name": "Incinerated Medicinal Root",
-    "imageUrl": "/images/incinerated-medicinal-root.jpg",
+    "imageUrl": "/images/medicinal-root.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -191,7 +191,7 @@
   },
   {
     "name": "Incinerated Tick",
-    "imageUrl": "/images/incinerated-tick.jpg",
+    "imageUrl": "/images/tick.png",
     "type": "Incinerated",
     "hunger": 20,
     "weight": 2.5,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Incinerated Egg",
-    "imageUrl": "/images/incinerated-egg.jpg",
+    "imageUrl": "/images/egg.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 5,
@@ -211,7 +211,7 @@
   },
   {
     "name": "Incinerated Chicken",
-    "imageUrl": "/images/incinerated-chicken.jpg",
+    "imageUrl": "/images/chicken.png",
     "type": "Incinerated",
     "hunger": 45,
     "weight": 5,
@@ -221,7 +221,7 @@
   },
   {
     "name": "Incinerated Marshmallow",
-    "imageUrl": "/images/incinerated-marsh-mallow.jpg",
+    "imageUrl": "/images/marsh-mallow.png",
     "type": "Incinerated",
     "hunger": 20,
     "weight": 2.5,
@@ -231,7 +231,7 @@
   },
   {
     "name": "Incinerated Half Coconut",
-    "imageUrl": "/images/incinerated-half-coconut.jpg",
+    "imageUrl": "/images/half-coconut.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 5,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Incinerated Honeycomb",
-    "imageUrl": "/images/incinerated-honeycomb.jpg",
+    "imageUrl": "/images/honeycomb.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -251,7 +251,7 @@
   },
   {
     "name": "Incinerated Weird Shroom",
-    "imageUrl": "/images/incinerated-weird-shroom.jpg",
+    "imageUrl": "/images/weird-shroom.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -261,7 +261,7 @@
   },
   {
     "name": "Incinerated Button Shroom",
-    "imageUrl": "/images/incinerated-button-shroom.jpg",
+    "imageUrl": "/images/button-shroom.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -271,7 +271,7 @@
   },
   {
     "name": "Incinerated Bugle Shroom",
-    "imageUrl": "/images/incinerated-bugle-shroom.jpg",
+    "imageUrl": "/images/bugle-shroom.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Incinerated Cluster Shroom",
-    "imageUrl": "/images/incinerated-cluster-shroom.jpg",
+    "imageUrl": "/images/cluster-shroom.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -291,7 +291,7 @@
   },
   {
     "name": "Incinerated Chubby Shroom",
-    "imageUrl": "/images/incinerated-chubby-shroom.jpg",
+    "imageUrl": "/images/chubby-shroom.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -301,7 +301,7 @@
   },
   {
     "name": "Incinerated Poisonous Button Shroom",
-    "imageUrl": "/images/incinerated-poisonous-button-shroom.jpg",
+    "imageUrl": "/images/poisonous-button-shroom.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Incinerated Poisonous Bugle Shroom",
-    "imageUrl": "/images/incinerated-poisonous-bugle-shroom.jpg",
+    "imageUrl": "/images/poisonous-bugle-shroom.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Incinerated Poisonous Cluster Shroom",
-    "imageUrl": "/images/incinerated-poisonous-cluster-shroom.jpg",
+    "imageUrl": "/images/poisonous-cluster-shroom.png",
     "type": "Incinerated",
     "hunger": 5,
     "weight": 2.5,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Incinerated Trail Mix",
-    "imageUrl": "/images/incinerated-trail-mix.jpg",
+    "imageUrl": "/images/trail-mix.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -341,7 +341,7 @@
   },
   {
     "name": "Incinerated Granola Bar",
-    "imageUrl": "/images/incinerated-granola-bar.jpg",
+    "imageUrl": "/images/granola-bar.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -351,7 +351,7 @@
   },
   {
     "name": "Incinerated Airline Food",
-    "imageUrl": "/images/incinerated-airline-food.jpg",
+    "imageUrl": "/images/airline-food.png",
     "type": "Incinerated",
     "hunger": 40,
     "weight": 2.5,
@@ -361,7 +361,7 @@
   },
   {
     "name": "Incinerated Scout Cookies",
-    "imageUrl": "/images/incinerated-scout-cookies.jpg",
+    "imageUrl": "/images/scout-cookies.png",
     "type": "Incinerated",
     "hunger": 40,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Incinerated Scorpion",
-    "imageUrl": "/images/incinerated-scorpion.jpg",
+    "imageUrl": "/images/scorpion.png",
     "type": "Incinerated",
     "hunger": 15,
     "weight": 2.5,
@@ -381,7 +381,7 @@
   },
   {
     "name": "Incinerated Aloe Vera",
-    "imageUrl": "/images/incinerated-aloe-vera.png",
+    "imageUrl": "/images/aloe-vera.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -391,7 +391,7 @@
   },
   {
     "name": "Incinerated Red Prickleberry",
-    "imageUrl": "/images/incinerated-red-prickleberry.jpg",
+    "imageUrl": "/images/red-prickleberry.png",
     "type": "Incinerated",
     "hunger": 10,
     "weight": 2.5,
@@ -401,7 +401,7 @@
   },
   {
     "name": "Incinerated Golden Prickleberry",
-    "imageUrl": "/images/incinerated-golden-prickleberry.jpg",
+    "imageUrl": "/images/golden-prickleberry.png",
     "type": "Incinerated",
     "hunger": 20,
     "weight": 2.5,

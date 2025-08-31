@@ -269,6 +269,7 @@ body {
 }
 
 .dropdown-option {
+  font-size: x-large;
   display: flex;
   align-items: center;
   padding: 8px 10px;

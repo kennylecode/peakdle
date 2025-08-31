@@ -7,9 +7,10 @@ import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
+  const srcPath = "src/data/edibles";
   const [targetEdible, setTargetEdible] = useState(null);
   const [guesses, setGuesses] = useState([]);
-  const [currentGuess, setCurrentGuess] = useState('');
+  const [currentGuess, setCurrentGuess] = useState({});
   const [gameWon, setGameWon] = useState(false);
   const [gameLost, setGameLost] = useState(false);
   const [maxGuesses, setMaxGuesses] = useState(defaultNumGuesses);
@@ -60,48 +61,33 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     setMaxGuesses(defaultNumGuesses+cookingLevel);
     setGameWon(false);
     setGameLost(false);
-    setCurrentGuess('');
+    setCurrentGuess({});
   }, [cookingLevel]);
 
   const handleGuess = () => {
-    if (!currentGuess.trim()) return;
+    if (!currentGuess) return;
 
-    const guessedEdible = availableEdibles.find(
-      edible => edible.name.toLowerCase() === currentGuess.toLowerCase()
-    );
+    const newGuesses = [...guesses, currentGuess];
+    setGuesses(newGuesses);
+    setCurrentGuess({});
 
-    if (guessedEdible) {
-      const newGuess = {
-        name: guessedEdible.name,
-        hunger: guessedEdible.hunger,
-        weight: guessedEdible.weight,
-        stamina: guessedEdible.stamina,
-        statusEffect: guessedEdible.statusEffect,
-        location: guessedEdible.location
-      };
-
-      const newGuesses = [...guesses, newGuess];
-      setGuesses(newGuesses);
-      setCurrentGuess('');
-
-      // Check if won
-      if (guessedEdible.name === targetEdible.name) {
-        setGameWon(true);
-        onComplete({
-          mode: 'edibles',
-          won: true,
-          guesses: newGuesses.length,
-          target: targetEdible.name
-        });
-      } else if (newGuesses.length >= maxGuesses) {
-        setGameLost(true);
-        onComplete({
-          mode: 'edibles',
-          won: false,
-          guesses: maxGuesses,
-          target: targetEdible.name
-        });
-      }
+    // Check if won
+    if (currentGuess.name === targetEdible.name) {
+      setGameWon(true);
+      onComplete({
+        mode: 'edibles',
+        won: true,
+        guesses: newGuesses.length,
+        target: targetEdible.name
+      });
+    } else if (newGuesses.length >= maxGuesses) {
+      setGameLost(true);
+      onComplete({
+        mode: 'edibles',
+        won: false,
+        guesses: maxGuesses,
+        target: targetEdible.name
+      });
     }
   };
 
@@ -281,10 +267,14 @@ const EdiblesGame = ({ onComplete, onBack }) => {
                 className="dropdown-header"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                {currentGuess ? (
+                {currentGuess.name ? (
                   <>
-                    <span style={{ fontSize: '24px', marginRight: '8px' }}>🍎</span>
-                    <span>{currentGuess}</span>
+                    <img 
+                      src={currentGuess.imageUrl ? srcPath + currentGuess.imageUrl : null} 
+                      alt={currentGuess.name}
+                      style={{ width: '100px', height: '100px', marginRight: '20px' }}
+                    />
+                    <span>{currentGuess.name}</span>
                   </>
                 ) : (
                   <span style={{ color: '#666' }}>Select an edible...</span>
@@ -299,18 +289,22 @@ const EdiblesGame = ({ onComplete, onBack }) => {
                       key={edible.name}
                       className="dropdown-option"
                       onClick={() => {
-                        setCurrentGuess(edible.name);
+                        setCurrentGuess(edible); // Set the entire edible object
                         setDropdownOpen(false);
                       }}
                     >
-                      <span style={{ fontSize: '24px', marginRight: '8px' }}>🍎</span>
+                      <img 
+                        src={edible.imageUrl ? srcPath + edible.imageUrl : null} 
+                        alt={edible.name}
+                        style={{ width: '100px', height: '100px', marginRight: '20px' }}
+                      />
                       <span>{edible.name}</span>
                     </div>
                   ))}
                 </div>
               )}
             </div>
-            <button onClick={handleGuess} disabled={!currentGuess.trim()}>
+            <button onClick={handleGuess} disabled={!currentGuess.name}>
               Guess
             </button>
           </div>

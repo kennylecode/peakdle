@@ -1,7 +1,7 @@
 [
   {
     "name": "Well-Done Yellow Crispberry",
-    "imageUrl": "/images/well-done-yellow-crispberry.jpg",
+    "imageUrl": "/images/yellow-crispberry.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -11,7 +11,7 @@
   }, 
   {
     "name": "Well-Done Red Crispberry",
-    "imageUrl": "/images/well-done-red-crispberry.jpg",
+    "imageUrl": "/images/red-crispberry.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -21,7 +21,7 @@
   },
   {
     "name": "Well-Done Green Crispberry",
-    "imageUrl": "/images/well-done-green-crispberry.jpg",
+    "imageUrl": "/images/green-crispberry.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -31,7 +31,7 @@
   },
   {
     "name": "Well-Done Scorchberry",
-    "imageUrl": "/images/well-done-scorchberry.jpg",
+    "imageUrl": "/images/scorchberry.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -41,7 +41,7 @@
   },
   {
     "name": "Well-Done Yellow Clusterberry",
-    "imageUrl": "/images/well-done-yellow-clusterberry.jpg",
+    "imageUrl": "/images/yellow-clusterberry.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -51,7 +51,7 @@
   },
   {
     "name": "Well-Done Black Clusterberry",
-    "imageUrl": "/images/well-done-black-clusterberry.jpg",
+    "imageUrl": "/images/black-clusterberry.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
@@ -61,7 +61,7 @@
   },
   {
     "name": "Well-Done Red Clusterberry",
-    "imageUrl": "/images/well-done-red-clusterberry.jpg",
+    "imageUrl": "/images/red-clusterberry.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -71,7 +71,7 @@
   },
   {
     "name": "Well-Done Green Clusterberry",
-    "imageUrl": "/images/well-done-green-clusterberry.jpg",
+    "imageUrl": "/images/green-clusterberry.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -81,7 +81,7 @@
   },
   {
     "name": "Well-Done Yellow Kingberry",
-    "imageUrl": "/images/well-done-yellow-kingberry.jpg",
+    "imageUrl": "/images/yellow-kingberry.png",
     "type": "Well-Done",
     "hunger": 30,
     "weight": 5,
@@ -91,7 +91,7 @@
   },
   {
     "name": "Well-Done Green Kingberry",
-    "imageUrl": "/images/well-done-green-kingberry.jpg",
+    "imageUrl": "/images/green-kingberry.png",
     "type": "Well-Done",
     "hunger": 30,
     "weight": 5,
@@ -101,7 +101,7 @@
   },
   {
     "name": "Well-Done Purple Kingberry",
-    "imageUrl": "/images/well-done-purple-kingberry.jpg",
+    "imageUrl": "/images/purple-kingberry.png",
     "type": "Well-Done",
     "hunger": 30,
     "weight": 5,
@@ -111,7 +111,7 @@
   },
   {
     "name": "Well-Done Brown Berrynana",
-    "imageUrl": "/images/well-done-brown-berrynana.jpg",
+    "imageUrl": "/images/brown-berrynana.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -121,7 +121,7 @@
   },
   {
     "name": "Well-Done Blue Berrynana",
-    "imageUrl": "/images/well-done-blue-berrynana.jpg",
+    "imageUrl": "/images/blue-berrynana.png",
     "type": "Well-Done",
     "hunger": 30,
     "weight": 2.5,
@@ -131,7 +131,7 @@
   },
   {
     "name": "Well-Done Pink Berrynana",
-    "imageUrl": "/images/well-done-pink-berrynana.jpg",
+    "imageUrl": "/images/pink-berrynana.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -141,7 +141,7 @@
   },
   {
     "name": "Well-Done Yellow Berrynana",
-    "imageUrl": "/images/well-done-yellow-berrynana.jpg",
+    "imageUrl": "/images/yellow-berrynana.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -151,7 +151,7 @@
   },
   {
     "name": "Well-Done Yellow Winterberry",
-    "imageUrl": "/images/well-done-yellow-winterberry.jpg",
+    "imageUrl": "/images/yellow-winterberry.png",
     "type": "Well-Done",
     "hunger": 30,
     "weight": 2.5,
@@ -161,7 +161,7 @@
   },
   {
     "name": "Well-Done Orange Winterberry",
-    "imageUrl": "/images/well-done-orange-winterberry.jpg",
+    "imageUrl": "/images/orange-winterberry.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -170,8 +170,8 @@
     "location": ["Alpine"]
   },
   {
-    "name": "Well-Done Napberry Winterberry",
-    "imageUrl": "/images/well-done-napberry-winterberry.jpg",
+    "name": "Well-Done Napberry",
+    "imageUrl": "/images/napberry.png",
     "type": "Well-Done",
     "hunger": 100,
     "weight": 2.5,
@@ -181,7 +181,7 @@
   },
   {
     "name": "Well-Done Medicinal Root",
-    "imageUrl": "/images/well-done-medicinal-root.jpg",
+    "imageUrl": "/images/medicinal-root.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -191,7 +191,7 @@
   },
   {
     "name": "Well-Done Tick",
-    "imageUrl": "/images/well-done-tick.jpg",
+    "imageUrl": "/images/tick.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
@@ -201,7 +201,7 @@
   },
   {
     "name": "Well-Done Egg",
-    "imageUrl": "/images/well-done-egg.jpg",
+    "imageUrl": "/images/egg.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 5,
@@ -211,7 +211,7 @@
   },
   {
     "name": "Well-Done Chicken",
-    "imageUrl": "/images/well-done-chicken.jpg",
+    "imageUrl": "/images/chicken.png",
     "type": "Well-Done",
     "hunger": 45,
     "weight": 5,
@@ -221,7 +221,7 @@
   },
   {
     "name": "Well-Done Marshmallow",
-    "imageUrl": "/images/well-done-marsh-mallow.jpg",
+    "imageUrl": "/images/marsh-mallow.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
@@ -231,7 +231,7 @@
   },
   {
     "name": "Well-Done Half Coconut",
-    "imageUrl": "/images/well-done-half-coconut.jpg",
+    "imageUrl": "/images/half-coconut.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 5,
@@ -241,7 +241,7 @@
   },
   {
     "name": "Well-Done Honeycomb",
-    "imageUrl": "/images/well-done-honeycomb.jpg",
+    "imageUrl": "/images/honeycomb.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -251,7 +251,7 @@
   },
   {
     "name": "Well-Done Weird Shroom",
-    "imageUrl": "/images/well-done-weird-shroom.jpg",
+    "imageUrl": "/images/weird-shroom.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -261,7 +261,7 @@
   },
   {
     "name": "Well-Done Button Shroom",
-    "imageUrl": "/images/well-done-button-shroom.jpg",
+    "imageUrl": "/images/button-shroom.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -271,7 +271,7 @@
   },
   {
     "name": "Well-Done Bugle Shroom",
-    "imageUrl": "/images/well-done-bugle-shroom.jpg",
+    "imageUrl": "/images/bugle-shroom.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -281,7 +281,7 @@
   },
   {
     "name": "Well-Done Cluster Shroom",
-    "imageUrl": "/images/well-done-cluster-shroom.jpg",
+    "imageUrl": "/images/cluster-shroom.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -291,7 +291,7 @@
   },
   {
     "name": "Well-Done Chubby Shroom",
-    "imageUrl": "/images/well-done-chubby-shroom.jpg",
+    "imageUrl": "/images/chubby-shroom.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -301,7 +301,7 @@
   },
   {
     "name": "Well-Done Poisonous Button Shroom",
-    "imageUrl": "/images/well-done-poisonous-button-shroom.jpg",
+    "imageUrl": "/images/poisonous-button-shroom.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Well-Done Poisonous Bugle Shroom",
-    "imageUrl": "/images/well-done-poisonous-bugle-shroom.jpg",
+    "imageUrl": "/images/poisonous-bugle-shroom.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -321,7 +321,7 @@
   },
   {
     "name": "Well-Done Poisonous Cluster Shroom",
-    "imageUrl": "/images/well-done-poisonous-cluster-shroom.jpg",
+    "imageUrl": "/images/poisonous-cluster-shroom.png",
     "type": "Well-Done",
     "hunger": 5,
     "weight": 2.5,
@@ -331,7 +331,7 @@
   },
   {
     "name": "Well-Done Trail Mix",
-    "imageUrl": "/images/well-done-trail-mix.jpg",
+    "imageUrl": "/images/trail-mix.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -341,7 +341,7 @@
   },
   {
     "name": "Well-Done Granola Bar",
-    "imageUrl": "/images/well-done-granola-bar.jpg",
+    "imageUrl": "/images/granola-bar.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -351,7 +351,7 @@
   },
   {
     "name": "Well-Done Airline Food",
-    "imageUrl": "/images/well-done-airline-food.jpg",
+    "imageUrl": "/images/airline-food.png",
     "type": "Well-Done",
     "hunger": 40,
     "weight": 2.5,
@@ -361,7 +361,7 @@
   },
   {
     "name": "Well-Done Scout Cookies",
-    "imageUrl": "/images/well-done-scout-cookies.jpg",
+    "imageUrl": "/images/scout-cookies.png",
     "type": "Well-Done",
     "hunger": 40,
     "weight": 2.5,
@@ -371,7 +371,7 @@
   },
   {
     "name": "Well-Done Scorpion",
-    "imageUrl": "/images/well-done-scorpion.jpg",
+    "imageUrl": "/images/scorpion.png",
     "type": "Well-Done",
     "hunger": 15,
     "weight": 2.5,
@@ -381,7 +381,7 @@
   },
   {
     "name": "Well-Done Aloe Vera",
-    "imageUrl": "/images/well-done-aloe-vera.png",
+    "imageUrl": "/images/aloe-vera.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -391,7 +391,7 @@
   },
   {
     "name": "Well-Done Red Prickleberry",
-    "imageUrl": "/images/well-done-red-prickleberry.jpg",
+    "imageUrl": "/images/red-prickleberry.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -401,7 +401,7 @@
   },
   {
     "name": "Well-Done Golden Prickleberry",
-    "imageUrl": "/images/well-done-golden-prickleberry.jpg",
+    "imageUrl": "/images/golden-prickleberry.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
