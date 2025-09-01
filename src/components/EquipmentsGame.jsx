@@ -2,35 +2,22 @@ import React, { useState, useEffect, useRef } from 'react';
 import equipmentsData from '../data/equipments.json';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
+  const maxGuesses = 6;
+  const srcPath = "images/equipments/";
   const [targetEquipment, setTargetEquipment] = useState(null);
   const [guesses, setGuesses] = useState([]);
   const [gameWon, setGameWon] = useState(false);
   const [gameLost, setGameLost] = useState(false);
-  const [maxGuesses] = useState(6);
   const [availableEquipment, setAvailableEquipment] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
+  const dropdownRef = useRef(null);
   const inputRef = useRef(null);
-
-  // Sort equipment array alphabetically by name
-  const sortByEquipmentName = (equipmentArray) => {
-    return [...equipmentArray].sort((a, b) => a.name.localeCompare(b.name));
-  };
-
-  // Get filtered equipment based on search text
-  const getFilteredEquipment = () => {
-    if (!filterText.trim()) {
-      return availableEquipment;
-    }
-    return availableEquipment.filter(equipment =>
-      equipment.name.toLowerCase().includes(filterText.toLowerCase())
-    );
-  };
 
   // Handle clicking outside dropdown to close it
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (inputRef.current && !inputRef.current.closest('.custom-dropdown')) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setDropdownOpen(false);
         setFilterText('');
       }
@@ -50,34 +37,24 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   }, []);
 
   useEffect(() => {
-    // Set up available equipment (sorted)
-    const sortedEquipment = sortByEquipmentName(equipmentsData);
-    setAvailableEquipment(sortedEquipment);
+    let allEquipment = sortByEquipmentName(equipmentsData);
 
-    // Select a random equipment as the target
-    const randomIndex = Math.floor(Math.random() * sortedEquipment.length);
-    setTargetEquipment(sortedEquipment[randomIndex]);
+    setAvailableEquipment(allEquipment);
+    
+    // Select a new random equipment from the updated pool
+    const randomIndex = Math.floor(Math.random() * allEquipment.length);
+    setTargetEquipment(allEquipment[randomIndex]);
   }, []);
 
-  const handleGuess = (selectedEquipment) => {
-    if (!selectedEquipment) return;
+  const handleGuess = (currentGuess) => {
+    if (!currentGuess) return;
 
-    const newGuess = {
-      name: selectedEquipment.name,
-      weight: selectedEquipment.weight,
-      statusAilment: selectedEquipment.statusAilment,
-      type: selectedEquipment.type,
-      rarity: selectedEquipment.rarity,
-      range: selectedEquipment.range
-    };
-
-    const newGuesses = [newGuess, ...guesses];
+    const newGuesses = [currentGuess, ...guesses];
     setGuesses(newGuesses);
-    setDropdownOpen(false);
-    setFilterText('');
+    setAvailableEquipment(availableEquipment.filter(equipment => equipment.name !== currentGuess.name));
 
     // Check if won
-    if (selectedEquipment.name === targetEquipment.name) {
+    if (currentGuess.name === targetEquipment.name) {
       setGameWon(true);
       onComplete({
         mode: 'equipment',
@@ -96,22 +73,28 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     }
   };
 
+  const getStatArrow = (guessedValue, targetValue) => {
+    if (guessedValue === targetValue) return null;
+    if (guessedValue > targetValue) return { symbol: '↓', class: 'up' };
+    return { symbol: '↑', class: 'down' };
+  };
+
   const getStatClass = (guessedValue, targetValue, statType) => {
     if (guessedValue === targetValue) return 'correct';
-    
-    if (statType === 'weight') {
-      const diff = Math.abs(guessedValue - targetValue);
-      if (diff <= 1.0) return 'partial';
-      return 'incorrect';
-    }
-    
-    if (statType === 'range') {
-      const diff = Math.abs(guessedValue - targetValue);
-      if (diff <= 3) return 'partial';
-      return 'incorrect';
-    }
-    
-    if (statType === 'statusAilment' || statType === 'type' || statType === 'rarity') {
+        
+    if (statType === 'statusEffect') {
+      // Handle array comparisons for status effects if they exist
+      if (Array.isArray(guessedValue) && Array.isArray(targetValue)) {
+        if (guessedValue.length === 0 && targetValue.length === 0) return 'correct';
+
+        const commonElements = guessedValue.filter(item => targetValue.includes(item));
+        if (commonElements.length > 0) {
+          if (commonElements.length === targetValue.length && guessedValue.length === targetValue.length) {
+            return 'correct';
+          }
+          return 'partial';
+        }
+      }
       return 'incorrect';
     }
     
@@ -120,142 +103,66 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
 
   const getStatHint = (guessedValue, targetValue, statType) => {
     if (guessedValue === targetValue) return 'Correct!';
-
+    
     if (statType === 'weight') {
       if (guessedValue > targetValue) return 'Too heavy';
       return 'Too light';
     }
-
+    
     if (statType === 'range') {
-      if (guessedValue > targetValue) return 'Too far';
-      return 'Too close';
+      if (guessedValue > targetValue) return 'Too long';
+      return 'Too short';
     }
+    
+    if (statType === 'statusEffect') {
+      // Handle array comparisons
+      if (Array.isArray(guessedValue) && Array.isArray(targetValue)) {
+        if (guessedValue.length === 0 && targetValue.length === 0) return 'Correct';
 
-    if (statType === 'statusAilment') {
-      return guessedValue === targetValue ? 'Correct!' : 'Wrong';
+        const commonElements = guessedValue.filter(item => targetValue.includes(item));
+        if (commonElements.length > 0) {
+          if (commonElements.length === targetValue.length && guessedValue.length === targetValue.length) {
+            return 'Correct';
+          }
+          return `${commonElements.length} correct`;
+        }
+      }
+      return 'Incorrect';
     }
-
-    if (statType === 'type') {
-      return guessedValue === targetValue ? 'Correct!' : 'Wrong';
-    }
-
-    if (statType === 'rarity') {
-      return guessedValue === targetValue ? 'Correct!' : 'Wrong';
-    }
-
+    
     return 'Incorrect';
   };
 
-  const getRarityColor = (rarity) => {
-    switch (rarity) {
-      case 'common': return '#6b7280';
-      case 'uncommon': return '#10b981';
-      case 'rare': return '#3b82f6';
-      case 'epic': return '#8b5cf6';
-      case 'legendary': return '#f59e0b';
-      default: return '#6b7280';
+  const formatArrayValue = (value) => {
+    if (Array.isArray(value)) {
+      return value.length > 0 ? value.join(', ') : 'None';
     }
+    return value;
+  };
+
+  // Sort equipment array alphabetically by name
+  const sortByEquipmentName = (equipmentArray) => {
+    return [...equipmentArray].sort((a, b) => a.name.localeCompare(b.name));
+  };
+
+  // Get filtered equipment based on search text
+  const getFilteredEquipment = () => {
+    if (!filterText.trim()) {
+      return availableEquipment;
+    }
+    return availableEquipment.filter(equipment =>
+      equipment.name.toLowerCase().includes(filterText.toLowerCase())
+    );
   };
 
   if (!targetEquipment) return <div>Loading...</div>;
 
   return (
     <div>
-      <div className="center-content">
-        <h2>Equipments Challenge</h2>
-        <p>Guess the equipment piece in {maxGuesses} tries!</p>
-        <p>Target: {gameWon || gameLost ? targetEquipment.name : '???'}</p>
-      </div>
-
       <div className="game-board">
-        <div className="stats-grid">
-          {/* Column Headers */}
-          <div className="column-headers-row">
-            <div className="column-headers-grid">
-              <div className="stat-card header-card">
-                <h4>Name</h4>
-              </div>
-              <div className="stat-card header-card">
-                <h4>Weight</h4>
-              </div>
-              <div className="stat-card header-card">
-                <h4>Status Effects</h4>
-              </div>
-              <div className="stat-card header-card">
-                <h4>Type</h4>
-              </div>
-              <div className="stat-card header-card">
-                <h4>Rarity</h4>
-              </div>
-              <div className="stat-card header-card">
-                <h4>Range</h4>
-              </div>
-            </div>
-          </div>
-
-          {/* Guesses */}
-          {guesses.map((guess, guessIndex) => {
-            const weightArrow = guess.weight !== targetEquipment.weight ?
-              (guess.weight > targetEquipment.weight ? '↓' : '↑') : null;
-            const rangeArrow = guess.range !== targetEquipment.range ?
-              (guess.range > targetEquipment.range ? '↓' : '↑') : null;
-
-            return (
-              <div key={guessIndex} className="guess-row">
-                <div className="guess-grid">
-                  <div className={`stat-card ${getStatClass(guess.name, targetEquipment.name, null)}`}>
-                    <div className="value">
-                      {guess.name}
-                    </div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.name, targetEquipment.name, null)}
-                    </div>
-                  </div>
-                  <div className={`stat-card ${getStatClass(guess.weight, targetEquipment.weight, 'weight')}`}>
-                    <div className="value">
-                      {guess.weight} {weightArrow && <span className={`arrow ${weightArrow === '↓' ? 'down' : 'up'}`}>{weightArrow}</span>}
-                    </div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.weight, targetEquipment.weight, 'weight')}
-                    </div>
-                  </div>
-                  <div className={`stat-card ${getStatClass(guess.statusAilment, targetEquipment.statusAilment, 'statusAilment')}`}>
-                    <div className="value">{guess.statusAilment}</div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.statusAilment, targetEquipment.statusAilment, 'statusAilment')}
-                    </div>
-                  </div>
-                  <div className={`stat-card ${getStatClass(guess.type, targetEquipment.type, 'type')}`}>
-                    <div className="value">{guess.type}</div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.type, targetEquipment.type, 'type')}
-                    </div>
-                  </div>
-                  <div className={`stat-card ${getStatClass(guess.rarity, targetEquipment.rarity, 'rarity')}`}>
-                    <div className="value" style={{ color: getRarityColor(guess.rarity) }}>
-                      {guess.rarity}
-                    </div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.rarity, targetEquipment.rarity, 'rarity')}
-                    </div>
-                  </div>
-                  <div className={`stat-card ${getStatClass(guess.range, targetEquipment.range, 'range')}`}>
-                    <div className="value">
-                      {guess.range} {rangeArrow && <span className={`arrow ${rangeArrow === '↓' ? 'down' : 'up'}`}>{rangeArrow}</span>}
-                    </div>
-                    <div className="stat-hint">
-                      {getStatHint(guess.range, targetEquipment.range, 'range')}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {!gameWon && !gameLost && (
           <div className="guess-input">
-            <div className="custom-dropdown">
+            <div className="custom-dropdown" ref={dropdownRef}>
               <div
                 className="dropdown-header"
                 onClick={() => {
@@ -292,9 +199,18 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
                     <div
                       key={equipment.name}
                       className="dropdown-option"
-                      onClick={() => handleGuess(equipment)}
+                      onClick={() => {
+                        setDropdownOpen(false);
+                        setFilterText('');
+                        handleGuess(equipment);
+                      }}
                     >
+                      <img
+                        src={equipment.imageUrl ? srcPath + equipment.imageUrl : null}
+                        alt={equipment.name}
+                      />
                       <span>{equipment.name}</span>
+                      <span></span>
                     </div>
                   ))}
                   {getFilteredEquipment().length === 0 && filterText.trim() && (
@@ -320,20 +236,105 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
 
         {gameLost && (
           <div className="game-result lose">
-            <h3>😔 Game Over!</h3>
+            <h3>😞 Game Over!</h3>
             <p>The equipment was: {targetEquipment.name}</p>
             <button className="new-game-btn" onClick={onBack}>
               Main Menu
             </button>
           </div>
         )}
+
+        <div className="stats-grid">
+          {/* Column Headers */}
+          <div className="column-headers-row">
+            <div className="column-headers-grid">
+              <div className="stat-card header-card">
+                <h4>Name</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Weight</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Status Effects</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Type</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Rarity</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Range</h4>
+              </div>
+            </div>
+          </div>
+
+          {guesses.map((guess, guessIndex) => {
+            const weightArrow = getStatArrow(guess.weight, targetEquipment.weight);
+            const rangeArrow = getStatArrow(guess.range, targetEquipment.range);
+            
+            return (
+              <div key={guessIndex} className="guess-row">
+                <div className="guess-grid">
+                  <div className={`stat-card ${getStatClass(guess.name, targetEquipment.name, null)}`}>
+                    <div className="value">
+                      {guess.name}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.name, targetEquipment.name, null)}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.weight, targetEquipment.weight, 'weight')}`}>
+                    <div className="value">
+                      {guess.weight} {weightArrow && <span className={`arrow ${weightArrow.class}`}>{weightArrow.symbol}</span>}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.weight, targetEquipment.weight, 'weight')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}`}>
+                    <div className="value">{formatArrayValue(guess.statusEffect)}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.type, targetEquipment.type, 'type')}`}>
+                    <div className="value">{guess.type}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.type, targetEquipment.type, 'type')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.rarity, targetEquipment.rarity, 'rarity')}`}>
+                    <div className="value">
+                      {guess.rarity}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.rarity, targetEquipment.rarity, 'rarity')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.range, targetEquipment.range, 'range')}`}>
+                    <div className="value">
+                      {guess.range} {rangeArrow && <span className={`arrow ${rangeArrow.class}`}>{rangeArrow.symbol}</span>}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.range, targetEquipment.range, 'range')}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="center-content">
-        <button onClick={onBack} className="back-button">
-          ← Back to Menu
-        </button>
-      </div>
+        <button
+            onClick={onBack}
+            className="back-button"
+          >
+            ← Back to Menu
+          </button>
+        </div>
     </div>
   );
 };

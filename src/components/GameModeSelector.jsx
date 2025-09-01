@@ -11,7 +11,7 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
     {
       id: 'equipments',
       name: 'Equipments',
-      description: 'Identify the equipment piece using its stats: weight, status ailment, type, rarity, and range.',
+      description: 'Identify the equipment piece using its stats: weight, status effects, type, rarity, and range.',
       stats: ['Weight', 'Status Ailment', 'Type', 'Rarity', 'Range']
     },
     {

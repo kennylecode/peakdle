@@ -1,10 +1,250 @@
 [
   {
-    "name": "Iron Pickaxe",
-    "weight": 3.5,
-    "statusAilment": "none",
-    "type": "mining",
-    "rarity": "common",
+    "name": "Antidote",
+    "weight": 0.5,
+    "statusEffect": ["-Poison"],
+    "type": "Status Effect",
+    "rarity": "Uncommon",
+    "range": 0
+  },
+  {
+    "name": "Anti-Rope Spool",
+    "weight": 2.0,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Rare",
+    "range": 12
+  },
+  {
+    "name": "Ancient Effigy",
+    "weight": 1.0,
+    "statusEffect": ["+Revive"],
+    "type": "Status Effect",
+    "rarity": "Legendary",
+    "range": 5
+  },
+  {
+    "name": "Anti-Rope Cannon",
+    "weight": 3.0,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Epic",
+    "range": 15
+  },
+  {
+    "name": "Bandages",
+    "weight": 0.3,
+    "statusEffect": ["+Health"],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Bing Bong",
+    "weight": 0.8,
+    "statusEffect": [],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Banana Peel",
+    "weight": 0.2,
+    "statusEffect": ["+Slip"],
+    "type": "Status Effect",
+    "rarity": "Common",
     "range": 1
+  },
+  {
+    "name": "Blowgun",
+    "weight": 1.2,
+    "statusEffect": ["+Sleep"],
+    "type": "Status Effect",
+    "rarity": "Uncommon",
+    "range": 8
+  },
+  {
+    "name": "Bugle of Friendship",
+    "weight": 1.5,
+    "statusEffect": ["+Infinite Stamina"],
+    "type": "Status Effect",
+    "rarity": "Rare",
+    "range": 6
+  },
+  {
+    "name": "Bugle",
+    "weight": 1.0,
+    "statusEffect": [],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 10
+  },
+  {
+    "name": "Chain Cannon",
+    "weight": 4.0,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Rare",
+    "range": 20
+  },
+  {
+    "name": "Compass",
+    "weight": 0.5,
+    "statusEffect": ["+Direction"],
+    "type": "Travel",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Cure-All",
+    "weight": 0.8,
+    "statusEffect": ["+Full Stamina", "-All Status"],
+    "type": "Status Effect",
+    "rarity": "Epic",
+    "range": 0
+  },
+  {
+    "name": "Cursed Skull",
+    "weight": 1.2,
+    "statusEffect": ["+Revive Team", "-Death"],
+    "type": "Status Effect",
+    "rarity": "Legendary",
+    "range": 0
+  },
+  {
+    "name": "Campfire",
+    "weight": 2.5,
+    "statusEffect": ["+Morale"],
+    "type": "Status Effect",
+    "rarity": "Uncommon",
+    "range": 4
+  },
+  {
+    "name": "Flare",
+    "weight": 0.6,
+    "statusEffect": ["-Frost", "+Light"],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 8
+  },
+  {
+    "name": "Faerie Lantern",
+    "weight": 1.8,
+    "statusEffect": ["-All Status"],
+    "type": "Status Effect",
+    "rarity": "Epic",
+    "range": 5
+  },
+  {
+    "name": "First-Aid Kit",
+    "weight": 1.0,
+    "statusEffect": ["+Full Health"],
+    "type": "Status Effect",
+    "rarity": "Rare",
+    "range": 0
+  },
+  {
+    "name": "Heat Pack",
+    "weight": 0.4,
+    "statusEffect": ["-Frost"],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Lantern",
+    "weight": 1.5,
+    "statusEffect": ["+Light", "-Frost"],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 4
+  },
+  {
+    "name": "Magic Bean",
+    "weight": 0.3,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Rare",
+    "range": 25
+  },
+  {
+    "name": "Pirate's Compass",
+    "weight": 0.7,
+    "statusEffect": ["+Treasure Direction"],
+    "type": "Travel",
+    "rarity": "Epic",
+    "range": 0
+  },
+  {
+    "name": "Piton",
+    "weight": 0.8,
+    "statusEffect": ["+Rest Point"],
+    "type": "Travel",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Portable Stove",
+    "weight": 2.0,
+    "statusEffect": ["-Frost", "+Cooking"],
+    "type": "Status Effect",
+    "rarity": "Uncommon",
+    "range": 2
+  },
+  {
+    "name": "Rope Cannon",
+    "weight": 3.5,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Uncommon",
+    "range": 15
+  },
+  {
+    "name": "Rope Spool",
+    "weight": 2.0,
+    "statusEffect": [],
+    "type": "Travel",
+    "rarity": "Common",
+    "range": 12
+  },
+  {
+    "name": "Remedy Fungus",
+    "weight": 0.6,
+    "statusEffect": ["+Healing Spores"],
+    "type": "Status Effect",
+    "rarity": "Uncommon",
+    "range": 6
+  },
+  {
+    "name": "Scout Effigy",
+    "weight": 1.0,
+    "statusEffect": ["+Revive One"],
+    "type": "Status Effect",
+    "rarity": "Rare",
+    "range": 0
+  },
+  {
+    "name": "Scroll",
+    "weight": 0.1,
+    "statusEffect": [],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Shelf Shroom",
+    "weight": 0.4,
+    "statusEffect": ["+Platform"],
+    "type": "Travel",
+    "rarity": "Uncommon",
+    "range": 3
+  },
+  {
+    "name": "Torn Page",
+    "weight": 0.1,
+    "statusEffect": [],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 0
   }
 ]

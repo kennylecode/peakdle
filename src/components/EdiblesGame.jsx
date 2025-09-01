@@ -77,7 +77,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
 
     const newGuesses = [currentGuess, ...guesses];
     setGuesses(newGuesses);
-    setAvailableEdibles(availableEdibles.filter({} = (edible) => edible.name !== currentGuess.name))
+    setAvailableEdibles(availableEdibles.filter((edible) => edible.name !== currentGuess.name))
 
     // Check if won
     if (currentGuess.name === targetEdible.name) {
