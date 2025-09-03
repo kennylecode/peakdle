@@ -1,250 +1,495 @@
 [
   {
     "name": "Antidote",
-    "weight": 0.5,
-    "statusEffect": ["-Poison"],
+    "imageUrl": "antidote.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Heat",
+      "-Poison"
+    ],
     "type": "Status Effect",
-    "rarity": "Uncommon",
+    "rarity": "Common",
     "range": 0
   },
   {
-    "name": "Anti-Rope Spool",
-    "weight": 2.0,
+    "name": "Backpack",
+    "imageUrl": "backpack.png",
+    "weight": 0,
     "statusEffect": [],
-    "type": "Travel",
-    "rarity": "Rare",
-    "range": 12
-  },
-  {
-    "name": "Ancient Effigy",
-    "weight": 1.0,
-    "statusEffect": ["+Revive"],
-    "type": "Status Effect",
-    "rarity": "Legendary",
-    "range": 5
-  },
-  {
-    "name": "Anti-Rope Cannon",
-    "weight": 3.0,
-    "statusEffect": [],
-    "type": "Travel",
-    "rarity": "Epic",
-    "range": 15
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
   },
   {
     "name": "Bandages",
-    "weight": 0.3,
-    "statusEffect": ["+Health"],
+    "imageUrl": "bandages.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Injury"
+    ],
     "type": "Status Effect",
     "rarity": "Common",
     "range": 0
   },
   {
     "name": "Bing Bong",
-    "weight": 0.8,
+    "imageUrl": "bing-bong.png",
+    "weight": 5,
     "statusEffect": [],
-    "type": "Status Effect",
-    "rarity": "Common",
+    "type": "Other",
+    "rarity": "Base",
     "range": 0
   },
   {
-    "name": "Banana Peel",
-    "weight": 0.2,
-    "statusEffect": ["+Slip"],
-    "type": "Status Effect",
-    "rarity": "Common",
-    "range": 1
+    "name": "Binoculars",
+    "imageUrl": "binoculars.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 100
   },
   {
     "name": "Blowgun",
-    "weight": 1.2,
-    "statusEffect": ["+Sleep"],
+    "imageUrl": "blowgun.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Poison",
+      "-Injury",
+      "-Cold",
+      "-Hot",
+      "+Drowsy"
+    ],
     "type": "Status Effect",
-    "rarity": "Uncommon",
-    "range": 8
-  },
-  {
-    "name": "Bugle of Friendship",
-    "weight": 1.5,
-    "statusEffect": ["+Infinite Stamina"],
-    "type": "Status Effect",
-    "rarity": "Rare",
-    "range": 6
+    "rarity": "Common",
+    "range": 100
   },
   {
     "name": "Bugle",
-    "weight": 1.0,
+    "imageUrl": "bugle.png",
+    "weight": 0,
     "statusEffect": [],
-    "type": "Status Effect",
-    "rarity": "Common",
-    "range": 10
+    "type": "Other",
+    "rarity": "Base",
+    "range": 100
   },
   {
-    "name": "Chain Cannon",
-    "weight": 4.0,
+    "name": "Chain Launcher",
+    "imageUrl": "chain-launcher.png",
+    "weight": 2.5,
     "statusEffect": [],
-    "type": "Travel",
-    "rarity": "Rare",
-    "range": 20
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 50
   },
   {
     "name": "Compass",
-    "weight": 0.5,
-    "statusEffect": ["+Direction"],
-    "type": "Travel",
+    "imageUrl": "compass.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
+  },
+  {
+    "name": "First Aid Kit",
+    "imageUrl": "first-aid-kit.png",
+    "weight": 5,
+    "statusEffect": [
+      "-Poison",
+      "-Injury"
+    ],
+    "type": "Status Effect",
     "rarity": "Common",
     "range": 0
-  },
-  {
-    "name": "Cure-All",
-    "weight": 0.8,
-    "statusEffect": ["+Full Stamina", "-All Status"],
-    "type": "Status Effect",
-    "rarity": "Epic",
-    "range": 0
-  },
-  {
-    "name": "Cursed Skull",
-    "weight": 1.2,
-    "statusEffect": ["+Revive Team", "-Death"],
-    "type": "Status Effect",
-    "rarity": "Legendary",
-    "range": 0
-  },
-  {
-    "name": "Campfire",
-    "weight": 2.5,
-    "statusEffect": ["+Morale"],
-    "type": "Status Effect",
-    "rarity": "Uncommon",
-    "range": 4
   },
   {
     "name": "Flare",
-    "weight": 0.6,
-    "statusEffect": ["-Frost", "+Light"],
-    "type": "Status Effect",
+    "imageUrl": "flare.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
     "rarity": "Common",
-    "range": 8
+    "range": 0
   },
   {
-    "name": "Faerie Lantern",
-    "weight": 1.8,
-    "statusEffect": ["-All Status"],
-    "type": "Status Effect",
-    "rarity": "Epic",
-    "range": 5
+    "name": "Flying Disc",
+    "imageUrl": "flying-disc.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 100
   },
   {
-    "name": "First-Aid Kit",
-    "weight": 1.0,
-    "statusEffect": ["+Full Health"],
-    "type": "Status Effect",
-    "rarity": "Rare",
+    "name": "Guidebook",
+    "imageUrl": "guidebook.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
     "range": 0
   },
   {
     "name": "Heat Pack",
-    "weight": 0.4,
-    "statusEffect": ["-Frost"],
+    "imageUrl": "heat-pack.png",
+    "weight": 0,
+    "statusEffect": [
+      "-Cold"
+    ],
     "type": "Status Effect",
     "rarity": "Common",
     "range": 0
   },
   {
     "name": "Lantern",
-    "weight": 1.5,
-    "statusEffect": ["+Light", "-Frost"],
+    "imageUrl": "lantern.png",
+    "weight": 5,
+    "statusEffect": [
+      "-Cold"
+    ],
     "type": "Status Effect",
     "rarity": "Common",
-    "range": 4
+    "range": 4.5
   },
   {
     "name": "Magic Bean",
-    "weight": 0.3,
+    "imageUrl": "magic-bean.png",
+    "weight": 2.5,
     "statusEffect": [],
-    "type": "Travel",
-    "rarity": "Rare",
-    "range": 25
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 20
+  },
+  {
+    "name": "Parasol",
+    "imageUrl": "parasol.png",
+    "weight": 2.5,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Uncommon",
+    "range": 0
   },
   {
     "name": "Pirate's Compass",
-    "weight": 0.7,
-    "statusEffect": ["+Treasure Direction"],
-    "type": "Travel",
-    "rarity": "Epic",
+    "imageUrl": "pirates-compass.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Common",
     "range": 0
   },
   {
     "name": "Piton",
-    "weight": 0.8,
-    "statusEffect": ["+Rest Point"],
-    "type": "Travel",
+    "imageUrl": "piton.png",
+    "weight": 2.5,
+    "statusEffect": [],
+    "type": "Traversal",
     "rarity": "Common",
     "range": 0
   },
   {
     "name": "Portable Stove",
-    "weight": 2.0,
-    "statusEffect": ["-Frost", "+Cooking"],
-    "type": "Status Effect",
-    "rarity": "Uncommon",
+    "imageUrl": "portable-stove.png",
+    "weight": 5,
+    "statusEffect": [
+      "-Cold"
+    ],
+    "type": "Other",
+    "rarity": "Common",
     "range": 2
   },
   {
+    "name": "Remedy Fungus",
+    "imageUrl": "remedy-fungus.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Injury"
+    ],
+    "type": "Status Effect",
+    "rarity": "Common",
+    "range": 5
+  },
+  {
     "name": "Rope Cannon",
-    "weight": 3.5,
+    "imageUrl": "rope-cannon.png",
+    "weight": 2.5,
     "statusEffect": [],
-    "type": "Travel",
-    "rarity": "Uncommon",
-    "range": 15
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 30
   },
   {
     "name": "Rope Spool",
-    "weight": 2.0,
+    "imageUrl": "rope-spool.png",
+    "weight": 2.5,
     "statusEffect": [],
-    "type": "Travel",
+    "type": "Traversal",
     "rarity": "Common",
-    "range": 12
+    "range": 12.5
   },
   {
-    "name": "Remedy Fungus",
-    "weight": 0.6,
-    "statusEffect": ["+Healing Spores"],
-    "type": "Status Effect",
-    "rarity": "Uncommon",
-    "range": 6
-  },
-  {
-    "name": "Scout Effigy",
-    "weight": 1.0,
-    "statusEffect": ["+Revive One"],
-    "type": "Status Effect",
-    "rarity": "Rare",
+    "name": "Scout Cannon",
+    "imageUrl": "scout-cannon.png",
+    "weight": 15,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Common",
     "range": 0
   },
   {
     "name": "Scroll",
-    "weight": 0.1,
+    "imageUrl": "scroll.png",
+    "weight": 0,
     "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
+  },
+  {
+    "name": "Shelf Fungus",
+    "imageUrl": "shelf-fungus.png",
+    "weight": 2.5,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Sunscreen",
+    "imageUrl": "sunscreen.png",
+    "weight": 2.5,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Uncommon",
+    "range": 0
+  },
+  {
+    "name": "Torch",
+    "imageUrl": "torch.png",
+    "weight": 0,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
+  },
+  {
+    "name": "Ancient Idol",
+    "imageUrl": "ancient-idol.png",
+    "weight": 40,
+    "statusEffect": [],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 0
+  },
+  {
+    "name": "Anti-Rope Cannon",
+    "imageUrl": "anti-rope-cannon.png",
+    "weight": -2.5,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Mystical",
+    "range": 30
+  },
+  {
+    "name": "Anti-Rope Spool",
+    "imageUrl": "anti-rope-spool.png",
+    "weight": -2.5,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Mystical",
+    "range": 12.5
+  },
+  {
+    "name": "Bugle of Friendship",
+    "imageUrl": "bugle-friendship.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "+Stamina"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 35
+  },
+  {
+    "name": "Cure-All",
+    "imageUrl": "cure-all.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Poison",
+      "-Injury",
+      "-Drowsy",
+      "-Cold",
+      "-Heat",
+      "-Curse"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 0
+  },
+  {
+    "name": "Cursed Skull",
+    "imageUrl": "cursed-skull.png",
+    "weight": 5,
+    "statusEffect": [
+      "+Stamina"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 0
+  },
+  {
+    "name": "Faerie Lantern",
+    "imageUrl": "faerie-lantern.png",
+    "weight": 5,
+    "statusEffect": [
+      "-Heat",
+      "-Cold",
+      "-Poison",
+      "-Drowsy",
+      "-Injury"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 4.5
+  },
+  {
+    "name": "Pandora's Lunchbox",
+    "imageUrl": "pandoras-lunchbox.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Hunger",
+      "+Hunger",
+      "-Stamina",
+      "+Stamina",
+      "-Injury",
+      "+Injury",
+      "-Poison",
+      "+Poison",
+      "-Cold",
+      "+Cold",
+      "-Hot",
+      "+Hot",
+      "-Drowsy",
+      "+Drowsy",
+      "-Curse"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 0
+  },
+  {
+    "name": "Scout Effigy",
+    "imageUrl": "scout-effigy.png",
+    "weight": 5,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Mystical",
+    "range": 0
+  },
+  {
+    "name": "Scoutmaster's Bugle",
+    "imageUrl": "scoutmasters-bugle.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "+Stamina"
+    ],
+    "type": "Status Effect",
+    "rarity": "Mystical",
+    "range": 35
+  },
+  {
+    "name": "Big Lollipop",
+    "imageUrl": "big-lollipop.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Hunger",
+      "+Drowsy"
+    ],
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Energy Drink",
+    "imageUrl": "energy-drink.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "+Drowsy",
+      "-Hot"
+    ],
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Sports Drink",
+    "imageUrl": "sports-drink.png",
+    "weight": 2.5,
+    "statusEffect": [
+      "-Hot",
+      "+Stamina"
+    ],
     "type": "Status Effect",
     "rarity": "Common",
     "range": 0
   },
   {
-    "name": "Shelf Shroom",
-    "weight": 0.4,
-    "statusEffect": ["+Platform"],
-    "type": "Travel",
-    "rarity": "Uncommon",
-    "range": 3
-  },
-  {
-    "name": "Torn Page",
-    "weight": 0.1,
-    "statusEffect": [],
+    "name": "Dynamite",
+    "imageUrl": "dynamite.png",
+    "weight": 0,
+    "statusEffect": [
+      "+Injury"
+    ],
     "type": "Status Effect",
     "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Balloon",
+    "imageUrl": "balloon.png",
+    "weight": -5,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Common",
+    "range": 0
+  },
+  {
+    "name": "Balloon Bunch",
+    "imageUrl": "balloon-bunch.png",
+    "weight": -15,
+    "statusEffect": [],
+    "type": "Traversal",
+    "rarity": "Uncommon",
+    "range": 0
+  },
+  {
+    "name": "Conch",
+    "imageUrl": "conch.png",
+    "weight": 5,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
+  },
+  {
+    "name": "Cactus",
+    "imageUrl": "cactus.png",
+    "weight": 0,
+    "statusEffect": [
+      "+Thorned"
+    ],
+    "type": "Other",
+    "rarity": "Base",
+    "range": 0
+  },
+  {
+    "name": "Strange Gem",
+    "imageUrl": "strange-gem.png",
+    "weight": 2.5,
+    "statusEffect": [],
+    "type": "Other",
+    "rarity": "Base",
     "range": 0
   }
 ]

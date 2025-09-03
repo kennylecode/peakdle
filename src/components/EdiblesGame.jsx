@@ -318,11 +318,11 @@ const EdiblesGame = ({ onComplete, onBack }) => {
               <div className="stat-card header-card">
                 <h4>Stamina</h4>
               </div>
-              <div className="stat-card header-card">
-                <h4>Status Effects</h4>
+              <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned">
+                <h4>Status Effects (?)</h4>
               </div>
-              <div className="stat-card header-card">
-                <h4>Locations</h4>
+              <div className="stat-card header-card" title="Shore, Tropics, Alpine, Mesa, Caldera, Kiln">
+                <h4>Locations (?)</h4>
               </div>
             </div>
           </div>

@@ -254,14 +254,14 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
               <div className="stat-card header-card">
                 <h4>Weight</h4>
               </div>
-              <div className="stat-card header-card">
-                <h4>Status Effects</h4>
+              <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned, Curse">
+                <h4>Status Effects (?)</h4>
               </div>
-              <div className="stat-card header-card">
-                <h4>Type</h4>
+              <div className="stat-card header-card" title="Status Effect, Traversal, Other">
+                <h4>Type (?)</h4>
               </div>
-              <div className="stat-card header-card">
-                <h4>Rarity</h4>
+              <div className="stat-card header-card" title="Base, Common, Uncommon, Mystical">
+                <h4>Rarity (?)</h4>
               </div>
               <div className="stat-card header-card">
                 <h4>Range</h4>

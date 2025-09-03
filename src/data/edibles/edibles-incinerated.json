@@ -95,7 +95,7 @@
     "weight": 2.5,
     "stamina": 0,
     "statusEffect": [
-      "+Health",
+      "-Injury",
       "+Poison"
     ],
     "location": [
@@ -224,7 +224,7 @@
     "stamina": 35,
     "statusEffect": [
       "-Hot",
-      "+Health",
+      "-Injury",
       "+Poison"
     ],
     "location": [
@@ -271,7 +271,7 @@
     "stamina": 0,
     "statusEffect": [
       "-Poison",
-      "+Health",
+      "-Injury",
       "+Poison"
     ],
     "location": [
@@ -627,7 +627,7 @@
     "stamina": 0,
     "statusEffect": [
       "+Thorned",
-      "+Health",
+      "-Injury",
       "+Poison"
     ],
     "location": [
