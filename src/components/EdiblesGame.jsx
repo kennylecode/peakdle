@@ -264,7 +264,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
                       }}
                     >
                       <img
-                        src={edible.imageUrl ? srcPath + edible.imageUrl : null}
+                        src={edible.imagePath ? srcPath + edible.imagePath : null}
                         alt={edible.name}
                       />
                       <span>{edible.name}</span>

@@ -1,16 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
+import cosmeticsData from '../data/cosmetics.json';
 
 const BadgesGame = ({ onComplete, onBack }) => {
+  const badgePath = "images/badges/";
+  const cosmeticPath = "images/cosmetics/";
+
   const [targetBadge, setTargetBadge] = useState(null);
   const [currentZoomLevel, setCurrentZoomLevel] = useState(5);
   const [guesses, setGuesses] = useState([]);
-  const [currentGuess, setCurrentGuess] = useState('');
-  const [gameWon, setGameWon] = useState(false);
-  const [gameLost, setGameLost] = useState(false);
-  const [maxGuesses] = useState(6);
+  const [badgeGameWon, setBadgeGameWon] = useState(false);
+  const [cosmeticGameWon, setCosmeticGameWon] = useState(false);
   const [outfitGuessed, setOutfitGuessed] = useState(false);
   const [selectedOutfit, setSelectedOutfit] = useState(null);
+  const [badgeDropdownOpen, setBadgeDropdownOpen] = useState(false);
+  const [cosmeticDropdownOpen, setCosmeticDropdownOpen] = useState(false);
+  const [badgeFilterText, setBadgeFilterText] = useState('');
+  const [cosmeticFilterText, setCosmeticFilterText] = useState('');
+  const badgeDropdownRef = useRef(null);
+  const cosmeticDropdownRef = useRef(null);
+  const badgeInputRef = useRef(null);
+  const cosmeticInputRef = useRef(null);
 
   useEffect(() => {
     // Select a random badge as the target
@@ -18,48 +28,68 @@ const BadgesGame = ({ onComplete, onBack }) => {
     setTargetBadge(badgesData[randomIndex]);
   }, []);
 
-  const handleGuess = () => {
-    if (!currentGuess.trim()) return;
+  // Handle clicking outside badge dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (badgeDropdownRef.current && !badgeDropdownRef.current.contains(event.target)) {
+        setBadgeDropdownOpen(false);
+        setBadgeFilterText('');
+      }
+    };
 
-    const guessedBadge = badgesData.find(
-      badge => badge.name.toLowerCase() === currentGuess.toLowerCase()
-    );
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
-    if (guessedBadge) {
-      const newGuess = {
-        name: guessedBadge.name,
-        correct: guessedBadge.name === targetBadge.name
-      };
+  // Handle clicking outside cosmetic dropdown to close it
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (cosmeticDropdownRef.current && !cosmeticDropdownRef.current.contains(event.target)) {
+        setCosmeticDropdownOpen(false);
+        setCosmeticFilterText('');
+      }
+    };
 
-      const newGuesses = [...guesses, newGuess];
-      setGuesses(newGuesses);
-      setCurrentGuess('');
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
+  // Focus badge input when component mounts
+  useEffect(() => {
+    if (badgeInputRef.current) {
+      badgeInputRef.current.focus();
+    }
+  }, []);
+
+  const handleBadgeGuess = (guessedBadge) => {
+    if (!guessedBadge) return;
+
+    const newGuess = {
+      name: guessedBadge.name,
+      correct: guessedBadge.name === targetBadge.name
+    };
+
+    const newGuesses = [...guesses, newGuess];
+    setGuesses(newGuesses);
+
+    // Check if won
+    if (guessedBadge.name === targetBadge.name) {
+      setBadgeGameWon(true);
+      // Don't complete yet - need to guess outfit
+    } else {
       // Zoom out the image
-      if (newGuesses.length < maxGuesses) {
-        setCurrentZoomLevel(Math.max(1, 5 - newGuesses.length));
-      }
-
-      // Check if won
-      if (guessedBadge.name === targetBadge.name) {
-        setGameWon(true);
-        // Don't complete yet - need to guess outfit
-      } else if (newGuesses.length >= maxGuesses) {
-        setGameLost(true);
-        onComplete({
-          mode: 'badges',
-          won: false,
-          guesses: maxGuesses,
-          target: targetBadge.name
-        });
-      }
+      setCurrentZoomLevel(currentZoomLevel + 1); 
     }
   };
 
-  const handleOutfitGuess = (outfit) => {
-    setSelectedOutfit(outfit);
-    const correct = outfit === targetBadge.outfitReward;
-    
+  const handleCosmeticGuess = (cosmetic) => {
+    setSelectedOutfit(cosmetic.name);
+    const correct = cosmetic.name === targetBadge.cosmeticReward;
+
     if (correct) {
       onComplete({
         mode: 'badges',
@@ -73,6 +103,26 @@ const BadgesGame = ({ onComplete, onBack }) => {
     }
   };
 
+  // Get filtered badges based on search text
+  const getFilteredBadges = () => {
+    if (!badgeFilterText.trim()) {
+      return badgesData;
+    }
+    return badgesData.filter(badge =>
+      badge.name.toLowerCase().includes(badgeFilterText.toLowerCase())
+    );
+  };
+
+  // Get filtered cosmetics based on search text
+  const getFilteredCosmetics = () => {
+    if (!cosmeticFilterText.trim()) {
+      return cosmeticsData;
+    }
+    return cosmeticsData.filter(cosmetic =>
+      cosmetic.name.toLowerCase().includes(cosmeticFilterText.toLowerCase())
+    );
+  };
+
   const getImageStyle = () => {
     const scale = currentZoomLevel / 5;
     return {
@@ -84,31 +134,6 @@ const BadgesGame = ({ onComplete, onBack }) => {
       borderRadius: '10px',
       boxShadow: '0 5px 15px rgba(0,0,0,0.2)'
     };
-  };
-
-  const getPlaceholderImage = () => {
-    // Create a placeholder image since we don't have actual images
-    const canvas = document.createElement('canvas');
-    canvas.width = 400;
-    canvas.height = 300;
-    const ctx = canvas.getContext('2d');
-    
-    // Create a gradient background
-    const gradient = ctx.createLinearGradient(0, 0, 400, 300);
-    gradient.addColorStop(0, '#667eea');
-    gradient.addColorStop(1, '#764ba2');
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, 400, 300);
-    
-    // Add text
-    ctx.fillStyle = 'white';
-    ctx.font = 'bold 24px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText(targetBadge?.name || 'Badge', 200, 150);
-    ctx.font = '16px Arial';
-    ctx.fillText(`Zoom Level: ${currentZoomLevel}/5`, 200, 180);
-    
-    return canvas.toDataURL();
   };
 
   if (!targetBadge) return <div>Loading...</div>;
@@ -131,8 +156,8 @@ const BadgesGame = ({ onComplete, onBack }) => {
           ← Back to Menu
         </button>
         <h2>Badges Challenge</h2>
-        <p>Guess the badge from the zoomed image, then match the outfit!</p>
-        <p>Target: {gameWon || gameLost ? targetBadge.name : '???'}</p>
+        <p>Guess the badge from the zoomed image, then match the cosmetic reward!</p>
+        <p>Target: {badgeGameWon ? targetBadge.name : '???'}</p>
       </div>
 
       <div className="game-board">
@@ -140,30 +165,71 @@ const BadgesGame = ({ onComplete, onBack }) => {
           <h3>Badge Image (Zoom Level: {currentZoomLevel}/5)</h3>
           <div style={{ overflow: 'hidden', maxWidth: '400px', margin: '0 auto' }}>
             <img
-              src={getPlaceholderImage()}
+              src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
               alt="Badge"
               style={getImageStyle()}
               className="badge-image"
             />
           </div>
-          
-          <p style={{ marginTop: '15px', color: '#718096' }}>
-            {targetBadge.description}
-          </p>
         </div>
 
-        {!gameWon && !gameLost && (
+        {!badgeGameWon && (
           <div className="guess-input">
-            <input
-              type="text"
-              value={currentGuess}
-              onChange={(e) => setCurrentGuess(e.target.value)}
-              placeholder="Enter badge name..."
-              onKeyPress={(e) => e.key === 'Enter' && handleGuess()}
-            />
-            <button onClick={handleGuess} disabled={!currentGuess.trim()}>
-              Guess
-            </button>
+            <div className="custom-dropdown" ref={badgeDropdownRef}>
+              <div
+                className="dropdown-header"
+                onClick={() => {
+                  if (!badgeDropdownOpen) {
+                    setBadgeDropdownOpen(true);
+                  }
+                }}
+              >
+                <input
+                  ref={badgeInputRef}
+                  type="text"
+                  placeholder="Search badges..."
+                  value={badgeFilterText}
+                  onChange={(e) => {
+                    setBadgeFilterText(e.target.value);
+                    if (!badgeDropdownOpen) setBadgeDropdownOpen(true);
+                  }}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') {
+                      setBadgeDropdownOpen(false);
+                      setBadgeFilterText('');
+                    } else if (e.key === 'ArrowDown' && !badgeDropdownOpen) {
+                      setBadgeDropdownOpen(true);
+                    }
+                  }}
+                  className="dropdown-input"
+                />
+                <span>▼</span>
+              </div>
+
+              {badgeDropdownOpen && (
+                <div className="dropdown-options">
+                  {getFilteredBadges().map((badge) => (
+                    <div
+                      key={badge.name}
+                      className="dropdown-option"
+                      onClick={() => {
+                        setBadgeDropdownOpen(false);
+                        setBadgeFilterText('');
+                        handleBadgeGuess(badge);
+                      }}
+                    >
+                      <span>{badge.name}</span>
+                      <span></span>
+                    </div>
+                  ))}
+                  {getFilteredBadges().length === 0 && badgeFilterText.trim() && (
+                    <div className="no-results-message">
+                      No badges found matching "{badgeFilterText}"
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         )}
 
@@ -189,64 +255,103 @@ const BadgesGame = ({ onComplete, onBack }) => {
           </div>
         )}
 
-        {gameWon && !outfitGuessed && (
+        {badgeGameWon && !outfitGuessed && (
           <div className="outfit-guess">
-            <h4>🎉 Great! You found the badge! Now guess the outfit reward:</h4>
-            <p style={{ marginBottom: '15px' }}>Which outfit goes with the "{targetBadge.name}" badge?</p>
-            
-            <div className="outfit-options">
-              {badgesData.map((badge) => (
+            <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
+            <p style={{ marginBottom: '15px' }}>Which cosmetic goes with the "{targetBadge.name}" badge?</p>
+
+            <div className="guess-input">
+              <div className="custom-dropdown" ref={cosmeticDropdownRef}>
                 <div
-                  key={badge.id}
-                  className={`outfit-option ${selectedOutfit === badge.outfitReward ? 'selected' : ''}`}
-                  onClick={() => handleOutfitGuess(badge.outfitReward)}
+                  className="dropdown-header"
+                  onClick={() => {
+                    if (!cosmeticDropdownOpen) {
+                      setCosmeticDropdownOpen(true);
+                    }
+                  }}
                 >
-                  {badge.outfitReward}
+                  <input
+                    ref={cosmeticInputRef}
+                    type="text"
+                    placeholder="Search cosmetics..."
+                    value={cosmeticFilterText}
+                    onChange={(e) => {
+                      setCosmeticFilterText(e.target.value);
+                      if (!cosmeticDropdownOpen) setCosmeticDropdownOpen(true);
+                    }}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Escape') {
+                        setCosmeticDropdownOpen(false);
+                        setCosmeticFilterText('');
+                      } else if (e.key === 'ArrowDown' && !cosmeticDropdownOpen) {
+                        setCosmeticDropdownOpen(true);
+                      }
+                    }}
+                    className="dropdown-input"
+                  />
+                  <span>▼</span>
                 </div>
-              ))}
+
+                {cosmeticDropdownOpen && (
+                  <div className="dropdown-options">
+                    {getFilteredCosmetics().map((cosmetic) => (
+                      <div
+                        key={cosmetic.name}
+                        className="dropdown-option"
+                        onClick={() => {
+                          setCosmeticDropdownOpen(false);
+                          setCosmeticFilterText('');
+                          handleCosmeticGuess(cosmetic);
+                        }}
+                      >
+                        <img
+                        src={cosmetic.imagePath ? cosmeticPath + cosmetic.imagePath : null}
+                        alt={cosmetic.name}
+                        />
+                        <span>{cosmetic.name}</span>
+                        <span></span>
+                      </div>
+                    ))}
+                    {getFilteredCosmetics().length === 0 && cosmeticFilterText.trim() && (
+                      <div className="no-results-message">
+                        No cosmetics found matching "{cosmeticFilterText}"
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
 
         {outfitGuessed && (
           <div className="outfit-guess">
-            <h4>Outfit Guessed!</h4>
+            <h4>Cosmetic Guessed!</h4>
             <div className="outfit-options">
-              {badgesData.map((badge) => (
+              {cosmeticsData.map((cosmetic) => (
                 <div
-                  key={badge.id}
+                  key={cosmetic.name}
                   className={`outfit-option ${
-                    badge.outfitReward === targetBadge.outfitReward
+                    cosmetic.name === targetBadge.cosmeticReward
                       ? 'correct'
-                      : selectedOutfit === badge.outfitReward
+                      : selectedOutfit === cosmetic.name
                       ? 'incorrect'
                       : ''
                   }`}
                 >
-                  {badge.outfitReward}
-                  {badge.outfitReward === targetBadge.outfitReward && ' ✓'}
-                  {selectedOutfit === badge.outfitReward && badge.outfitReward !== targetBadge.outfitReward && ' ✗'}
+                  {cosmetic.name}
+                  {cosmetic.name === targetBadge.cosmeticReward && ' ✓'}
+                  {selectedOutfit === cosmetic.name && cosmetic.name !== targetBadge.cosmeticReward && ' ✗'}
                 </div>
               ))}
             </div>
-            
+
             <div style={{ marginTop: '20px', textAlign: 'center' }}>
-              <p>The correct outfit was: <strong>{targetBadge.outfitReward}</strong></p>
+              <p>The correct cosmetic was: <strong>{targetBadge.cosmeticReward}</strong></p>
               <button className="new-game-btn" onClick={onBack}>
                 Play Again
               </button>
             </div>
-          </div>
-        )}
-
-        {gameLost && (
-          <div className="game-result lose">
-            <h3>😔 Game Over!</h3>
-            <p>The badge was: {targetBadge.name}</p>
-            <p>The outfit reward was: {targetBadge.outfitReward}</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Try Again
-            </button>
           </div>
         )}
       </div>

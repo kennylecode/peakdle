@@ -1,7 +1,7 @@
 [
   {
     "name": "Yellow Crispberry",
-    "imageUrl": "yellow-crispberry.png",
+    "imagePath": "yellow-crispberry.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -14,7 +14,7 @@
   },
   {
     "name": "Red Crispberry",
-    "imageUrl": "red-crispberry.png",
+    "imagePath": "red-crispberry.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -27,7 +27,7 @@
   },
   {
     "name": "Green Crispberry",
-    "imageUrl": "green-crispberry.png",
+    "imagePath": "green-crispberry.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -42,7 +42,7 @@
   },
   {
     "name": "Scorchberry",
-    "imageUrl": "scorchberry.png",
+    "imagePath": "scorchberry.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -56,7 +56,7 @@
   },
   {
     "name": "Yellow Clusterberry",
-    "imageUrl": "yellow-clusterberry.png",
+    "imagePath": "yellow-clusterberry.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -68,7 +68,7 @@
   },
   {
     "name": "Black Clusterberry",
-    "imageUrl": "black-clusterberry.png",
+    "imagePath": "black-clusterberry.png",
     "type": "Base",
     "hunger": 20,
     "weight": 2.5,
@@ -80,7 +80,7 @@
   },
   {
     "name": "Red Clusterberry",
-    "imageUrl": "red-clusterberry.png",
+    "imagePath": "red-clusterberry.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -94,7 +94,7 @@
   },
   {
     "name": "Green Clusterberry",
-    "imageUrl": "green-clusterberry.png",
+    "imagePath": "green-clusterberry.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -108,7 +108,7 @@
   },
   {
     "name": "Yellow Kingberry",
-    "imageUrl": "yellow-kingberry.png",
+    "imagePath": "yellow-kingberry.png",
     "type": "Base",
     "hunger": 30,
     "weight": 5,
@@ -122,7 +122,7 @@
   },
   {
     "name": "Green Kingberry",
-    "imageUrl": "green-kingberry.png",
+    "imagePath": "green-kingberry.png",
     "type": "Base",
     "hunger": 30,
     "weight": 5,
@@ -136,7 +136,7 @@
   },
   {
     "name": "Purple Kingberry",
-    "imageUrl": "purple-kingberry.png",
+    "imagePath": "purple-kingberry.png",
     "type": "Base",
     "hunger": 30,
     "weight": 5,
@@ -148,7 +148,7 @@
   },
   {
     "name": "Brown Berrynana",
-    "imageUrl": "brown-berrynana.png",
+    "imagePath": "brown-berrynana.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -160,7 +160,7 @@
   },
   {
     "name": "Blue Berrynana",
-    "imageUrl": "blue-berrynana.png",
+    "imagePath": "blue-berrynana.png",
     "type": "Base",
     "hunger": 30,
     "weight": 2.5,
@@ -172,7 +172,7 @@
   },
   {
     "name": "Pink Berrynana",
-    "imageUrl": "pink-berrynana.png",
+    "imagePath": "pink-berrynana.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -186,7 +186,7 @@
   },
   {
     "name": "Yellow Berrynana",
-    "imageUrl": "yellow-berrynana.png",
+    "imagePath": "yellow-berrynana.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -198,7 +198,7 @@
   },
   {
     "name": "Yellow Winterberry",
-    "imageUrl": "yellow-winterberry.png",
+    "imagePath": "yellow-winterberry.png",
     "type": "Base",
     "hunger": 30,
     "weight": 2.5,
@@ -214,7 +214,7 @@
   },
   {
     "name": "Orange Winterberry",
-    "imageUrl": "orange-winterberry.png",
+    "imagePath": "orange-winterberry.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -228,7 +228,7 @@
   },
   {
     "name": "Napberry",
-    "imageUrl": "napberry.png",
+    "imagePath": "napberry.png",
     "type": "Base",
     "hunger": 100,
     "weight": 2.5,
@@ -242,7 +242,7 @@
   },
   {
     "name": "Medicinal Root",
-    "imageUrl": "medicinal-root.png",
+    "imagePath": "medicinal-root.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -258,7 +258,7 @@
   },
   {
     "name": "Tick",
-    "imageUrl": "tick.png",
+    "imagePath": "tick.png",
     "type": "Base",
     "hunger": 20,
     "weight": 2.5,
@@ -270,7 +270,7 @@
   },
   {
     "name": "Egg",
-    "imageUrl": "egg.png",
+    "imagePath": "egg.png",
     "type": "Base",
     "hunger": 15,
     "weight": 5,
@@ -282,7 +282,7 @@
   },
   {
     "name": "Chicken",
-    "imageUrl": "chicken.png",
+    "imagePath": "chicken.png",
     "type": "Base",
     "hunger": 45,
     "weight": 5,
@@ -294,7 +294,7 @@
   },
   {
     "name": "Marshmallow",
-    "imageUrl": "marshmallow.png",
+    "imagePath": "marshmallow.png",
     "type": "Base",
     "hunger": 20,
     "weight": 2.5,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Half Coconut",
-    "imageUrl": "half-coconut.png",
+    "imagePath": "half-coconut.png",
     "type": "Base",
     "hunger": 10,
     "weight": 5,
@@ -326,7 +326,7 @@
   },
   {
     "name": "Honeycomb",
-    "imageUrl": "honeycomb.png",
+    "imagePath": "honeycomb.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -338,7 +338,7 @@
   },
   {
     "name": "Weird Shroom",
-    "imageUrl": "weird-shroom.png",
+    "imagePath": "weird-shroom.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -352,7 +352,7 @@
   },
   {
     "name": "Button Shroom",
-    "imageUrl": "button-shroom.png",
+    "imagePath": "button-shroom.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -366,7 +366,7 @@
   },
   {
     "name": "Bugle Shroom",
-    "imageUrl": "bugle-shroom.png",
+    "imagePath": "bugle-shroom.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -380,7 +380,7 @@
   },
   {
     "name": "Cluster Shroom",
-    "imageUrl": "cluster-shroom.png",
+    "imagePath": "cluster-shroom.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -394,7 +394,7 @@
   },
   {
     "name": "Chubby Shroom",
-    "imageUrl": "chubby-shroom.png",
+    "imagePath": "chubby-shroom.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -408,7 +408,7 @@
   },
   {
     "name": "Poisonous Button Shroom",
-    "imageUrl": "poisonous-button-shroom.png",
+    "imagePath": "poisonous-button-shroom.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -424,7 +424,7 @@
   },
   {
     "name": "Poisonous Bugle Shroom",
-    "imageUrl": "poisonous-bugle-shroom.png",
+    "imagePath": "poisonous-bugle-shroom.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -440,7 +440,7 @@
   },
   {
     "name": "Poisonous Cluster Shroom",
-    "imageUrl": "poisonous-cluster-shroom.png",
+    "imagePath": "poisonous-cluster-shroom.png",
     "type": "Base",
     "hunger": 5,
     "weight": 2.5,
@@ -456,7 +456,7 @@
   },
   {
     "name": "Trail Mix",
-    "imageUrl": "trail-mix.png",
+    "imagePath": "trail-mix.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -473,7 +473,7 @@
   },
   {
     "name": "Granola Bar",
-    "imageUrl": "granola-bar.png",
+    "imagePath": "granola-bar.png",
     "type": "Base",
     "hunger": 15,
     "weight": 2.5,
@@ -490,7 +490,7 @@
   },
   {
     "name": "Airline Food",
-    "imageUrl": "airline-food.png",
+    "imagePath": "airline-food.png",
     "type": "Base",
     "hunger": 40,
     "weight": 2.5,
@@ -507,7 +507,7 @@
   },
   {
     "name": "Scout Cookies",
-    "imageUrl": "scout-cookies.png",
+    "imagePath": "scout-cookies.png",
     "type": "Base",
     "hunger": 40,
     "weight": 2.5,
@@ -524,7 +524,7 @@
   },
   {
     "name": "Aloe Vera",
-    "imageUrl": "aloe-vera.png",
+    "imagePath": "aloe-vera.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -538,7 +538,7 @@
   },
   {
     "name": "Red Prickleberry",
-    "imageUrl": "red-prickleberry.png",
+    "imagePath": "red-prickleberry.png",
     "type": "Base",
     "hunger": 10,
     "weight": 2.5,
@@ -552,7 +552,7 @@
   },
   {
     "name": "Golden Prickleberry",
-    "imageUrl": "golden-prickleberry.png",
+    "imagePath": "golden-prickleberry.png",
     "type": "Base",
     "hunger": 20,
     "weight": 2.5,

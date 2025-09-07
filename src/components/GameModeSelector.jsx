@@ -6,19 +6,16 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
       id: 'edibles',
       name: 'Edibles',
       description: 'Guess the edible item based on its stats: hunger, weight, stamina, status effects, and location.',
-      stats: ['Hunger', 'Weight', 'Stamina', 'Status Effects', 'Location']
     },
     {
       id: 'equipments',
       name: 'Equipments',
       description: 'Identify the equipment piece using its stats: weight, status effects, type, rarity, and range.',
-      stats: ['Weight', 'Status Effects', 'Type', 'Rarity', 'Range']
     },
     {
       id: 'badges',
       name: 'Badges',
       description: 'Guess the badge from a zoomed-in image that gradually reveals more as you guess. Then match it with the correct outfit reward.',
-      stats: ['Image Recognition', 'Outfit Matching']
     }
   ];
 
@@ -40,14 +37,6 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
           >
             <h3>{mode.name}</h3>
             <p>{mode.description}</p>
-            <div className="stats">
-              <h4>Stats to Guess:</h4>
-              <ul>
-                {mode.stats.map((stat, index) => (
-                  <li key={index}>{stat}</li>
-                ))}
-              </ul>
-            </div>
             {gameHistory.length > 0 && (
               <div style={{ marginTop: '15px', fontSize: '0.9rem', color: '#718096' }}>
                 Win Rate: {getWinRate(mode.id)}% ({gameHistory.filter(g => g.mode === mode.id).length} games)

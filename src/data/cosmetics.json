@@ -1,0 +1,406 @@
+[
+    {
+      "name": "Angry Brows",
+      "imagePath": "accessory-angry-brows.png"
+    },
+    {
+      "name": "Aviators",
+      "imagePath": "accessory-aviators.png"
+    },
+    {
+      "name": "Broken Glasses",
+      "imagePath": "accessory-broken-glasses.png"
+    },
+    {
+      "name": "Brows",
+      "imagePath": "accessory-brows.png"
+    },
+    {
+      "name": "Charlie",
+      "imagePath": "accessory-charlie.png"
+    },
+    {
+      "name": "Cheekbones",
+      "imagePath": "accessory-cheekbones.png"
+    },
+    {
+      "name": "Dot Brows",
+      "imagePath": "accessory-dot-brows.png"
+    },
+    {
+      "name": "Eyepatch",
+      "imagePath": "accessory-eyepatch.png"
+    },
+    {
+      "name": "Face Paint",
+      "imagePath": "accessory-face-paint.png"
+    },
+    {
+      "name": "Hair",
+      "imagePath": "accessory-hair.png"
+    },
+    {
+      "name": "Incognito Face",
+      "imagePath": "accessory-incognito-face.png"
+    },
+    {
+      "name": "Matrix Glasses",
+      "imagePath": "accessory-matrix-glasses.png"
+    },
+    {
+      "name": "Microbangs",
+      "imagePath": "accessory-microbangs.png"
+    },
+    {
+      "name": "Parted Hair",
+      "imagePath": "accessory-parted-hair.png"
+    },
+    {
+      "name": "Raised Brow",
+      "imagePath": "accessory-raised-brow.png"
+    },
+    {
+      "name": "Ribbon Bow",
+      "imagePath": "accessory-ribbon-bow.png"
+    },
+    {
+      "name": "Round Glasses",
+      "imagePath": "accessory-round-glasses.png"
+    },
+    {
+      "name": "Scar",
+      "imagePath": "accessory-scar.png"
+    },
+    {
+      "name": "Scar2",
+      "imagePath": "accessory-scar2.png"
+    },
+    {
+      "name": "Astronaut Helmet",
+      "imagePath": "astronaut-helmet.png"
+    },
+    {
+      "name": "Astronaut Outfit",
+      "imagePath": "astronaut-outfit.png"
+    },
+    {
+      "name": "Aviator Cap",
+      "imagePath": "aviator-cap.png"
+    },
+    {
+      "name": "Beret",
+      "imagePath": "beret.png"
+    },
+    {
+      "name": "Bing Bong Beanie",
+      "imagePath": "bing-bong-beanie.png"
+    },
+    {
+      "name": "Cap",
+      "imagePath": "cap.png"
+    },
+    {
+      "name": "Castaway Outfit Shorts",
+      "imagePath": "castaway-outfit-shorts.png"
+    },
+    {
+      "name": "Castaway Outfit Skirt",
+      "imagePath": "castaway-outfit-skirt.png"
+    },
+    {
+      "name": "Chef's Hat",
+      "imagePath": "chef-s-hat.png"
+    },
+    {
+      "name": "Cowboy Outfit",
+      "imagePath": "cowboy-outfit.png"
+    },
+    {
+      "name": "Crown",
+      "imagePath": "crown.png"
+    },
+    {
+      "name": "Desert Hat",
+      "imagePath": "desert-hat.png"
+    },
+    {
+      "name": "Eyes 2",
+      "imagePath": "eyes-2.png"
+    },
+    {
+      "name": "Almond Eyes",
+      "imagePath": "eyes-almond.png"
+    },
+    {
+      "name": "Angry Eyes",
+      "imagePath": "eyes-angry.png"
+    },
+    {
+      "name": "Basic Eyes",
+      "imagePath": "eyes-basic.png"
+    },
+    {
+      "name": "Concerned Eyes",
+      "imagePath": "eyes-concern.png"
+    },
+    {
+      "name": "Crying Eyes",
+      "imagePath": "eyes-cry.png"
+    },
+    {
+      "name": "Eyeliner",
+      "imagePath": "eyes-eyeliner.png"
+    },
+    {
+      "name": "Half Eyes",
+      "imagePath": "eyes-half.png"
+    },
+    {
+      "name": "Inverted Eyes",
+      "imagePath": "eyes-inverted.png"
+    },
+    {
+      "name": "Lashes",
+      "imagePath": "eyes-lashes.png"
+    },
+    {
+      "name": "Monster Eyes",
+      "imagePath": "eyes-monster.png"
+    },
+    {
+      "name": "Realistic Eyes",
+      "imagePath": "eyes-realistic.png"
+    },
+    {
+      "name": "Sad Eyes",
+      "imagePath": "eyes-sad.png"
+    },
+    {
+      "name": "Shine",
+      "imagePath": "eyes-shine.png"
+    },
+    {
+      "name": "Small Eyes",
+      "imagePath": "eyes-small.png"
+    },
+    {
+      "name": "Squint",
+      "imagePath": "eyes-squint.png"
+    },
+    {
+      "name": "Starry Eyes",
+      "imagePath": "eyes-starry.png"
+    },
+    {
+      "name": "Tired Eyes",
+      "imagePath": "eyes-tired.png"
+    },
+    {
+      "name": "Flower Garland",
+      "imagePath": "flower-garland.png"
+    },
+    {
+      "name": "Gallon Hat",
+      "imagePath": "gallon-hat.png"
+    },
+    {
+      "name": "Goat Horns",
+      "imagePath": "goat-horns.png"
+    },
+    {
+      "name": "Headband",
+      "imagePath": "headband.png"
+    },
+    {
+      "name": "Kril Hat",
+      "imagePath": "kril-hat.png"
+    },
+    {
+      "name": "Medic Helmet",
+      "imagePath": "medic-helmet.png"
+    },
+    {
+      "name": "Messenger Cap",
+      "imagePath": "messenger-cap.png"
+    },
+    {
+      "name": "Aggro",
+      "imagePath": "mouth-aggro.png"
+    },
+    {
+      "name": "Calarts",
+      "imagePath": "mouth-calarts.png"
+    },
+    {
+      "name": "Cat",
+      "imagePath": "mouth-cat.png"
+    },
+    {
+      "name": "Cheek",
+      "imagePath": "mouth-cheek.png"
+    },
+    {
+      "name": "Cringe",
+      "imagePath": "mouth-cringe.png"
+    },
+    {
+      "name": "Drool",
+      "imagePath": "mouth-drool.png"
+    },
+    {
+      "name": "Frown",
+      "imagePath": "mouth-frown.png"
+    },
+    {
+      "name": "Kissy",
+      "imagePath": "mouth-kissy.png"
+    },
+    {
+      "name": "Labu",
+      "imagePath": "mouth-labu.png"
+    },
+    {
+      "name": "Lips",
+      "imagePath": "mouth-lips.png"
+    },
+    {
+      "name": "Nonplussed",
+      "imagePath": "mouth-nonplussed.png"
+    },
+    {
+      "name": "O",
+      "imagePath": "mouth-o.png"
+    },
+    {
+      "name": "Smiley",
+      "imagePath": "mouth-smiley.png"
+    },
+    {
+      "name": "Smirk",
+      "imagePath": "mouth-smirk.png"
+    },
+    {
+      "name": "Squiggle",
+      "imagePath": "mouth-squiggle.png"
+    },
+    {
+      "name": "Teeth",
+      "imagePath": "mouth-teeth.png"
+    },
+    {
+      "name": "Tongue",
+      "imagePath": "mouth-tongue.png"
+    },
+    {
+      "name": "Triangle",
+      "imagePath": "mouth-triangle.png"
+    },
+    {
+      "name": "Vampire",
+      "imagePath": "mouth-vampire.png"
+    },
+    {
+      "name": "Mushroom Cap",
+      "imagePath": "mushroom-cap.png"
+    },
+    {
+      "name": "Ninja Headband",
+      "imagePath": "ninja-headband.png"
+    },
+    {
+      "name": "Outfit Shorts",
+      "imagePath": "outfit-shorts.png"
+    },
+    {
+      "name": "Outfit Skirt",
+      "imagePath": "outfit-skirt.png"
+    },
+    {
+      "name": "Pith Helmet",
+      "imagePath": "pith-helmet.png"
+    },
+    {
+      "name": "Propeller Hat",
+      "imagePath": "propeller-hat.png"
+    },
+    {
+      "name": "Racing Helmet",
+      "imagePath": "racing-helmet.png"
+    },
+    {
+      "name": "Russell's Outfit Shorts",
+      "imagePath": "russell-s-outfit-shorts.png"
+    },
+    {
+      "name": "Russell's Outfit Skirt",
+      "imagePath": "russell-s-outfit-skirt.png"
+    },
+    {
+      "name": "Sailor's Hat",
+      "imagePath": "sailor-s-hat.png"
+    },
+    {
+      "name": "Sailor's Outfit Shorts",
+      "imagePath": "sailor-s-outfit-shorts.png"
+    },
+    {
+      "name": "Sailor's Outfit Skirt",
+      "imagePath": "sailor-s-outfit-skirt.png"
+    },
+    {
+      "name": "School Uniform Shorts",
+      "imagePath": "school-uniform-shorts.png"
+    },
+    {
+      "name": "School Uniform Skirt",
+      "imagePath": "school-uniform-skirt.png"
+    },
+    {
+      "name": "Scoutmaster Outfit Shorts",
+      "imagePath": "scoutmaster-outfit-shorts.png"
+    },
+    {
+      "name": "Scoutmaster Outfit Skirt",
+      "imagePath": "scoutmaster-outfit-skirt.png"
+    },
+    {
+      "name": "Stetson Hat",
+      "imagePath": "stetson-hat.png"
+    },
+    {
+      "name": "Straw Hat",
+      "imagePath": "straw-hat.png"
+    },
+    {
+      "name": "Sun Hat",
+      "imagePath": "sun-hat.png"
+    },
+    {
+      "name": "Tropical Outfit Shorts",
+      "imagePath": "tropical-outfit-shorts.png"
+    },
+    {
+      "name": "Tropical Outfit Skirt",
+      "imagePath": "tropical-outfit-skirt.png"
+    },
+    {
+      "name": "Turtle Outfit Shorts",
+      "imagePath": "turtle-outfit-shorts.png"
+    },
+    {
+      "name": "Turtle Outfit Skirt",
+      "imagePath": "turtle-outfit-skirt.png"
+    },
+    {
+      "name": "Visor",
+      "imagePath": "visor.png"
+    },
+    {
+      "name": "Wizard Hat",
+      "imagePath": "wizard-hat.png"
+    },
+    {
+      "name": "Wolf Ears",
+      "imagePath": "wolf-ears.png"
+    }
+  ]

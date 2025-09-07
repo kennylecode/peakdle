@@ -1,7 +1,7 @@
 [
   {
     "name": "Cooked Yellow Crispberry",
-    "imageUrl": "yellow-crispberry.png",
+    "imagePath": "yellow-crispberry.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -14,7 +14,7 @@
   },
   {
     "name": "Cooked Red Crispberry",
-    "imageUrl": "red-crispberry.png",
+    "imagePath": "red-crispberry.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -27,7 +27,7 @@
   },
   {
     "name": "Cooked Green Crispberry",
-    "imageUrl": "green-crispberry.png",
+    "imagePath": "green-crispberry.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -42,7 +42,7 @@
   },
   {
     "name": "Cooked Scorchberry",
-    "imageUrl": "scorchberry.png",
+    "imagePath": "scorchberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -56,7 +56,7 @@
   },
   {
     "name": "Cooked Yellow Clusterberry",
-    "imageUrl": "yellow-clusterberry.png",
+    "imagePath": "yellow-clusterberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -68,7 +68,7 @@
   },
   {
     "name": "Cooked Black Clusterberry",
-    "imageUrl": "black-clusterberry.png",
+    "imagePath": "black-clusterberry.png",
     "type": "Cooked",
     "hunger": 40,
     "weight": 2.5,
@@ -80,7 +80,7 @@
   },
   {
     "name": "Cooked Red Clusterberry",
-    "imageUrl": "red-clusterberry.png",
+    "imagePath": "red-clusterberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -94,7 +94,7 @@
   },
   {
     "name": "Cooked Green Clusterberry",
-    "imageUrl": "green-clusterberry.png",
+    "imagePath": "green-clusterberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -108,7 +108,7 @@
   },
   {
     "name": "Cooked Yellow Kingberry",
-    "imageUrl": "yellow-kingberry.png",
+    "imagePath": "yellow-kingberry.png",
     "type": "Cooked",
     "hunger": 60,
     "weight": 5,
@@ -122,7 +122,7 @@
   },
   {
     "name": "Cooked Green Kingberry",
-    "imageUrl": "green-kingberry.png",
+    "imagePath": "green-kingberry.png",
     "type": "Cooked",
     "hunger": 60,
     "weight": 5,
@@ -136,7 +136,7 @@
   },
   {
     "name": "Cooked Purple Kingberry",
-    "imageUrl": "purple-kingberry.png",
+    "imagePath": "purple-kingberry.png",
     "type": "Cooked",
     "hunger": 60,
     "weight": 5,
@@ -148,7 +148,7 @@
   },
   {
     "name": "Cooked Brown Berrynana",
-    "imageUrl": "brown-berrynana.png",
+    "imagePath": "brown-berrynana.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -160,7 +160,7 @@
   },
   {
     "name": "Cooked Blue Berrynana",
-    "imageUrl": "blue-berrynana.png",
+    "imagePath": "blue-berrynana.png",
     "type": "Cooked",
     "hunger": 60,
     "weight": 2.5,
@@ -172,7 +172,7 @@
   },
   {
     "name": "Cooked Pink Berrynana",
-    "imageUrl": "pink-berrynana.png",
+    "imagePath": "pink-berrynana.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -186,7 +186,7 @@
   },
   {
     "name": "Cooked Yellow Berrynana",
-    "imageUrl": "yellow-berrynana.png",
+    "imagePath": "yellow-berrynana.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -198,7 +198,7 @@
   },
   {
     "name": "Cooked Yellow Winterberry",
-    "imageUrl": "yellow-winterberry.png",
+    "imagePath": "yellow-winterberry.png",
     "type": "Cooked",
     "hunger": 60,
     "weight": 2.5,
@@ -214,7 +214,7 @@
   },
   {
     "name": "Cooked Orange Winterberry",
-    "imageUrl": "orange-winterberry.png",
+    "imagePath": "orange-winterberry.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -228,7 +228,7 @@
   },
   {
     "name": "Cooked Napberry",
-    "imageUrl": "napberry.png",
+    "imagePath": "napberry.png",
     "type": "Cooked",
     "hunger": 200,
     "weight": 2.5,
@@ -242,7 +242,7 @@
   },
   {
     "name": "Cooked Medicinal Root",
-    "imageUrl": "medicinal-root.png",
+    "imagePath": "medicinal-root.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -258,7 +258,7 @@
   },
   {
     "name": "Cooked Tick",
-    "imageUrl": "tick.png",
+    "imagePath": "tick.png",
     "type": "Cooked",
     "hunger": 40,
     "weight": 2.5,
@@ -270,7 +270,7 @@
   },
   {
     "name": "Cooked Egg",
-    "imageUrl": "egg.png",
+    "imagePath": "egg.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 5,
@@ -282,7 +282,7 @@
   },
   {
     "name": "Cooked Chicken",
-    "imageUrl": "chicken.png",
+    "imagePath": "chicken.png",
     "type": "Cooked",
     "hunger": 90,
     "weight": 5,
@@ -294,7 +294,7 @@
   },
   {
     "name": "Cooked Marshmallow",
-    "imageUrl": "marshmallow.png",
+    "imagePath": "marshmallow.png",
     "type": "Cooked",
     "hunger": 40,
     "weight": 2.5,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Cooked Half Coconut",
-    "imageUrl": "half-coconut.png",
+    "imagePath": "half-coconut.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 5,
@@ -326,7 +326,7 @@
   },
   {
     "name": "Cooked Honeycomb",
-    "imageUrl": "honeycomb.png",
+    "imagePath": "honeycomb.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -338,7 +338,7 @@
   },
   {
     "name": "Cooked Weird Shroom",
-    "imageUrl": "weird-shroom.png",
+    "imagePath": "weird-shroom.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -352,7 +352,7 @@
   },
   {
     "name": "Cooked Button Shroom",
-    "imageUrl": "button-shroom.png",
+    "imagePath": "button-shroom.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -366,7 +366,7 @@
   },
   {
     "name": "Cooked Bugle Shroom",
-    "imageUrl": "bugle-shroom.png",
+    "imagePath": "bugle-shroom.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -380,7 +380,7 @@
   },
   {
     "name": "Cooked Cluster Shroom",
-    "imageUrl": "cluster-shroom.png",
+    "imagePath": "cluster-shroom.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -394,7 +394,7 @@
   },
   {
     "name": "Cooked Chubby Shroom",
-    "imageUrl": "chubby-shroom.png",
+    "imagePath": "chubby-shroom.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -408,7 +408,7 @@
   },
   {
     "name": "Cooked Poisonous Button Shroom",
-    "imageUrl": "poisonous-button-shroom.png",
+    "imagePath": "poisonous-button-shroom.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -424,7 +424,7 @@
   },
   {
     "name": "Cooked Poisonous Bugle Shroom",
-    "imageUrl": "poisonous-bugle-shroom.png",
+    "imagePath": "poisonous-bugle-shroom.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -440,7 +440,7 @@
   },
   {
     "name": "Cooked Poisonous Cluster Shroom",
-    "imageUrl": "poisonous-cluster-shroom.png",
+    "imagePath": "poisonous-cluster-shroom.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -456,7 +456,7 @@
   },
   {
     "name": "Cooked Trail Mix",
-    "imageUrl": "trail-mix.png",
+    "imagePath": "trail-mix.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -473,7 +473,7 @@
   },
   {
     "name": "Cooked Granola Bar",
-    "imageUrl": "granola-bar.png",
+    "imagePath": "granola-bar.png",
     "type": "Cooked",
     "hunger": 30,
     "weight": 2.5,
@@ -490,7 +490,7 @@
   },
   {
     "name": "Cooked Airline Food",
-    "imageUrl": "airline-food.png",
+    "imagePath": "airline-food.png",
     "type": "Cooked",
     "hunger": 80,
     "weight": 2.5,
@@ -507,7 +507,7 @@
   },
   {
     "name": "Cooked Scout Cookies",
-    "imageUrl": "scout-cookies.png",
+    "imagePath": "scout-cookies.png",
     "type": "Cooked",
     "hunger": 80,
     "weight": 2.5,
@@ -524,7 +524,7 @@
   },
   {
     "name": "Cooked Scorpion",
-    "imageUrl": "cooked-scorpion.png",
+    "imagePath": "cooked-scorpion.png",
     "type": "Cooked",
     "hunger": 15,
     "weight": 2.5,
@@ -536,7 +536,7 @@
   },
   {
     "name": "Cooked Aloe Vera",
-    "imageUrl": "aloe-vera.png",
+    "imagePath": "aloe-vera.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -550,7 +550,7 @@
   },
   {
     "name": "Cooked Red Prickleberry",
-    "imageUrl": "red-prickleberry.png",
+    "imagePath": "red-prickleberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
@@ -564,7 +564,7 @@
   },
   {
     "name": "Cooked Golden Prickleberry",
-    "imageUrl": "golden-prickleberry.png",
+    "imagePath": "golden-prickleberry.png",
     "type": "Cooked",
     "hunger": 40,
     "weight": 2.5,

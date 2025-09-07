@@ -1,7 +1,7 @@
 [
   {
     "name": "Burnt Yellow Crispberry",
-    "imageUrl": "yellow-crispberry.png",
+    "imagePath": "yellow-crispberry.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -14,7 +14,7 @@
   },
   {
     "name": "Burnt Red Crispberry",
-    "imageUrl": "red-crispberry.png",
+    "imagePath": "red-crispberry.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -27,7 +27,7 @@
   },
   {
     "name": "Burnt Green Crispberry",
-    "imageUrl": "green-crispberry.png",
+    "imagePath": "green-crispberry.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -42,7 +42,7 @@
   },
   {
     "name": "Burnt Scorchberry",
-    "imageUrl": "scorchberry.png",
+    "imagePath": "scorchberry.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -56,7 +56,7 @@
   },
   {
     "name": "Burnt Yellow Clusterberry",
-    "imageUrl": "yellow-clusterberry.png",
+    "imagePath": "yellow-clusterberry.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -68,7 +68,7 @@
   },
   {
     "name": "Burnt Black Clusterberry",
-    "imageUrl": "black-clusterberry.png",
+    "imagePath": "black-clusterberry.png",
     "type": "Burnt",
     "hunger": 35,
     "weight": 2.5,
@@ -80,7 +80,7 @@
   },
   {
     "name": "Burnt Red Clusterberry",
-    "imageUrl": "red-clusterberry.png",
+    "imagePath": "red-clusterberry.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -94,7 +94,7 @@
   },
   {
     "name": "Burnt Green Clusterberry",
-    "imageUrl": "green-clusterberry.png",
+    "imagePath": "green-clusterberry.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -108,7 +108,7 @@
   },
   {
     "name": "Burnt Yellow Kingberry",
-    "imageUrl": "yellow-kingberry.png",
+    "imagePath": "yellow-kingberry.png",
     "type": "Burnt",
     "hunger": 55,
     "weight": 5,
@@ -122,7 +122,7 @@
   },
   {
     "name": "Burnt Green Kingberry",
-    "imageUrl": "green-kingberry.png",
+    "imagePath": "green-kingberry.png",
     "type": "Burnt",
     "hunger": 55,
     "weight": 5,
@@ -136,7 +136,7 @@
   },
   {
     "name": "Burnt Purple Kingberry",
-    "imageUrl": "purple-kingberry.png",
+    "imagePath": "purple-kingberry.png",
     "type": "Burnt",
     "hunger": 55,
     "weight": 5,
@@ -148,7 +148,7 @@
   },
   {
     "name": "Burnt Brown Berrynana",
-    "imageUrl": "brown-berrynana.png",
+    "imagePath": "brown-berrynana.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -160,7 +160,7 @@
   },
   {
     "name": "Burnt Blue Berrynana",
-    "imageUrl": "blue-berrynana.png",
+    "imagePath": "blue-berrynana.png",
     "type": "Burnt",
     "hunger": 55,
     "weight": 2.5,
@@ -172,7 +172,7 @@
   },
   {
     "name": "Burnt Pink Berrynana",
-    "imageUrl": "pink-berrynana.png",
+    "imagePath": "pink-berrynana.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -186,7 +186,7 @@
   },
   {
     "name": "Burnt Yellow Berrynana",
-    "imageUrl": "yellow-berrynana.png",
+    "imagePath": "yellow-berrynana.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -198,7 +198,7 @@
   },
   {
     "name": "Burnt Yellow Winterberry",
-    "imageUrl": "yellow-winterberry.png",
+    "imagePath": "yellow-winterberry.png",
     "type": "Burnt",
     "hunger": 55,
     "weight": 2.5,
@@ -214,7 +214,7 @@
   },
   {
     "name": "Burnt Orange Winterberry",
-    "imageUrl": "orange-winterberry.png",
+    "imagePath": "orange-winterberry.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -228,7 +228,7 @@
   },
   {
     "name": "Burnt Napberry",
-    "imageUrl": "napberry.png",
+    "imagePath": "napberry.png",
     "type": "Burnt",
     "hunger": 195,
     "weight": 2.5,
@@ -242,7 +242,7 @@
   },
   {
     "name": "Burnt Medicinal Root",
-    "imageUrl": "medicinal-root.png",
+    "imagePath": "medicinal-root.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -258,7 +258,7 @@
   },
   {
     "name": "Burnt Tick",
-    "imageUrl": "tick.png",
+    "imagePath": "tick.png",
     "type": "Burnt",
     "hunger": 35,
     "weight": 2.5,
@@ -270,7 +270,7 @@
   },
   {
     "name": "Burnt Egg",
-    "imageUrl": "egg.png",
+    "imagePath": "egg.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 5,
@@ -282,7 +282,7 @@
   },
   {
     "name": "Burnt Chicken",
-    "imageUrl": "chicken.png",
+    "imagePath": "chicken.png",
     "type": "Burnt",
     "hunger": 85,
     "weight": 5,
@@ -294,7 +294,7 @@
   },
   {
     "name": "Burnt Marshmallow",
-    "imageUrl": "marshmallow.png",
+    "imagePath": "marshmallow.png",
     "type": "Burnt",
     "hunger": 35,
     "weight": 2.5,
@@ -311,7 +311,7 @@
   },
   {
     "name": "Burnt Half Coconut",
-    "imageUrl": "half-coconut.png",
+    "imagePath": "half-coconut.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 5,
@@ -326,7 +326,7 @@
   },
   {
     "name": "Burnt Honeycomb",
-    "imageUrl": "honeycomb.png",
+    "imagePath": "honeycomb.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -338,7 +338,7 @@
   },
   {
     "name": "Burnt Weird Shroom",
-    "imageUrl": "weird-shroom.png",
+    "imagePath": "weird-shroom.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -352,7 +352,7 @@
   },
   {
     "name": "Burnt Button Shroom",
-    "imageUrl": "button-shroom.png",
+    "imagePath": "button-shroom.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -366,7 +366,7 @@
   },
   {
     "name": "Burnt Bugle Shroom",
-    "imageUrl": "bugle-shroom.png",
+    "imagePath": "bugle-shroom.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -380,7 +380,7 @@
   },
   {
     "name": "Burnt Cluster Shroom",
-    "imageUrl": "cluster-shroom.png",
+    "imagePath": "cluster-shroom.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -394,7 +394,7 @@
   },
   {
     "name": "Burnt Chubby Shroom",
-    "imageUrl": "chubby-shroom.png",
+    "imagePath": "chubby-shroom.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -408,7 +408,7 @@
   },
   {
     "name": "Burnt Poisonous Button Shroom",
-    "imageUrl": "poisonous-button-shroom.png",
+    "imagePath": "poisonous-button-shroom.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -424,7 +424,7 @@
   },
   {
     "name": "Burnt Poisonous Bugle Shroom",
-    "imageUrl": "poisonous-bugle-shroom.png",
+    "imagePath": "poisonous-bugle-shroom.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -440,7 +440,7 @@
   },
   {
     "name": "Burnt Poisonous Cluster Shroom",
-    "imageUrl": "poisonous-cluster-shroom.png",
+    "imagePath": "poisonous-cluster-shroom.png",
     "type": "Burnt",
     "hunger": 5,
     "weight": 2.5,
@@ -456,7 +456,7 @@
   },
   {
     "name": "Burnt Trail Mix",
-    "imageUrl": "trail-mix.png",
+    "imagePath": "trail-mix.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -473,7 +473,7 @@
   },
   {
     "name": "Burnt Granola Bar",
-    "imageUrl": "granola-bar.png",
+    "imagePath": "granola-bar.png",
     "type": "Burnt",
     "hunger": 25,
     "weight": 2.5,
@@ -490,7 +490,7 @@
   },
   {
     "name": "Burnt Airline Food",
-    "imageUrl": "airline-food.png",
+    "imagePath": "airline-food.png",
     "type": "Burnt",
     "hunger": 75,
     "weight": 2.5,
@@ -507,7 +507,7 @@
   },
   {
     "name": "Burnt Scout Cookies",
-    "imageUrl": "scout-cookies.png",
+    "imagePath": "scout-cookies.png",
     "type": "Burnt",
     "hunger": 75,
     "weight": 2.5,
@@ -524,7 +524,7 @@
   },
   {
     "name": "Burnt Scorpion",
-    "imageUrl": "cooked-scorpion.png",
+    "imagePath": "cooked-scorpion.png",
     "type": "Burnt",
     "hunger": 10,
     "weight": 2.5,
@@ -536,7 +536,7 @@
   },
   {
     "name": "Burnt Aloe Vera",
-    "imageUrl": "aloe-vera.png",
+    "imagePath": "aloe-vera.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -550,7 +550,7 @@
   },
   {
     "name": "Burnt Red Prickleberry",
-    "imageUrl": "red-prickleberry.png",
+    "imagePath": "red-prickleberry.png",
     "type": "Burnt",
     "hunger": 15,
     "weight": 2.5,
@@ -564,7 +564,7 @@
   },
   {
     "name": "Burnt Golden Prickleberry",
-    "imageUrl": "golden-prickleberry.png",
+    "imagePath": "golden-prickleberry.png",
     "type": "Burnt",
     "hunger": 35,
     "weight": 2.5,

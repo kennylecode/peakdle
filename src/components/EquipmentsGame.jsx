@@ -57,7 +57,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     if (currentGuess.name === targetEquipment.name) {
       setGameWon(true);
       onComplete({
-        mode: 'equipment',
+        mode: 'equipments',
         won: true,
         guesses: newGuesses.length,
         target: targetEquipment.name
@@ -206,7 +206,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
                       }}
                     >
                       <img
-                        src={equipment.imageUrl ? srcPath + equipment.imageUrl : null}
+                        src={equipment.imagePath ? srcPath + equipment.imagePath : null}
                         alt={equipment.name}
                       />
                       <span>{equipment.name}</span>

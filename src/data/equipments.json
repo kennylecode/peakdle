@@ -1,10 +1,10 @@
 [
   {
     "name": "Antidote",
-    "imageUrl": "antidote.png",
+    "imagePath": "antidote.png",
     "weight": 2.5,
     "statusEffect": [
-      "-Heat",
+      "-Hot",
       "-Poison"
     ],
     "type": "Status Effect",
@@ -13,7 +13,7 @@
   },
   {
     "name": "Backpack",
-    "imageUrl": "backpack.png",
+    "imagePath": "backpack.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -22,7 +22,7 @@
   },
   {
     "name": "Bandages",
-    "imageUrl": "bandages.png",
+    "imagePath": "bandages.png",
     "weight": 2.5,
     "statusEffect": [
       "-Injury"
@@ -33,7 +33,7 @@
   },
   {
     "name": "Bing Bong",
-    "imageUrl": "bing-bong.png",
+    "imagePath": "bing-bong.png",
     "weight": 5,
     "statusEffect": [],
     "type": "Other",
@@ -42,7 +42,7 @@
   },
   {
     "name": "Binoculars",
-    "imageUrl": "binoculars.png",
+    "imagePath": "binoculars.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -51,7 +51,7 @@
   },
   {
     "name": "Blowgun",
-    "imageUrl": "blowgun.png",
+    "imagePath": "blowgun.png",
     "weight": 2.5,
     "statusEffect": [
       "-Poison",
@@ -66,7 +66,7 @@
   },
   {
     "name": "Bugle",
-    "imageUrl": "bugle.png",
+    "imagePath": "bugle.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -75,7 +75,7 @@
   },
   {
     "name": "Chain Launcher",
-    "imageUrl": "chain-launcher.png",
+    "imagePath": "chain-launcher.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -84,7 +84,7 @@
   },
   {
     "name": "Compass",
-    "imageUrl": "compass.png",
+    "imagePath": "compass.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -93,7 +93,7 @@
   },
   {
     "name": "First Aid Kit",
-    "imageUrl": "first-aid-kit.png",
+    "imagePath": "first-aid-kit.png",
     "weight": 5,
     "statusEffect": [
       "-Poison",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Flare",
-    "imageUrl": "flare.png",
+    "imagePath": "flare.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -114,7 +114,7 @@
   },
   {
     "name": "Flying Disc",
-    "imageUrl": "flying-disc.png",
+    "imagePath": "flying-disc.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -123,7 +123,7 @@
   },
   {
     "name": "Guidebook",
-    "imageUrl": "guidebook.png",
+    "imagePath": "guidebook.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -132,7 +132,7 @@
   },
   {
     "name": "Heat Pack",
-    "imageUrl": "heat-pack.png",
+    "imagePath": "heat-pack.png",
     "weight": 0,
     "statusEffect": [
       "-Cold"
@@ -143,7 +143,7 @@
   },
   {
     "name": "Lantern",
-    "imageUrl": "lantern.png",
+    "imagePath": "lantern.png",
     "weight": 5,
     "statusEffect": [
       "-Cold"
@@ -154,7 +154,7 @@
   },
   {
     "name": "Magic Bean",
-    "imageUrl": "magic-bean.png",
+    "imagePath": "magic-bean.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -163,7 +163,7 @@
   },
   {
     "name": "Parasol",
-    "imageUrl": "parasol.png",
+    "imagePath": "parasol.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Other",
@@ -172,7 +172,7 @@
   },
   {
     "name": "Pirate's Compass",
-    "imageUrl": "pirates-compass.png",
+    "imagePath": "pirates-compass.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -181,7 +181,7 @@
   },
   {
     "name": "Piton",
-    "imageUrl": "piton.png",
+    "imagePath": "piton.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -190,7 +190,7 @@
   },
   {
     "name": "Portable Stove",
-    "imageUrl": "portable-stove.png",
+    "imagePath": "portable-stove.png",
     "weight": 5,
     "statusEffect": [
       "-Cold"
@@ -201,7 +201,7 @@
   },
   {
     "name": "Remedy Fungus",
-    "imageUrl": "remedy-fungus.png",
+    "imagePath": "remedy-fungus.png",
     "weight": 2.5,
     "statusEffect": [
       "-Injury"
@@ -212,7 +212,7 @@
   },
   {
     "name": "Rope Cannon",
-    "imageUrl": "rope-cannon.png",
+    "imagePath": "rope-cannon.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -221,7 +221,7 @@
   },
   {
     "name": "Rope Spool",
-    "imageUrl": "rope-spool.png",
+    "imagePath": "rope-spool.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -230,7 +230,7 @@
   },
   {
     "name": "Scout Cannon",
-    "imageUrl": "scout-cannon.png",
+    "imagePath": "scout-cannon.png",
     "weight": 15,
     "statusEffect": [],
     "type": "Traversal",
@@ -239,7 +239,7 @@
   },
   {
     "name": "Scroll",
-    "imageUrl": "scroll.png",
+    "imagePath": "scroll.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -248,7 +248,7 @@
   },
   {
     "name": "Shelf Fungus",
-    "imageUrl": "shelf-fungus.png",
+    "imagePath": "shelf-fungus.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -257,7 +257,7 @@
   },
   {
     "name": "Sunscreen",
-    "imageUrl": "sunscreen.png",
+    "imagePath": "sunscreen.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Other",
@@ -266,7 +266,7 @@
   },
   {
     "name": "Torch",
-    "imageUrl": "torch.png",
+    "imagePath": "torch.png",
     "weight": 0,
     "statusEffect": [],
     "type": "Other",
@@ -275,7 +275,7 @@
   },
   {
     "name": "Ancient Idol",
-    "imageUrl": "ancient-idol.png",
+    "imagePath": "ancient-idol.png",
     "weight": 40,
     "statusEffect": [],
     "type": "Status Effect",
@@ -284,7 +284,7 @@
   },
   {
     "name": "Anti-Rope Cannon",
-    "imageUrl": "anti-rope-cannon.png",
+    "imagePath": "anti-rope-cannon.png",
     "weight": -2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -293,7 +293,7 @@
   },
   {
     "name": "Anti-Rope Spool",
-    "imageUrl": "anti-rope-spool.png",
+    "imagePath": "anti-rope-spool.png",
     "weight": -2.5,
     "statusEffect": [],
     "type": "Traversal",
@@ -302,7 +302,7 @@
   },
   {
     "name": "Bugle of Friendship",
-    "imageUrl": "bugle-friendship.png",
+    "imagePath": "bugle-friendship.png",
     "weight": 2.5,
     "statusEffect": [
       "+Stamina"
@@ -313,14 +313,14 @@
   },
   {
     "name": "Cure-All",
-    "imageUrl": "cure-all.png",
+    "imagePath": "cure-all.png",
     "weight": 2.5,
     "statusEffect": [
       "-Poison",
       "-Injury",
       "-Drowsy",
       "-Cold",
-      "-Heat",
+      "-Hot",
       "-Curse"
     ],
     "type": "Status Effect",
@@ -329,7 +329,7 @@
   },
   {
     "name": "Cursed Skull",
-    "imageUrl": "cursed-skull.png",
+    "imagePath": "cursed-skull.png",
     "weight": 5,
     "statusEffect": [
       "+Stamina"
@@ -340,10 +340,10 @@
   },
   {
     "name": "Faerie Lantern",
-    "imageUrl": "faerie-lantern.png",
+    "imagePath": "faerie-lantern.png",
     "weight": 5,
     "statusEffect": [
-      "-Heat",
+      "-Hot",
       "-Cold",
       "-Poison",
       "-Drowsy",
@@ -355,7 +355,7 @@
   },
   {
     "name": "Pandora's Lunchbox",
-    "imageUrl": "pandoras-lunchbox.png",
+    "imagePath": "pandoras-lunchbox.png",
     "weight": 2.5,
     "statusEffect": [
       "-Hunger",
@@ -380,7 +380,7 @@
   },
   {
     "name": "Scout Effigy",
-    "imageUrl": "scout-effigy.png",
+    "imagePath": "scout-effigy.png",
     "weight": 5,
     "statusEffect": [],
     "type": "Other",
@@ -389,7 +389,7 @@
   },
   {
     "name": "Scoutmaster's Bugle",
-    "imageUrl": "scoutmasters-bugle.png",
+    "imagePath": "scoutmasters-bugle.png",
     "weight": 2.5,
     "statusEffect": [
       "+Stamina"
@@ -400,7 +400,7 @@
   },
   {
     "name": "Big Lollipop",
-    "imageUrl": "big-lollipop.png",
+    "imagePath": "big-lollipop.png",
     "weight": 2.5,
     "statusEffect": [
       "-Hunger",
@@ -412,7 +412,7 @@
   },
   {
     "name": "Energy Drink",
-    "imageUrl": "energy-drink.png",
+    "imagePath": "energy-drink.png",
     "weight": 2.5,
     "statusEffect": [
       "+Drowsy",
@@ -424,7 +424,7 @@
   },
   {
     "name": "Sports Drink",
-    "imageUrl": "sports-drink.png",
+    "imagePath": "sports-drink.png",
     "weight": 2.5,
     "statusEffect": [
       "-Hot",
@@ -436,7 +436,7 @@
   },
   {
     "name": "Dynamite",
-    "imageUrl": "dynamite.png",
+    "imagePath": "dynamite.png",
     "weight": 0,
     "statusEffect": [
       "+Injury"
@@ -447,7 +447,7 @@
   },
   {
     "name": "Balloon",
-    "imageUrl": "balloon.png",
+    "imagePath": "balloon.png",
     "weight": -5,
     "statusEffect": [],
     "type": "Traversal",
@@ -456,7 +456,7 @@
   },
   {
     "name": "Balloon Bunch",
-    "imageUrl": "balloon-bunch.png",
+    "imagePath": "balloon-bunch.png",
     "weight": -15,
     "statusEffect": [],
     "type": "Traversal",
@@ -465,7 +465,7 @@
   },
   {
     "name": "Conch",
-    "imageUrl": "conch.png",
+    "imagePath": "conch.png",
     "weight": 5,
     "statusEffect": [],
     "type": "Other",
@@ -474,7 +474,7 @@
   },
   {
     "name": "Cactus",
-    "imageUrl": "cactus.png",
+    "imagePath": "cactus.png",
     "weight": 0,
     "statusEffect": [
       "+Thorned"
@@ -485,7 +485,7 @@
   },
   {
     "name": "Strange Gem",
-    "imageUrl": "strange-gem.png",
+    "imagePath": "strange-gem.png",
     "weight": 2.5,
     "statusEffect": [],
     "type": "Other",
