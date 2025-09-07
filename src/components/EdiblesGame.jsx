@@ -173,9 +173,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     const descriptions = [
       'Default',
       'LET. HIM. COOK!',
-      'Well, it\'s Done',
       'When you cross the Mesa during the day',
-      'Should have waited for the lava to drop in the Caldera'
+      'Should have waited for the lava to drop in the Caldera',
+      'Lava caught up to you in the Kiln'
     ];
     return descriptions[level] || 'Default';
   };
@@ -203,9 +203,6 @@ const EdiblesGame = ({ onComplete, onBack }) => {
         {/* Cooking Level Slider */}
         <div className="cooking-level-container">
           <h3 className="cooking-level-title">Edibles Cooking Level: {getCookingLevelLabel(cookingLevel)} ({maxGuesses} Guesses)</h3>
-          <p className="cooking-level-description">
-            {getCookingLevelDescription(cookingLevel)}
-          </p>
           <input
             type="range"
             min="0"
@@ -214,6 +211,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
             onChange={(e) => setCookingLevel(parseInt(e.target.value))}
             className="cooking-level-slider"
           />
+          <p className="cooking-level-description">
+            {getCookingLevelDescription(cookingLevel)}
+          </p>
         </div>
       </div>
 

@@ -37,7 +37,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   }, []);
 
   useEffect(() => {
-    let allEquipment = sortByEquipmentName(equipmentsData);
+    const allEquipment = sortByEquipmentName(equipmentsData);
 
     setAvailableEquipment(allEquipment);
     

@@ -44,7 +44,7 @@
     "description": "Escape the island without taking fall damage.",
     "cosmeticReward": [
       "Russell's Outfit Shorts", 
-      "Russel's Outfit Skirt"
+      "Russell's Outfit Skirt"
     ]
   },
   {
@@ -126,14 +126,14 @@
     "name": "Foraging Badge",
     "imagePath": "foraging-badge.png",
     "description": "Eat 5 different berries in one expedition.",
-    "cosmeticReward": ["Tongue Mouth"]
+    "cosmeticReward": ["Tongue"]
   },
   {
     "name": "Gourmand Badge",
     "imagePath": "gourmand-badge.png",
     "description": "Escape the island after cooking and eating a Half-Coconut, Honeycomb, Yellow Winterberry, and an Egg.",
     "cosmeticReward": [
-      "Aggro Mouth",
+      "Aggro",
       "Monster Eyes"
     ]
   },
@@ -231,7 +231,7 @@
     "name": "Resourcefulness Badge",
     "imagePath": "resourcefulness-badge.png",
     "description": "Give in to your hunger.",
-    "cosmeticReward": ["Labu Mouth"]
+    "cosmeticReward": ["Labu"]
   },
   {
     "name": "Speed Climber Badge",
@@ -245,7 +245,7 @@
     "description": "Escape the island without ever losing consciousness.",
     "cosmeticReward": [
       "Scoutmaster Outfit Shorts",
-      "Scoutmaster Outift Skirt"
+      "Scoutmaster Outfit Skirt"
     ]
   },
   {

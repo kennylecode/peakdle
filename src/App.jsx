@@ -27,7 +27,7 @@ function App() {
       case 'equipments':
         return <EquipmentsGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
       case 'badges':
-        return <BadgesGame onComplete={handleGameComplete} onBack={handleBackToMenu} />;
+        return <BadgesGame onBack={handleBackToMenu} />;
       default:
         return (
           <GameModeSelector 
