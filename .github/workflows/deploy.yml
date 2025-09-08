@@ -25,17 +25,10 @@ jobs:
         run: |
           find dist -name "*.html" -type f -exec sed -i "s/GA_MEASUREMENT_ID/${{ secrets.GA_MEASUREMENT_ID }}/g" {} \;
           
-      - name: Deploy built files
-        run: |
-          # Remove source files and keep only dist contents
-          find . -maxdepth 1 ! -name 'dist' ! -name '.git' ! -name '.' -exec rm -rf {} +
-          mv dist/* .
-          rmdir dist
-          
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "Deploy built React app" || exit 0
-          git push
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          force_orphan: true  # This replaces all content
