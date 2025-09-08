@@ -1,4 +1,4 @@
-name: Deploy Static Site
+name: Deploy React App
 on:
   push:
     branches: [ main ]
@@ -14,9 +14,21 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Replace GA Measurement ID
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Build React app
+        run: npm run build
+        
+      - name: Replace GA Measurement ID in built files
         run: |
-          sed -i "s/GA_MEASUREMENT_ID/${{ secrets.GA_MEASUREMENT_ID }}/g" index.html
+          find dist -name "*.html" -type f -exec sed -i "s/GA_MEASUREMENT_ID/${{ secrets.GA_MEASUREMENT_ID }}/g" {} \;
           
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -24,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './dist'
           
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
