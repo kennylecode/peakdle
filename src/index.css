@@ -8,6 +8,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   min-height: 100vh;
+  min-width: 100vw;
   color: #333;
 }
 
@@ -55,29 +56,12 @@ body {
   box-shadow: 0 15px 40px rgba(0,0,0,0.15);
 }
 
-.game-mode-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #4a5568;
-}
-
-.game-mode-card p {
-  color: #718096;
-  line-height: 1.6;
-}
-
 .game-board {
   background: white;
   border-radius: 15px;
   padding: 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   margin-bottom: 20px;
-}
-
-.game-board h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #2d3748;
 }
 
 .stats-grid {
@@ -234,17 +218,11 @@ body {
   text-align: center;
 }
 
-.badge-image {
-  max-width: 400px;
+/* .badge-image {
+  width: 50vw;
   margin: 20px auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
 
-.badge-image:hover {
-  transform: scale(1.05);
-}
+} */
 
 .outfit-guess {
   margin-top: 30px;
@@ -256,46 +234,6 @@ body {
 .outfit-guess h4 {
   margin-bottom: 15px;
   color: #2d3748;
-}
-
-.outfit-options {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.outfit-option {
-  padding: 15px;
-  background: white;
-  border: 2px solid #e2e8f0;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.outfit-option:hover {
-  border-color: #667eea;
-  background: #f0f4ff;
-}
-
-.outfit-option.selected {
-  border-color: #667eea;
-  background: #667eea;
-  color: white;
-}
-
-.outfit-option.correct {
-  border-color: #48bb78;
-  background: #48bb78;
-  color: white;
-}
-
-.outfit-option.incorrect {
-  border-color: #e53e3e;
-  background: #e53e3e;
-  color: white;
 }
 
 .game-result {
@@ -427,27 +365,116 @@ body {
   gap: 10px;
 }
 
+/* BadgesGame specific styles */
+.badge-image-container {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border: 4px solid;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+
+.badge-image {
+  width: 200px;
+  height: 200px;
+}
+
+.guesses-section {
+  margin-top: 20px;
+}
+
+.guesses-images {
+  display: flex;
+  padding: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.guesses-image {
+  border-radius: 10px;
+  border: 2px dashed;
+}
+
+.guesses-image.correct {
+  border-color: #48bb78;
+}
+
+.guesses-image.partial {
+  border-color: #ed8936;
+}
+
+.guesses-image.incorrect {
+  border-color: #e53e3e;
+}
+
+.cosmetic-description {
+  margin-bottom: 15px;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 15px;
   }
-  
+
   .header h1 {
     font-size: 2rem;
   }
-  
+
   .game-modes {
     grid-template-columns: 1fr;
   }
-  
+
   .stats-grid {
     grid-template-columns: 1fr;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e0 #f7fafc;
   }
-  
+
+  .stats-grid::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .stats-grid::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 4px;
+  }
+
+  .stats-grid::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+  }
+
+  .stats-grid::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+  }
+
+  .column-headers-grid,
+  .guess-grid {
+    min-width: 600px; /* Ensures minimum width for readability */
+  }
+
+  .stat-card {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  .stat-card h4 {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .stat-card .value {
+    font-size: 1rem;
+  }
+
   .guess-input {
     flex-direction: column;
   }
-  
+
   .guess-input input {
     width: 100%;
   }

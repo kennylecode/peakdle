@@ -5,7 +5,10 @@ import cosmeticsData from '../data/cosmetics.json';
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
   const cosmeticPath = "images/cosmetics/";
+  const maxZoomLevel = 20;
 
+  const [badgeOriginW, setBadgeOriginW] = useState(Math.floor((Math.random()) * 100));
+  const [badgeOriginH, setBadgeOriginH] = useState(Math.floor((Math.random()) * 100));
   const [targetBadge, setTargetBadge] = useState(null);
   const [badgeGuesses, setBadgeGuesses] = useState([]);
   const [badgeGameWon, setBadgeGameWon] = useState(false);
@@ -14,7 +17,7 @@ const BadgesGame = ({ onBack }) => {
   const [badgeFilterText, setBadgeFilterText] = useState('');
   const badgeInputRef = useRef(null);
 
-  const [currentZoomLevel, setCurrentZoomLevel] = useState(5);
+  const [currentZoomLevel, setCurrentZoomLevel] = useState(20);
   const [cosmeticGuesses, setCosmeticGuesses] = useState([]);
   const [cosmeticGameWon, setCosmeticGameWon] = useState(false);
   const [availableCosmetics, setAvailableCosmetics] = useState([]);
@@ -34,6 +37,7 @@ const BadgesGame = ({ onBack }) => {
     // Select a random badge as the target
     const randomIndex = Math.floor(Math.random() * badges.length);
     setTargetBadge(badges[randomIndex]);
+    setCurrentZoomLevel(20);
   }, []);
 
   // Handle clicking outside badge dropdown to close it
@@ -86,8 +90,19 @@ const BadgesGame = ({ onBack }) => {
       // Don't complete yet - need to guess outfit
     } else {
       // Zoom out the image
-      setCurrentZoomLevel(currentZoomLevel + 1); 
+      if (currentZoomLevel > 0) {
+        setCurrentZoomLevel(currentZoomLevel - 1); 
+      }
     }
+  };
+
+  const getImageStyle = () => {
+    const scale = 1 + currentZoomLevel / 5;
+
+    return {
+      transformOrigin: `${badgeOriginW}% ${badgeOriginH}%`,
+      transform: `scale(${scale})`
+    };
   };
 
   const handleCosmeticGuess = (guessedCosmetic) => {
@@ -110,6 +125,26 @@ const BadgesGame = ({ onBack }) => {
     }
   };
 
+  const getBadgeStatClass = (guessedValue, targetValue) => {
+    if (guessedValue === targetValue) return 'correct';
+    
+    return 'incorrect';
+  };
+
+  const getCosmeticStatClass = (guessedValue, targetValues) => {
+    if (targetValues.length === 1) {
+      if (guessedValue === targetValues[0]) 
+        return 'correct';
+      else
+        return 'incorrect';
+    }
+
+    if (targetValues.includes(guessedValue))
+      return 'partial';
+
+    return 'incorrect';
+  };
+  
   // Get filtered badges based on search text
   const getFilteredBadges = () => {
     if (!badgeFilterText.trim()) {
@@ -141,11 +176,12 @@ const BadgesGame = ({ onBack }) => {
     <div>
       <div className="game-board">
         <div className="badge-game">
-          <div style={{ overflow: 'hidden', minWidth: '400px', margin: '0 auto' }}>
+          <div className="badge-image-container">
             <img
               src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
               alt="Badge"
               className="badge-image"
+              style={getImageStyle()}
             />
           </div>
         </div>
@@ -211,14 +247,18 @@ const BadgesGame = ({ onBack }) => {
         )}
 
         {badgeGuesses.length > 0 && (
-          <div style={{ marginTop: '40px' }}>
+          <div className="guesses-section">
             <h4>Badge Guesses:</h4>
-            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div className="guesses-images">
               {badgeGuesses.map((guess) => (
-                <img
-                  src={guess.imagePath ? badgePath + guess.imagePath : null}
-                  alt={guess.name}
-                />
+                <div 
+                  key={guess.name}
+                  className={`guesses-image ${getBadgeStatClass(guess.name, targetBadge.name)}`}>
+                  <img
+                    src={guess.imagePath ? badgePath + guess.imagePath : null}
+                    alt={guess.name}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -227,7 +267,7 @@ const BadgesGame = ({ onBack }) => {
         {badgeGameWon && !cosmeticGameWon && (
           <div className="outfit-guess">
             <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
-            <p style={{ marginBottom: '15px' }}>Which cosmetic goes with the "{targetBadge.name}" badge?</p>
+            <p className="cosmetic-description">Which cosmetic goes with the "{targetBadge.name}" badge?</p>
 
             <div className="guess-input">
               <div className="custom-dropdown" ref={cosmeticDropdownRef}>
@@ -294,14 +334,18 @@ const BadgesGame = ({ onBack }) => {
         )}
 
         {cosmeticGuesses.length > 0 && (
-          <div style={{ marginTop: '40px' }}>
+          <div className="guesses-section">
             <h4>Cosmetic Guesses:</h4>
-            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div className="guesses-images">
               {cosmeticGuesses.map((guess) => (
-                <img
-                  src={guess.imagePath ? cosmeticPath + guess.imagePath : null}
-                  alt={guess.name}
-                />
+                <div 
+                  key={guess.name}
+                  className={`guesses-image ${getCosmeticStatClass(guess.name, targetBadge.cosmeticReward)}`}>
+                  <img
+                    src={guess.imagePath ? cosmeticPath + guess.imagePath : null}
+                    alt={guess.name}
+                  />
+                </div>
               ))}
             </div>
           </div>
