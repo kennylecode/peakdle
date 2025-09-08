@@ -13,8 +13,11 @@ body {
 }
 
 .container {
+  min-height: 100vh;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
 }
 
@@ -33,6 +36,15 @@ body {
 .header p {
   font-size: 1.2rem;
   color: rgba(255,255,255,0.9);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 30px;
 }
 
 .game-modes {
@@ -394,7 +406,7 @@ body {
 
 .guesses-image {
   border-radius: 10px;
-  border: 2px dashed;
+  border: 4px dashed;
 }
 
 .guesses-image.correct {

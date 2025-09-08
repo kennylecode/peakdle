@@ -41,11 +41,19 @@ function App() {
   return (
     <div className="container">
       <div className="header">
-        <h1>Peakdle</h1>
-        <p>Master the mountain in this Peak-inspired Wordle game!</p>
+        <h1>PEAKdle</h1>
+        <p>Master the mountain in this PEAK-Wordle mashup game!</p>
       </div>
-      
-      {renderGameMode()}
+      <div className="main">
+        {renderGameMode()}
+      </div>
+      <div className="footer">
+        <p>All contents belong to the game PEAK and the developers/publishers <a href="https://aggrocrab.com/">Aggro Crab</a> and <a href="https://landfall.se/">Landfall Games</a>.</p>
+        <p>Much love to my friends for coming up with the ideas and supporting this project.</p>
+        <a href="https://www.linkedin.com/in/kenny-le-code/">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
     </div>
   );
 }

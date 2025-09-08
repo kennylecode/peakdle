@@ -1,6 +1,6 @@
-# Peakdle - Peak Wordle Game
+# PEAKdle - PEAK Wordle Game
 
-A Wordle-style game based on the cooperative game Peak, featuring three unique game modes that challenge players to guess items based on their stats and characteristics.
+A Wordle-style game based on the cooperative game PEAK, featuring three unique game modes that challenge players to guess items based on their stats and characteristics.
 
 ## 🎮 Game Modes
 
@@ -19,7 +19,7 @@ A Wordle-style game based on the cooperative game Peak, featuring three unique g
 ### 3. Badges Challenge
 - **Objective**: Guess the badge from a zoomed-in image, then match the achievement reward
 - **Gameplay**: 
-  - Image starts at maximum zoom (5x) and gradually reveals more with each guess
+  - Image starts at maximum zoom and gradually reveals more with each guess
   - After guessing the badge correctly, players must match it with the correct achievement reward
 
 ## 🚀 Getting Started
@@ -93,21 +93,15 @@ To add new items to any game mode, simply edit the corresponding JSON file:
 ### Modifying Game Rules
 - Change the difficulty of the Edibles game mode by adding cooked, well-done, burnt, and incinerated items
 
-## 🎯 Game Balance
-
-The game is designed with balanced difficulty:
-- **Edibles**: Mix of common and rare items with varied stat ranges
-- **Equipment**: Different rarity levels and stat combinations
-- **Badges**: Progressive difficulty with zoom mechanics
-
 ## 📝 License
 
-This project is based on the Peak co-op game and data/assets from that game, gathered from the following sources. Appreciate the game devs for the amazing game and these info sites for their knowledge base.
-
+This project is based on the PEAK co-op game and data/assets from that game, gathered from the following sources. Appreciate the game devs for the amazing game and these info sites for their knowledge base.
+- https://aggrocrab.com/
+- https://landfall.se/
 - https://steamcommunity.com/sharedfiles/filedetails/?id=3506303339
 - https://peakgame.wiki/
 - https://peak.wiki.gg/
 
 ## 🎮 Enjoy Playing!
 
-Master the mountain in this Peak-inspired Wordle game! Challenge yourself across all three modes and see how well you know the world of Peak.
+Master the mountain in this PEAK-inspired Wordle game! Challenge yourself across all three modes and see how well you know the world of PEAK.

@@ -1,7 +1,7 @@
 {
   "name": "peakdle",
   "version": "1.0.0",
-  "description": "A Wordle-style game based on Peak with three game modes: Edibles, Equipment, and Badges",
+  "description": "A Wordle-style game based on PEAK with three game modes: Edibles, Equipments, and Badges",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
