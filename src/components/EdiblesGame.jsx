@@ -4,6 +4,7 @@ import ediblesCooked from '../data/edibles/edibles-cooked.json';
 import ediblesWellDone from '../data/edibles/edibles-well-done.json';
 import ediblesBurnt from '../data/edibles/edibles-burnt.json';
 import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
@@ -61,8 +62,8 @@ const EdiblesGame = ({ onComplete, onBack }) => {
 
     setAvailableEdibles(allEdibles);
     
-    // Select a new random edible from the updated pool
-    const randomIndex = Math.floor(Math.random() * allEdibles.length);
+    // Select a deterministic edible
+    const randomIndex = dateTextToNumberDJB2(new Date(), 'edible-' + cookingLevel, allEdibles.length);
     setTargetEdible(allEdibles[randomIndex]);
     
     // Reset game state

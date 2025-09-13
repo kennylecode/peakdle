@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
 import cosmeticsData from '../data/cosmetics.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
 
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
@@ -34,8 +35,8 @@ const BadgesGame = ({ onBack }) => {
     setAvailableBadges(badges);
     setAvailableCosmetics(cosmetics);
 
-    // Select a random badge as the target
-    const randomIndex = Math.floor(Math.random() * badges.length);
+    // Select a deterministic badge
+    const randomIndex = dateTextToNumberDJB2(new Date(), 'badge', badges.length);
     setTargetBadge(badges[randomIndex]);
     setCurrentZoomLevel(20);
   }, []);

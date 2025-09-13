@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import equipmentsData from '../data/equipments.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
   const maxGuesses = 6;
@@ -41,8 +42,8 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
 
     setAvailableEquipment(allEquipment);
     
-    // Select a new random equipment from the updated pool
-    const randomIndex = Math.floor(Math.random() * allEquipment.length);
+    // Select a deterministic equipment
+    const randomIndex = dateTextToNumberDJB2(new Date(), 'equipment', allEquipment.length);
     setTargetEquipment(allEquipment[randomIndex]);
   }, []);
 

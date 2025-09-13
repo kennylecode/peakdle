@@ -37,7 +37,7 @@ const GameModeSelector = ({ onSelect, gameHistory }) => {
           >
             <h3>{mode.name}</h3>
             <p>{mode.description}</p>
-            {gameHistory.length > 0 && (
+            {gameHistory.filter(g => g.mode === mode.id).length > 0 && (
               <div style={{ marginTop: '15px', fontSize: '0.9rem', color: '#718096' }}>
                 Win Rate: {getWinRate(mode.id)}% ({gameHistory.filter(g => g.mode === mode.id).length} games)
               </div>
