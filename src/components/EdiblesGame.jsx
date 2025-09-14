@@ -5,6 +5,8 @@ import ediblesWellDone from '../data/edibles/edibles-well-done.json';
 import ediblesBurnt from '../data/edibles/edibles-burnt.json';
 import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
@@ -18,6 +20,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
   const [availableEdibles, setAvailableEdibles] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
+  const [hasPlayedCurrentLevel, setHasPlayedCurrentLevel] = useState(false);
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -62,10 +65,14 @@ const EdiblesGame = ({ onComplete, onBack }) => {
 
     setAvailableEdibles(allEdibles);
     
+    // Check if player has already played this cooking level today
+    const playedToday = hasPlayedToday('edibles-' + cookingLevel);
+    setHasPlayedCurrentLevel(playedToday);
+
     // Select a deterministic edible
     const randomIndex = dateTextToNumberDJB2(new Date(), 'edible-' + cookingLevel, allEdibles.length);
     setTargetEdible(allEdibles[randomIndex]);
-    
+
     // Reset game state
     setGuesses([]);
     setMaxGuesses(defaultNumGuesses+cookingLevel);
@@ -83,6 +90,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     // Check if won
     if (currentGuess.name === targetEdible.name) {
       setGameWon(true);
+      // Mark current cooking level as played
+      markAsPlayed('edibles-' + cookingLevel);
+      setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
         won: true,
@@ -91,6 +101,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
       });
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
+      // Mark current cooking level as played
+      markAsPlayed('edibles-' + cookingLevel);
+      setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
         won: false,
@@ -196,6 +209,15 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     );
   };
 
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedCurrentLevel(false);
+    // Reset game state for new day
+    setGuesses([]);
+    setGameWon(false);
+    setGameLost(false);
+  };
+
   if (!targetEdible) return <div>Loading...</div>;
 
   return (
@@ -219,6 +241,17 @@ const EdiblesGame = ({ onComplete, onBack }) => {
       </div>
 
       <div className="game-board">
+        {hasPlayedCurrentLevel && (
+          <div className="daily-play-completed">
+            <h2>🎉 You've already completed today's {getCookingLevelLabel(cookingLevel).toLowerCase()} edibles challenge!</h2>
+            <p>The next challenge will be available in:</p>
+            <CountdownTimer onReset={handleTimerReset} />
+            <button className="new-game-btn" onClick={onBack}>
+              Back to Menu
+            </button>
+          </div>
+        )}
+
         {!gameWon && !gameLost && (
           <div className="guess-input">
             <div className="custom-dropdown" ref={dropdownRef}>

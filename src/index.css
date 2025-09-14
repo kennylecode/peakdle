@@ -491,3 +491,76 @@ body {
     width: 100%;
   }
 }
+
+/* Daily Play Completed Styles */
+.daily-play-completed {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.daily-play-completed h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.daily-play-completed p {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.countdown-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+  min-width: 200px;
+}
+
+.countdown-time {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.countdown-text {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive countdown timer */
+@media (max-width: 768px) {
+  .countdown-display {
+    padding: 15px 20px;
+  }
+
+  .countdown-time {
+    font-size: 1.5rem;
+  }
+
+  .daily-play-completed {
+    padding: 20px 15px;
+  }
+
+  .daily-play-completed h2 {
+    font-size: 1.2rem;
+  }
+}

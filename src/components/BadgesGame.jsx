@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
 import cosmeticsData from '../data/cosmetics.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
 
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
@@ -24,6 +26,7 @@ const BadgesGame = ({ onBack }) => {
   const [availableCosmetics, setAvailableCosmetics] = useState([]);
   const [cosmeticDropdownOpen, setCosmeticDropdownOpen] = useState(false);
   const [cosmeticFilterText, setCosmeticFilterText] = useState('');
+  const [hasPlayedToday, setHasPlayedToday] = useState(false);
   const badgeDropdownRef = useRef(null);
   const cosmeticDropdownRef = useRef(null);
   const cosmeticInputRef = useRef(null);
@@ -31,9 +34,13 @@ const BadgesGame = ({ onBack }) => {
   useEffect(() => {
     const badges = sortByName(badgesData);
     const cosmetics = sortByName(cosmeticsData)
-    
+
     setAvailableBadges(badges);
     setAvailableCosmetics(cosmetics);
+
+    // Check if player has already played today
+    const playedToday = hasPlayedToday('badges');
+    setHasPlayedToday(playedToday);
 
     // Select a deterministic badge
     const randomIndex = dateTextToNumberDJB2(new Date(), 'badge', badges.length);
@@ -123,6 +130,9 @@ const BadgesGame = ({ onBack }) => {
 
     if (allCosmeticsSelected) {
       setCosmeticGameWon(true);
+      // Mark as played today
+      markAsPlayed('badges');
+      setHasPlayedToday(true);
     }
   };
 
@@ -166,12 +176,39 @@ const BadgesGame = ({ onBack }) => {
     );
   };
 
-   // Sort array alphabetically by name
-   const sortByName = (array) => {
+  // Sort array alphabetically by name
+  const sortByName = (array) => {
     return [...array].sort((a, b) => a.name.localeCompare(b.name));
   };
 
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedToday(false);
+    // Reset game state for new day
+    setBadgeGuesses([]);
+    setCosmeticGuesses([]);
+    setBadgeGameWon(false);
+    setCosmeticGameWon(false);
+    setCurrentZoomLevel(20);
+  };
+
   if (!targetBadge) return <div>Loading...</div>;
+
+  // If player has already played today, show countdown
+  if (hasPlayedToday) {
+    return (
+      <div className="game-board">
+        <div className="daily-play-completed">
+          <h2>🎉 You've already completed today's badge challenge!</h2>
+          <p>The next challenge will be available in:</p>
+          <CountdownTimer onReset={handleTimerReset} />
+          <button className="new-game-btn" onClick={onBack}>
+            Back to Menu
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>

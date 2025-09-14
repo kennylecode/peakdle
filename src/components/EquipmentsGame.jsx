@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import equipmentsData from '../data/equipments.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
   const maxGuesses = 6;
@@ -12,6 +14,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   const [availableEquipment, setAvailableEquipment] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
+  const [hasPlayedToday, setHasPlayedToday] = useState(false);
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -41,7 +44,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     const allEquipment = sortByEquipmentName(equipmentsData);
 
     setAvailableEquipment(allEquipment);
-    
+
+    // Check if player has already played today
+    const playedToday = hasPlayedToday('equipments');
+    setHasPlayedToday(playedToday);
+
     // Select a deterministic equipment
     const randomIndex = dateTextToNumberDJB2(new Date(), 'equipment', allEquipment.length);
     setTargetEquipment(allEquipment[randomIndex]);
@@ -57,6 +64,9 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     // Check if won
     if (currentGuess.name === targetEquipment.name) {
       setGameWon(true);
+      // Mark as played today
+      markAsPlayed('equipments');
+      setHasPlayedToday(true);
       onComplete({
         mode: 'equipments',
         won: true,
@@ -65,8 +75,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
       });
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
+      // Mark as played today
+      markAsPlayed('equipments');
+      setHasPlayedToday(true);
       onComplete({
-        mode: 'equipment',
+        mode: 'equipments',
         won: false,
         guesses: maxGuesses,
         target: targetEquipment.name
@@ -156,7 +169,32 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     );
   };
 
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedToday(false);
+    // Reset game state for new day
+    setGuesses([]);
+    setGameWon(false);
+    setGameLost(false);
+  };
+
   if (!targetEquipment) return <div>Loading...</div>;
+
+  // If player has already played today, show countdown
+  if (hasPlayedToday) {
+    return (
+      <div className="game-board">
+        <div className="daily-play-completed">
+          <h2>🎉 You've already completed today's equipment challenge!</h2>
+          <p>The next challenge will be available in:</p>
+          <CountdownTimer onReset={handleTimerReset} />
+          <button className="new-game-btn" onClick={onBack}>
+            Back to Menu
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div>
