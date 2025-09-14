@@ -10,8 +10,8 @@ const BadgesGame = ({ onBack }) => {
   const cosmeticPath = "images/cosmetics/";
   const maxZoomLevel = 20;
 
-  const [badgeOriginW, setBadgeOriginW] = useState(Math.floor((Math.random()) * 100));
-  const [badgeOriginH, setBadgeOriginH] = useState(Math.floor((Math.random()) * 100));
+  const [badgeOriginW, setBadgeOriginW] = useState(Math.floor((Math.random()) * 80) + 10);
+  const [badgeOriginH, setBadgeOriginH] = useState(Math.floor((Math.random()) * 80) + 10);
   const [targetBadge, setTargetBadge] = useState(null);
   const [badgeGuesses, setBadgeGuesses] = useState([]);
   const [badgeGameWon, setBadgeGameWon] = useState(false);
@@ -20,13 +20,13 @@ const BadgesGame = ({ onBack }) => {
   const [badgeFilterText, setBadgeFilterText] = useState('');
   const badgeInputRef = useRef(null);
 
-  const [currentZoomLevel, setCurrentZoomLevel] = useState(20);
+  const [currentZoomLevel, setCurrentZoomLevel] = useState(maxZoomLevel);
   const [cosmeticGuesses, setCosmeticGuesses] = useState([]);
   const [cosmeticGameWon, setCosmeticGameWon] = useState(false);
   const [availableCosmetics, setAvailableCosmetics] = useState([]);
   const [cosmeticDropdownOpen, setCosmeticDropdownOpen] = useState(false);
   const [cosmeticFilterText, setCosmeticFilterText] = useState('');
-  const [hasPlayedToday, setHasPlayedToday] = useState(false);
+  const [hasPlayedBadges, setHasPlayedBadges] = useState(false);
   const badgeDropdownRef = useRef(null);
   const cosmeticDropdownRef = useRef(null);
   const cosmeticInputRef = useRef(null);
@@ -40,12 +40,12 @@ const BadgesGame = ({ onBack }) => {
 
     // Check if player has already played today
     const playedToday = hasPlayedToday('badges');
-    setHasPlayedToday(playedToday);
+    setHasPlayedBadges(playedToday);
 
     // Select a deterministic badge
     const randomIndex = dateTextToNumberDJB2(new Date(), 'badge', badges.length);
     setTargetBadge(badges[randomIndex]);
-    setCurrentZoomLevel(20);
+    setCurrentZoomLevel(maxZoomLevel);
   }, []);
 
   // Handle clicking outside badge dropdown to close it
@@ -132,7 +132,7 @@ const BadgesGame = ({ onBack }) => {
       setCosmeticGameWon(true);
       // Mark as played today
       markAsPlayed('badges');
-      setHasPlayedToday(true);
+      setHasPlayedBadges(true);
     }
   };
 
@@ -183,48 +183,42 @@ const BadgesGame = ({ onBack }) => {
 
   // Handle timer reset (when new day begins)
   const handleTimerReset = () => {
-    setHasPlayedToday(false);
+    setHasPlayedBadges(false);
     // Reset game state for new day
     setBadgeGuesses([]);
     setCosmeticGuesses([]);
     setBadgeGameWon(false);
     setCosmeticGameWon(false);
-    setCurrentZoomLevel(20);
+    setCurrentZoomLevel(maxZoomLevel);
   };
 
   if (!targetBadge) return <div>Loading...</div>;
 
-  // If player has already played today, show countdown
-  if (hasPlayedToday) {
-    return (
-      <div className="game-board">
-        <div className="daily-play-completed">
-          <h2>🎉 You've already completed today's badge challenge!</h2>
-          <p>The next challenge will be available in:</p>
-          <CountdownTimer onReset={handleTimerReset} />
-          <button className="new-game-btn" onClick={onBack}>
-            Back to Menu
-          </button>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div>
       <div className="game-board">
-        <div className="badge-game">
-          <div className="badge-image-container">
-            <img
-              src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
-              alt="Badge"
-              className="badge-image"
-              style={getImageStyle()}
-            />
+        {hasPlayedBadges && (
+          <div className="daily-play-completed">
+            <h2>You've completed today's badges challenge!</h2>
+            <p>The next challenge will be available in:</p>
+            <CountdownTimer onReset={handleTimerReset} />
           </div>
-        </div>
+        )}
 
-        {!badgeGameWon && (
+        {!hasPlayedBadges && (
+          <div className="badge-game">
+            <div className="badge-image-container">
+              <img
+                src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
+                alt="Badge"
+                className="badge-image"
+                style={getImageStyle()}
+              />
+            </div>
+          </div>
+        )}
+
+        {!badgeGameWon && !hasPlayedBadges && (
           <div className="guess-input">
             <div className="custom-dropdown" ref={badgeDropdownRef}>
               <div

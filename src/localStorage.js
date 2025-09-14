@@ -51,8 +51,6 @@ export function hasPlayedToday(gameModeStr) {
 
   const prevDateISO = dailyPlays[gameModeStr];
 
-  console.log(prevDateISO);
-  console.log(todayDateISO);
   return prevDateISO === todayDateISO;
 }
 

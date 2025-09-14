@@ -44,7 +44,6 @@ const CountdownTimer = ({ onReset }) => {
       <div className="countdown-display">
         <span className="countdown-time">{formatTime(timeLeft)}</span>
       </div>
-      <p className="countdown-text">New {timeLeft <= 0 ? 'game available!' : 'game in:'}</p>
     </div>
   );
 };
