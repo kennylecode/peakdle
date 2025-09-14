@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
 import cosmeticsData from '../data/cosmetics.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
-import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
 
 const BadgesGame = ({ onBack }) => {
@@ -38,14 +38,22 @@ const BadgesGame = ({ onBack }) => {
     setAvailableBadges(badges);
     setAvailableCosmetics(cosmetics);
 
+    const key = "badges";
     // Check if player has already played today
-    const playedToday = hasPlayedToday('badges');
+    const playedToday = hasPlayedToday(key);
     setHasPlayedBadges(playedToday);
 
     // Select a deterministic badge
-    const randomIndex = dateTextToNumberDJB2(new Date(), 'badge', badges.length);
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, badges.length);
     setTargetBadge(badges[randomIndex]);
     setCurrentZoomLevel(maxZoomLevel);
+
+    if (playedToday) {
+      setBadgeGuesses(getPrimaryGuessesToday(key));
+      setCosmeticGuesses(getSecondaryGuessesToday(key));
+      setBadgeGameWon(true);
+      setCosmeticGameWon(true);
+    }
   }, []);
 
   // Handle clicking outside badge dropdown to close it
@@ -131,7 +139,7 @@ const BadgesGame = ({ onBack }) => {
     if (allCosmeticsSelected) {
       setCosmeticGameWon(true);
       // Mark as played today
-      markAsPlayed('badges');
+      markAsPlayed('badges', badgeGuesses.length + cosmeticGuesses.length, badgeGuesses, newGuesses);
       setHasPlayedBadges(true);
     }
   };
@@ -296,72 +304,74 @@ const BadgesGame = ({ onBack }) => {
           </div>
         )}
 
-        {badgeGameWon && !cosmeticGameWon && (
-          <div className="outfit-guess">
+        {badgeGameWon && (
+          <div className="game-result win">
             <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
-            <p className="cosmetic-description">Which cosmetic goes with the "{targetBadge.name}" badge?</p>
+            <p className="cosmetic-description">Which cosmetic goes with the {targetBadge.name}?</p>
 
-            <div className="guess-input">
-              <div className="custom-dropdown" ref={cosmeticDropdownRef}>
-                <div
-                  className="dropdown-header"
-                  onClick={() => {
-                    if (!cosmeticDropdownOpen) {
-                      setCosmeticDropdownOpen(true);
-                    }
-                  }}
-                >
-                  <input
-                    ref={cosmeticInputRef}
-                    type="text"
-                    placeholder="Search cosmetics..."
-                    value={cosmeticFilterText}
-                    onChange={(e) => {
-                      setCosmeticFilterText(e.target.value);
-                      if (!cosmeticDropdownOpen) setCosmeticDropdownOpen(true);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Escape') {
-                        setCosmeticDropdownOpen(false);
-                        setCosmeticFilterText('');
-                      } else if (e.key === 'ArrowDown' && !cosmeticDropdownOpen) {
+            {!cosmeticGameWon && (
+              <div className="guess-input">
+                <div className="custom-dropdown" ref={cosmeticDropdownRef}>
+                  <div
+                    className="dropdown-header"
+                    onClick={() => {
+                      if (!cosmeticDropdownOpen) {
                         setCosmeticDropdownOpen(true);
                       }
                     }}
-                    className="dropdown-input"
-                  />
-                  <span>▼</span>
-                </div>
-
-                {cosmeticDropdownOpen && (
-                  <div className="dropdown-options">
-                    {getFilteredCosmetics().map((cosmetic) => (
-                      <div
-                        key={cosmetic.name}
-                        className="dropdown-option"
-                        onClick={() => {
+                  >
+                    <input
+                      ref={cosmeticInputRef}
+                      type="text"
+                      placeholder="Search cosmetics..."
+                      value={cosmeticFilterText}
+                      onChange={(e) => {
+                        setCosmeticFilterText(e.target.value);
+                        if (!cosmeticDropdownOpen) setCosmeticDropdownOpen(true);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Escape') {
                           setCosmeticDropdownOpen(false);
                           setCosmeticFilterText('');
-                          handleCosmeticGuess(cosmetic);
-                        }}
-                      >
-                        <img
-                          src={cosmetic.imagePath ? cosmeticPath + cosmetic.imagePath : null}
-                          alt={cosmetic.name}
-                        />
-                        <span>{cosmetic.name}</span>
-                        <span></span>
-                      </div>
-                    ))}
-                    {getFilteredCosmetics().length === 0 && cosmeticFilterText.trim() && (
-                      <div className="no-results-message">
-                        No cosmetics found matching "{cosmeticFilterText}"
-                      </div>
-                    )}
+                        } else if (e.key === 'ArrowDown' && !cosmeticDropdownOpen) {
+                          setCosmeticDropdownOpen(true);
+                        }
+                      }}
+                      className="dropdown-input"
+                    />
+                    <span>▼</span>
                   </div>
-                )}
+
+                  {cosmeticDropdownOpen && (
+                    <div className="dropdown-options">
+                      {getFilteredCosmetics().map((cosmetic) => (
+                        <div
+                          key={cosmetic.name}
+                          className="dropdown-option"
+                          onClick={() => {
+                            setCosmeticDropdownOpen(false);
+                            setCosmeticFilterText('');
+                            handleCosmeticGuess(cosmetic);
+                          }}
+                        >
+                          <img
+                            src={cosmetic.imagePath ? cosmeticPath + cosmetic.imagePath : null}
+                            alt={cosmetic.name}
+                          />
+                          <span>{cosmetic.name}</span>
+                          <span></span>
+                        </div>
+                      ))}
+                      {getFilteredCosmetics().length === 0 && cosmeticFilterText.trim() && (
+                        <div className="no-results-message">
+                          No cosmetics found matching "{cosmeticFilterText}"
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
 

@@ -230,27 +230,9 @@ body {
   text-align: center;
 }
 
-/* .badge-image {
-  width: 50vw;
-  margin: 20px auto;
-
-} */
-
-.outfit-guess {
-  margin-top: 30px;
-  padding: 20px;
-  background: #f7fafc;
-  border-radius: 10px;
-}
-
-.outfit-guess h4 {
-  margin-bottom: 15px;
-  color: #2d3748;
-}
-
 .game-result {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -348,7 +330,6 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-right: 15px;
 }
 
 .back-button:hover {

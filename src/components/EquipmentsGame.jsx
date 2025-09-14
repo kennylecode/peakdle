@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import equipmentsData from '../data/equipments.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
-import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
@@ -45,13 +45,28 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
 
     setAvailableEquipment(allEquipment);
 
+    const key = "equipments";
     // Check if player has already played today
-    const playedToday = hasPlayedToday('equipments');
+    const playedToday = hasPlayedToday(key);
     setHasPlayedEquipments(playedToday);
 
     // Select a deterministic equipment
-    const randomIndex = dateTextToNumberDJB2(new Date(), 'equipment', allEquipment.length);
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, allEquipment.length);
     setTargetEquipment(allEquipment[randomIndex]);
+
+    if (playedToday) {
+      const result = getResultToday(key);
+
+      setGuesses(getPrimaryGuessesToday(key));
+
+      if (result === 1) {
+        setGameWon(true);
+        setGameLost(false);
+      } else if (result === 0) {
+        setGameWon(false);
+        setGameLost(true);
+      }
+    }
   }, []);
 
   const handleGuess = (currentGuess) => {
@@ -65,7 +80,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     if (currentGuess.name === targetEquipment.name) {
       setGameWon(true);
       // Mark as played today
-      markAsPlayed('equipments');
+      markAsPlayed('equipments', 1, newGuesses);
       setHasPlayedEquipments(true);
       onComplete({
         mode: 'equipments',
@@ -76,7 +91,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
       // Mark as played today
-      markAsPlayed('equipments');
+      markAsPlayed('equipments', 0, newGuesses);
       setHasPlayedEquipments(true);
       onComplete({
         mode: 'equipments',
@@ -116,7 +131,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   };
 
   const getStatHint = (guessedValue, targetValue, statType) => {
-    if (guessedValue === targetValue) return 'Correct!';
+    if (guessedValue === targetValue) return 'Correct';
     
     if (statType === 'weight') {
       if (guessedValue > targetValue) return 'Too heavy';
@@ -275,89 +290,87 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           </div>
         )}
 
-        {!hasPlayedEquipments && (
-          <div className="stats-grid">
-            {/* Column Headers */}
-            <div className="column-headers-row">
-              <div className="column-headers-grid">
-                <div className="stat-card header-card">
-                  <h4>Name</h4>
-                </div>
-                <div className="stat-card header-card">
-                  <h4>Weight</h4>
-                </div>
-                <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned, Curse">
-                  <h4>Status Effects (?)</h4>
-                </div>
-                <div className="stat-card header-card" title="Status Effect, Traversal, Other">
-                  <h4>Type (?)</h4>
-                </div>
-                <div className="stat-card header-card" title="Base, Common, Uncommon, Mystical">
-                  <h4>Rarity (?)</h4>
-                </div>
-                <div className="stat-card header-card">
-                  <h4>Range</h4>
-                </div>
+        <div className="stats-grid">
+          {/* Column Headers */}
+          <div className="column-headers-row">
+            <div className="column-headers-grid">
+              <div className="stat-card header-card">
+                <h4>Name</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Weight</h4>
+              </div>
+              <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned, Curse">
+                <h4>Status Effects (?)</h4>
+              </div>
+              <div className="stat-card header-card" title="Status Effect, Traversal, Other">
+                <h4>Type (?)</h4>
+              </div>
+              <div className="stat-card header-card" title="Base, Common, Uncommon, Mystical">
+                <h4>Rarity (?)</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Range</h4>
               </div>
             </div>
+          </div>
 
-            {guesses.map((guess, guessIndex) => {
-              const weightArrow = getStatArrow(guess.weight, targetEquipment.weight);
-              const rangeArrow = getStatArrow(guess.range, targetEquipment.range);
-              
-              return (
-                <div key={guessIndex} className="guess-row">
-                  <div className="guess-grid">
-                    <div className={`stat-card ${getStatClass(guess.name, targetEquipment.name, null)}`}>
-                      <div className="value">
-                        {guess.name}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.name, targetEquipment.name, null)}
-                      </div>
+          {guesses.map((guess, guessIndex) => {
+            const weightArrow = getStatArrow(guess.weight, targetEquipment.weight);
+            const rangeArrow = getStatArrow(guess.range, targetEquipment.range);
+            
+            return (
+              <div key={guessIndex} className="guess-row">
+                <div className="guess-grid">
+                  <div className={`stat-card ${getStatClass(guess.name, targetEquipment.name, null)}`}>
+                    <div className="value">
+                      {guess.name}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.weight, targetEquipment.weight, 'weight')}`}>
-                      <div className="value">
-                        {guess.weight} {weightArrow && <span className={`arrow ${weightArrow.class}`}>{weightArrow.symbol}</span>}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.weight, targetEquipment.weight, 'weight')}
-                      </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.name, targetEquipment.name, null)}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}`}>
-                      <div className="value">{formatArrayValue(guess.statusEffect)}</div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}
-                      </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.weight, targetEquipment.weight, 'weight')}`}>
+                    <div className="value">
+                      {guess.weight} {weightArrow && <span className={`arrow ${weightArrow.class}`}>{weightArrow.symbol}</span>}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.type, targetEquipment.type, 'type')}`}>
-                      <div className="value">{guess.type}</div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.type, targetEquipment.type, 'type')}
-                      </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.weight, targetEquipment.weight, 'weight')}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.rarity, targetEquipment.rarity, 'rarity')}`}>
-                      <div className="value">
-                        {guess.rarity}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.rarity, targetEquipment.rarity, 'rarity')}
-                      </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}`}>
+                    <div className="value">{formatArrayValue(guess.statusEffect)}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect')}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.range, targetEquipment.range, 'range')}`}>
-                      <div className="value">
-                        {guess.range} {rangeArrow && <span className={`arrow ${rangeArrow.class}`}>{rangeArrow.symbol}</span>}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.range, targetEquipment.range, 'range')}
-                      </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.type, targetEquipment.type, 'type')}`}>
+                    <div className="value">{guess.type}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.type, targetEquipment.type, 'type')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.rarity, targetEquipment.rarity, 'rarity')}`}>
+                    <div className="value">
+                      {guess.rarity}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.rarity, targetEquipment.rarity, 'rarity')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.range, targetEquipment.range, 'range')}`}>
+                    <div className="value">
+                      {guess.range} {rangeArrow && <span className={`arrow ${rangeArrow.class}`}>{rangeArrow.symbol}</span>}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.range, targetEquipment.range, 'range')}
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        )}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="center-content">

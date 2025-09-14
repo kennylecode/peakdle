@@ -5,7 +5,7 @@ import ediblesWellDone from '../data/edibles/edibles-well-done.json';
 import ediblesBurnt from '../data/edibles/edibles-burnt.json';
 import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
-import { hasPlayedToday, markAsPlayed } from '../localStorage';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
@@ -65,19 +65,32 @@ const EdiblesGame = ({ onComplete, onBack }) => {
 
     setAvailableEdibles(allEdibles);
     
+    const key = "edibles-" + cookingLevel;
     // Check if player has already played this cooking level today
-    const playedToday = hasPlayedToday('edibles-' + cookingLevel);
+    const playedToday = hasPlayedToday(key);
     setHasPlayedCurrentLevel(playedToday);
 
     // Select a deterministic edible
-    const randomIndex = dateTextToNumberDJB2(new Date(), 'edible-' + cookingLevel, allEdibles.length);
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, allEdibles.length);
     setTargetEdible(allEdibles[randomIndex]);
 
-    // Reset game state
-    setGuesses([]);
-    setMaxGuesses(defaultNumGuesses+cookingLevel);
-    setGameWon(false);
-    setGameLost(false);
+    if (playedToday) {
+      setGuesses(getPrimaryGuessesToday(key))
+      const result = getResultToday(key);
+      if (result === 1) {
+        setGameWon(true);
+        setGameLost(false);
+      } else if (result === 0) {
+        setGameWon(false);
+        setGameLost(true);
+      }
+    } else {
+      // Reset game state
+      setGuesses([]);
+      setMaxGuesses(defaultNumGuesses+cookingLevel);
+      setGameWon(false);
+      setGameLost(false);
+    }
   }, [cookingLevel]);
 
   const handleGuess = (currentGuess) => {
@@ -91,7 +104,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     if (currentGuess.name === targetEdible.name) {
       setGameWon(true);
       // Mark current cooking level as played
-      markAsPlayed('edibles-' + cookingLevel);
+      markAsPlayed('edibles-' + cookingLevel, 1, newGuesses);
       setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
@@ -102,7 +115,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
       // Mark current cooking level as played
-      markAsPlayed('edibles-' + cookingLevel);
+      markAsPlayed('edibles-' + cookingLevel, 0, newGuesses);
       setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
@@ -141,7 +154,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
   };
 
   const getStatHint = (guessedValue, targetValue, statType) => {
-    if (guessedValue === targetValue) return 'Correct!';
+    if (guessedValue === targetValue) return 'Correct';
     
     if (statType === 'hunger' || statType === 'stamina') {
       if (guessedValue > targetValue) return 'Too high';
@@ -333,90 +346,88 @@ const EdiblesGame = ({ onComplete, onBack }) => {
           </div>
         )}
 
-        {!hasPlayedCurrentLevel && (
-          <div className="stats-grid">
-            {/* Column Headers */}
-            <div className="column-headers-row">
-              <div className="column-headers-grid">
-                <div className="stat-card header-card">
-                  <h4>Name</h4>
-                </div>
-                <div className="stat-card header-card">
-                  <h4>Hunger</h4>
-                </div>
-                <div className="stat-card header-card">
-                  <h4>Weight</h4>
-                </div>
-                <div className="stat-card header-card">
-                  <h4>Stamina</h4>
-                </div>
-                <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned">
-                  <h4>Status Effects (?)</h4>
-                </div>
-                <div className="stat-card header-card" title="Shore, Tropics, Alpine, Mesa, Caldera, Kiln">
-                  <h4>Locations (?)</h4>
-                </div>
+        <div className="stats-grid">
+          {/* Column Headers */}
+          <div className="column-headers-row">
+            <div className="column-headers-grid">
+              <div className="stat-card header-card">
+                <h4>Name</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Hunger</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Weight</h4>
+              </div>
+              <div className="stat-card header-card">
+                <h4>Stamina</h4>
+              </div>
+              <div className="stat-card header-card" title="Injury, Poison, Cold, Hot, Drowsy, Thorned">
+                <h4>Status Effects (?)</h4>
+              </div>
+              <div className="stat-card header-card" title="Shore, Tropics, Alpine, Mesa, Caldera, Kiln">
+                <h4>Locations (?)</h4>
               </div>
             </div>
+          </div>
 
-            {guesses.map((guess, guessIndex) => {
-              const hungerArrow = getStatArrow(guess.hunger, targetEdible.hunger);
-              const weightArrow = getStatArrow(guess.weight, targetEdible.weight);
-              const staminaArrow = getStatArrow(guess.stamina, targetEdible.stamina);
-              
-              return (
-                <div key={guessIndex} className="guess-row">
-                  <div className="guess-grid">
-                    <div className={`stat-card ${getStatClass(guess.name, targetEdible.name, null)}`}>
-                      <div className="value">
-                        {guess.name}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.name, targetEdible.name, null)}
-                      </div>
+          {guesses.map((guess, guessIndex) => {
+            const hungerArrow = getStatArrow(guess.hunger, targetEdible.hunger);
+            const weightArrow = getStatArrow(guess.weight, targetEdible.weight);
+            const staminaArrow = getStatArrow(guess.stamina, targetEdible.stamina);
+            
+            return (
+              <div key={guessIndex} className="guess-row">
+                <div className="guess-grid">
+                  <div className={`stat-card ${getStatClass(guess.name, targetEdible.name, null)}`}>
+                    <div className="value">
+                      {guess.name}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.hunger, targetEdible.hunger, 'hunger')}`}>
-                      <div className="value">
-                        {guess.hunger} {hungerArrow && <span className={`arrow ${hungerArrow.class}`}>{hungerArrow.symbol}</span>}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.hunger, targetEdible.hunger, 'hunger')}
-                      </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.name, targetEdible.name, null)}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.weight, targetEdible.weight, 'weight')}`}>
-                      <div className="value">
-                        {guess.weight} {weightArrow && <span className={`arrow ${weightArrow.class}`}>{weightArrow.symbol}</span>}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.weight, targetEdible.weight, 'weight')}
-                      </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.hunger, targetEdible.hunger, 'hunger')}`}>
+                    <div className="value">
+                      {guess.hunger} {hungerArrow && <span className={`arrow ${hungerArrow.class}`}>{hungerArrow.symbol}</span>}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.stamina, targetEdible.stamina, 'stamina')}`}>
-                      <div className="value">
-                        {guess.stamina} {staminaArrow && <span className={`arrow ${staminaArrow.class}`}>{staminaArrow.symbol}</span>}
-                      </div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.stamina, targetEdible.stamina, 'stamina')}
-                      </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.hunger, targetEdible.hunger, 'hunger')}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.statusEffect, targetEdible.statusEffect, 'statusEffect')}`}>
-                      <div className="value">{formatArrayValue(guess.statusEffect)}</div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.statusEffect, targetEdible.statusEffect, 'statusEffect')}
-                      </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.weight, targetEdible.weight, 'weight')}`}>
+                    <div className="value">
+                      {guess.weight} {weightArrow && <span className={`arrow ${weightArrow.class}`}>{weightArrow.symbol}</span>}
                     </div>
-                    <div className={`stat-card ${getStatClass(guess.location, targetEdible.location, 'location')}`}>
-                      <div className="value">{formatArrayValue(guess.location)}</div>
-                      <div className="stat-hint">
-                        {getStatHint(guess.location, targetEdible.location, 'location')}
-                      </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.weight, targetEdible.weight, 'weight')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.stamina, targetEdible.stamina, 'stamina')}`}>
+                    <div className="value">
+                      {guess.stamina} {staminaArrow && <span className={`arrow ${staminaArrow.class}`}>{staminaArrow.symbol}</span>}
+                    </div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.stamina, targetEdible.stamina, 'stamina')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.statusEffect, targetEdible.statusEffect, 'statusEffect')}`}>
+                    <div className="value">{formatArrayValue(guess.statusEffect)}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.statusEffect, targetEdible.statusEffect, 'statusEffect')}
+                    </div>
+                  </div>
+                  <div className={`stat-card ${getStatClass(guess.location, targetEdible.location, 'location')}`}>
+                    <div className="value">{formatArrayValue(guess.location)}</div>
+                    <div className="stat-hint">
+                      {getStatHint(guess.location, targetEdible.location, 'location')}
                     </div>
                   </div>
                 </div>
-              );
-            })}
-          </div>
-        )}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       <div className="center-content">
