@@ -250,7 +250,7 @@ body {
 }
 
 .new-game-btn {
-  margin-top: 20px;
+  margin: 10px;
   padding: 12px 25px;
   background: #667eea;
   color: white;
@@ -262,6 +262,27 @@ body {
 }
 
 .new-game-btn:hover {
+  background: #5a67d8;
+}
+
+.share-game-container {
+  margin: 10px;
+  white-space: pre;
+}
+
+.share-game-btn {
+  margin: 10px;
+  padding: 12px 25px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.share-game-btn:hover {
   background: #5a67d8;
 }
 

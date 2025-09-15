@@ -3,6 +3,7 @@ import equipmentsData from '../data/equipments.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
 import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
+import Share from './Share';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
   const maxGuesses = 6;
@@ -162,6 +163,21 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     return 'Incorrect';
   };
 
+  const getStatsGrid = () => {
+    let grid = guesses.map((guess) => 
+      [
+        getStatClass(guess.name, targetEquipment.name, null),
+        getStatClass(guess.weight, targetEquipment.weight, 'weight'),
+        getStatClass(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect'),
+        getStatClass(guess.type, targetEquipment.type, 'type'),
+        getStatClass(guess.rarity, targetEquipment.rarity, 'rarity'),
+        getStatClass(guess.range, targetEquipment.range, 'range')
+      ]
+    );
+
+    return grid;
+  };
+
   const formatArrayValue = (value) => {
     if (Array.isArray(value)) {
       return value.length > 0 ? value.join(', ') : 'None';
@@ -274,9 +290,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the equipment!</h3>
             <p>You guessed {targetEquipment.name} in {guesses.length} tries!</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <Share
+              buttonText="Share Equipments Guesses"
+              message="Equipments PEAKdle"
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 
@@ -284,9 +302,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           <div className="game-result lose">
             <h3>😞 Game Over!</h3>
             <p>The equipment was: {targetEquipment.name}</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <Share
+              buttonText="Share Equipments Guesses"
+              message="Equipments PEAKdle"
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 

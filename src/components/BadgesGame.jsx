@@ -4,6 +4,7 @@ import cosmeticsData from '../data/cosmetics.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
 import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
+import Share from './Share';
 
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
@@ -163,6 +164,18 @@ const BadgesGame = ({ onBack }) => {
 
     return 'incorrect';
   };
+
+  const getBadgesStatsGrid = () => {
+    const grid = [badgeGuesses.map((badge) => getBadgeStatClass(badge.name, targetBadge.name))];
+
+    return grid;
+  };
+
+  const getCosmeticsStatsGrid = () => {
+    const grid = [cosmeticGuesses.map((cosmetic) => getCosmeticStatClass(cosmetic.name, targetBadge.cosmeticReward))];
+
+    return grid;
+  };
   
   // Get filtered badges based on search text
   const getFilteredBadges = () => {
@@ -308,7 +321,11 @@ const BadgesGame = ({ onBack }) => {
           <div className="game-result win">
             <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
             <p className="cosmetic-description">Which cosmetic goes with the {targetBadge.name}?</p>
-
+            <Share
+              buttonText="Share Badges Guesses"
+              message="Badges PEAKdle"
+              statsGrid={getBadgesStatsGrid()}
+            />
             {!cosmeticGameWon && (
               <div className="guess-input">
                 <div className="custom-dropdown" ref={cosmeticDropdownRef}>
@@ -397,6 +414,11 @@ const BadgesGame = ({ onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the cosmetic!</h3>
             <p>You guessed {targetBadge.cosmeticReward.join(', ')} in {cosmeticGuesses.length} tries!</p>
+            <Share
+              buttonText="Share Cosmetics Guesses"
+              message="Cosmetics PEAKdle"
+              statsGrid={getCosmeticsStatsGrid()}
+            />
             <button className="new-game-btn" onClick={onBack}>
               Main Menu
             </button>
