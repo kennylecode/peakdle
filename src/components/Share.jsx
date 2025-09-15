@@ -17,32 +17,48 @@ const getEmojiGrid = (statsGrid) => {
   return grid;
 };
 
-const copyShareGrid = (message, gridText) => {
-    const copiedText = `${message}\n${gridText}`;
+const copyShareGrid = async (message, gridText) => {
+  const copiedText = `${message}\n${gridText}\n${window.location.href}`;
+  try {
     if (navigator.clipboard) {
-      navigator.clipboard.writeText(copiedText);
+      await navigator.clipboard.writeText(copiedText);
+      console.log('Text copied to clipboard!');
     } else {
       // fallback for older browsers
       const textarea = document.createElement('textarea');
-      textarea.value = text;
+      textarea.value = copiedText;
       document.body.appendChild(textarea);
       textarea.select();
       document.execCommand('copy');
       document.body.removeChild(textarea);
+      console.log('Text copied to clipboard! (fallback)');
     }
-  };
+  } catch (err) {
+    console.error('Failed to copy text: ', err);
+  }
+};
 
 const Share = ({ buttonText, message, statsGrid }) => {
   const grid = getEmojiGrid(statsGrid);
 
+  const handleCopyClick = () => copyShareGrid(message, grid);
+
   console.log(grid);
   
   return (
-    <div>
-        <div className = "share-game-container">
+    <div className = "share-game-container">
+        <div>
+          <div className = "share-game-message">
+            {message}
+          </div>
+          <div className = "share-game-grid">
             {grid}
+          </div>
+          <div className = "share-game-message">
+            {window.location.href}
+          </div>
         </div>
-        <button className="share-game-btn" onClick={copyShareGrid(message, grid)} title="Copy results to clipboard" >
+        <button className="share-game-btn" onClick={handleCopyClick} title="Copy results to clipboard" >
           {buttonText}
         </button>
     </div>

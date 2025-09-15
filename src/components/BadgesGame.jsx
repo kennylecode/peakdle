@@ -213,6 +213,22 @@ const BadgesGame = ({ onBack }) => {
     setCurrentZoomLevel(maxZoomLevel);
   };
 
+  const badgeWonShareMessage = () => {
+    const message = "😎 I got the badge in PEAKdle in " +
+      badgeGuesses.length + 
+      (badgeGuesses.length > 1 ? " attempts" : " attempt");
+    
+    return message;
+  }
+
+  const cosmeticWonShareMessage = () => {
+    const message = "😎 I got the cosmetic in PEAKdle in " +
+      cosmeticGuesses.length + 
+      (cosmeticGuesses.length > 1 ? " attempts" : " attempt");
+    
+    return message;
+  }
+
   if (!targetBadge) return <div>Loading...</div>;
 
   return (
@@ -323,7 +339,7 @@ const BadgesGame = ({ onBack }) => {
             <p className="cosmetic-description">Which cosmetic goes with the {targetBadge.name}?</p>
             <Share
               buttonText="Share Badges Guesses"
-              message="Badges PEAKdle"
+              message={badgeWonShareMessage()}
               statsGrid={getBadgesStatsGrid()}
             />
             {!cosmeticGameWon && (
@@ -416,7 +432,7 @@ const BadgesGame = ({ onBack }) => {
             <p>You guessed {targetBadge.cosmeticReward.join(', ')} in {cosmeticGuesses.length} tries!</p>
             <Share
               buttonText="Share Cosmetics Guesses"
-              message="Cosmetics PEAKdle"
+              message={cosmeticWonShareMessage()}
               statsGrid={getCosmeticsStatsGrid()}
             />
             <button className="new-game-btn" onClick={onBack}>

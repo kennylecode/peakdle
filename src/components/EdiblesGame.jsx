@@ -247,6 +247,22 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     setGameLost(false);
   };
 
+  const gameWonShareMessage = () => {
+    const message = "😎 I figured out what I was eating in " +
+      guesses.length + 
+      (guesses.length > 1 ? " attempts" : " attempt") +
+      " on PEAKdle!";
+
+    
+    return message;
+  }
+
+  const gameLostShareMessage = () => {
+    const message = "😵 I didn't know what edibles I was consuming on PEAKdle!";
+    
+    return message;
+  }
+
   if (!targetEdible) return <div>Loading...</div>;
 
   return (
@@ -345,10 +361,10 @@ const EdiblesGame = ({ onComplete, onBack }) => {
         {gameWon && (
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the edible!</h3>
-            <p>You guessed {targetEdible.name} in {guesses.length} tries!</p>
+            <p>You guessed {targetEdible.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
             <Share
               buttonText="Share Edibles Guesses"
-              message="Edibles PEAKdle"
+              message={gameWonShareMessage()}
               statsGrid={getStatsGrid()}
             />
           </div>
@@ -360,7 +376,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
             <p>The edible was: {targetEdible.name}</p>
             <Share
               buttonText="Share Edibles Guesses"
-              message="Edibles PEAKdle"
+              message={gameLostShareMessage()}
               statsGrid={getStatsGrid()}
             />
           </div>

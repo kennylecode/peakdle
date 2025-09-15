@@ -267,7 +267,15 @@ body {
 
 .share-game-container {
   margin: 10px;
-  white-space: pre;
+}
+
+.share-game-message {
+  font-weight: lighter;
+}
+
+.share-game-grid {
+  white-space: pre-line;
+  padding: 10px;
 }
 
 .share-game-btn {
@@ -286,12 +294,12 @@ body {
   background: #5a67d8;
 }
 
-/* EdiblesGame Specific Styles */
 .center-content {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* EdiblesGame Specific Styles */
 .cooking-level-container {
   margin: 10px 0;
   padding: 20px;

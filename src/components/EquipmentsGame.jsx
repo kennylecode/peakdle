@@ -209,6 +209,23 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     setGameLost(false);
   };
 
+  const gameWonShareMessage = () => {
+    const message = "😎 I used" + 
+      (guesses.length > 1 ? " all the right equipments" : " the right equipment") + 
+      " to PEAKdle in  " +
+      guesses.length + 
+      (guesses.length > 1 ? " attempts" : " attempt") +
+      "!";
+    
+    return message;
+  }
+
+  const gameLostShareMessage = () => {
+    const message = "😵 I didn't know what tools would aid me on PEAKdle!";
+    
+    return message;
+  }
+
   if (!targetEquipment) return <div>Loading...</div>;
 
   return (
@@ -289,10 +306,10 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
         {gameWon && (
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the equipment!</h3>
-            <p>You guessed {targetEquipment.name} in {guesses.length} tries!</p>
+            <p>You guessed {targetEquipment.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
             <Share
               buttonText="Share Equipments Guesses"
-              message="Equipments PEAKdle"
+              message={gameWonShareMessage()}
               statsGrid={getStatsGrid()}
             />
           </div>
@@ -304,7 +321,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
             <p>The equipment was: {targetEquipment.name}</p>
             <Share
               buttonText="Share Equipments Guesses"
-              message="Equipments PEAKdle"
+              message={gameLostShareMessage()}
               statsGrid={getStatsGrid()}
             />
           </div>
