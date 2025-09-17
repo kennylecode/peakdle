@@ -1,14 +1,18 @@
 import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
 import cosmeticsData from '../data/cosmetics.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
+import Share from './Share';
 
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
   const cosmeticPath = "images/cosmetics/";
   const maxZoomLevel = 20;
 
-  const [badgeOriginW, setBadgeOriginW] = useState(Math.floor((Math.random()) * 100));
-  const [badgeOriginH, setBadgeOriginH] = useState(Math.floor((Math.random()) * 100));
+  const [badgeOriginW, setBadgeOriginW] = useState(Math.floor((Math.random()) * 80) + 10);
+  const [badgeOriginH, setBadgeOriginH] = useState(Math.floor((Math.random()) * 80) + 10);
   const [targetBadge, setTargetBadge] = useState(null);
   const [badgeGuesses, setBadgeGuesses] = useState([]);
   const [badgeGameWon, setBadgeGameWon] = useState(false);
@@ -17,12 +21,13 @@ const BadgesGame = ({ onBack }) => {
   const [badgeFilterText, setBadgeFilterText] = useState('');
   const badgeInputRef = useRef(null);
 
-  const [currentZoomLevel, setCurrentZoomLevel] = useState(20);
+  const [currentZoomLevel, setCurrentZoomLevel] = useState(maxZoomLevel);
   const [cosmeticGuesses, setCosmeticGuesses] = useState([]);
   const [cosmeticGameWon, setCosmeticGameWon] = useState(false);
   const [availableCosmetics, setAvailableCosmetics] = useState([]);
   const [cosmeticDropdownOpen, setCosmeticDropdownOpen] = useState(false);
   const [cosmeticFilterText, setCosmeticFilterText] = useState('');
+  const [hasPlayedBadges, setHasPlayedBadges] = useState(false);
   const badgeDropdownRef = useRef(null);
   const cosmeticDropdownRef = useRef(null);
   const cosmeticInputRef = useRef(null);
@@ -30,14 +35,26 @@ const BadgesGame = ({ onBack }) => {
   useEffect(() => {
     const badges = sortByName(badgesData);
     const cosmetics = sortByName(cosmeticsData)
-    
+
     setAvailableBadges(badges);
     setAvailableCosmetics(cosmetics);
 
-    // Select a random badge as the target
-    const randomIndex = Math.floor(Math.random() * badges.length);
+    const key = "badges";
+    // Check if player has already played today
+    const playedToday = hasPlayedToday(key);
+    setHasPlayedBadges(playedToday);
+
+    // Select a deterministic badge
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, badges.length);
     setTargetBadge(badges[randomIndex]);
-    setCurrentZoomLevel(20);
+    setCurrentZoomLevel(maxZoomLevel);
+
+    if (playedToday) {
+      setBadgeGuesses(getPrimaryGuessesToday(key));
+      setCosmeticGuesses(getSecondaryGuessesToday(key));
+      setBadgeGameWon(true);
+      setCosmeticGameWon(true);
+    }
   }, []);
 
   // Handle clicking outside badge dropdown to close it
@@ -122,6 +139,9 @@ const BadgesGame = ({ onBack }) => {
 
     if (allCosmeticsSelected) {
       setCosmeticGameWon(true);
+      // Mark as played today
+      markAsPlayed('badges', badgeGuesses.length + cosmeticGuesses.length, badgeGuesses, newGuesses);
+      setHasPlayedBadges(true);
     }
   };
 
@@ -144,6 +164,18 @@ const BadgesGame = ({ onBack }) => {
 
     return 'incorrect';
   };
+
+  const getBadgesStatsGrid = () => {
+    const grid = [badgeGuesses.map((badge) => getBadgeStatClass(badge.name, targetBadge.name))];
+
+    return grid;
+  };
+
+  const getCosmeticsStatsGrid = () => {
+    const grid = [cosmeticGuesses.map((cosmetic) => getCosmeticStatClass(cosmetic.name, targetBadge.cosmeticReward))];
+
+    return grid;
+  };
   
   // Get filtered badges based on search text
   const getFilteredBadges = () => {
@@ -165,28 +197,65 @@ const BadgesGame = ({ onBack }) => {
     );
   };
 
-   // Sort array alphabetically by name
-   const sortByName = (array) => {
+  // Sort array alphabetically by name
+  const sortByName = (array) => {
     return [...array].sort((a, b) => a.name.localeCompare(b.name));
   };
+
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedBadges(false);
+    // Reset game state for new day
+    setBadgeGuesses([]);
+    setCosmeticGuesses([]);
+    setBadgeGameWon(false);
+    setCosmeticGameWon(false);
+    setCurrentZoomLevel(maxZoomLevel);
+  };
+
+  const badgeWonShareMessage = () => {
+    const message = "😎 I got the badge in PEAKdle in " +
+      badgeGuesses.length + 
+      (badgeGuesses.length > 1 ? " attempts" : " attempt");
+    
+    return message;
+  }
+
+  const cosmeticWonShareMessage = () => {
+    const message = "😎 I got the cosmetic in PEAKdle in " +
+      cosmeticGuesses.length + 
+      (cosmeticGuesses.length > 1 ? " attempts" : " attempt");
+    
+    return message;
+  }
 
   if (!targetBadge) return <div>Loading...</div>;
 
   return (
     <div>
       <div className="game-board">
-        <div className="badge-game">
-          <div className="badge-image-container">
-            <img
-              src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
-              alt="Badge"
-              className="badge-image"
-              style={getImageStyle()}
-            />
+        {hasPlayedBadges && (
+          <div className="daily-play-completed">
+            <h2>You've completed today's badges challenge!</h2>
+            <p>The next challenge will be available in:</p>
+            <CountdownTimer onReset={handleTimerReset} />
           </div>
-        </div>
+        )}
 
-        {!badgeGameWon && (
+        {!hasPlayedBadges && (
+          <div className="badge-game">
+            <div className="badge-image-container">
+              <img
+                src={targetBadge.imagePath ? badgePath + targetBadge.imagePath : null}
+                alt="Badge"
+                className="badge-image"
+                style={getImageStyle()}
+              />
+            </div>
+          </div>
+        )}
+
+        {!badgeGameWon && !hasPlayedBadges && (
           <div className="guess-input">
             <div className="custom-dropdown" ref={badgeDropdownRef}>
               <div
@@ -264,72 +333,78 @@ const BadgesGame = ({ onBack }) => {
           </div>
         )}
 
-        {badgeGameWon && !cosmeticGameWon && (
-          <div className="outfit-guess">
+        {badgeGameWon && (
+          <div className="game-result win">
             <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
-            <p className="cosmetic-description">Which cosmetic goes with the "{targetBadge.name}" badge?</p>
-
-            <div className="guess-input">
-              <div className="custom-dropdown" ref={cosmeticDropdownRef}>
-                <div
-                  className="dropdown-header"
-                  onClick={() => {
-                    if (!cosmeticDropdownOpen) {
-                      setCosmeticDropdownOpen(true);
-                    }
-                  }}
-                >
-                  <input
-                    ref={cosmeticInputRef}
-                    type="text"
-                    placeholder="Search cosmetics..."
-                    value={cosmeticFilterText}
-                    onChange={(e) => {
-                      setCosmeticFilterText(e.target.value);
-                      if (!cosmeticDropdownOpen) setCosmeticDropdownOpen(true);
-                    }}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Escape') {
-                        setCosmeticDropdownOpen(false);
-                        setCosmeticFilterText('');
-                      } else if (e.key === 'ArrowDown' && !cosmeticDropdownOpen) {
+            <p className="cosmetic-description">Which cosmetic goes with the {targetBadge.name}?</p>
+            <Share
+              buttonText="Share Badges Guesses"
+              message={badgeWonShareMessage()}
+              statsGrid={getBadgesStatsGrid()}
+            />
+            {!cosmeticGameWon && (
+              <div className="guess-input">
+                <div className="custom-dropdown" ref={cosmeticDropdownRef}>
+                  <div
+                    className="dropdown-header"
+                    onClick={() => {
+                      if (!cosmeticDropdownOpen) {
                         setCosmeticDropdownOpen(true);
                       }
                     }}
-                    className="dropdown-input"
-                  />
-                  <span>▼</span>
-                </div>
-
-                {cosmeticDropdownOpen && (
-                  <div className="dropdown-options">
-                    {getFilteredCosmetics().map((cosmetic) => (
-                      <div
-                        key={cosmetic.name}
-                        className="dropdown-option"
-                        onClick={() => {
+                  >
+                    <input
+                      ref={cosmeticInputRef}
+                      type="text"
+                      placeholder="Search cosmetics..."
+                      value={cosmeticFilterText}
+                      onChange={(e) => {
+                        setCosmeticFilterText(e.target.value);
+                        if (!cosmeticDropdownOpen) setCosmeticDropdownOpen(true);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Escape') {
                           setCosmeticDropdownOpen(false);
                           setCosmeticFilterText('');
-                          handleCosmeticGuess(cosmetic);
-                        }}
-                      >
-                        <img
-                          src={cosmetic.imagePath ? cosmeticPath + cosmetic.imagePath : null}
-                          alt={cosmetic.name}
-                        />
-                        <span>{cosmetic.name}</span>
-                        <span></span>
-                      </div>
-                    ))}
-                    {getFilteredCosmetics().length === 0 && cosmeticFilterText.trim() && (
-                      <div className="no-results-message">
-                        No cosmetics found matching "{cosmeticFilterText}"
-                      </div>
-                    )}
+                        } else if (e.key === 'ArrowDown' && !cosmeticDropdownOpen) {
+                          setCosmeticDropdownOpen(true);
+                        }
+                      }}
+                      className="dropdown-input"
+                    />
+                    <span>▼</span>
                   </div>
-                )}
+
+                  {cosmeticDropdownOpen && (
+                    <div className="dropdown-options">
+                      {getFilteredCosmetics().map((cosmetic) => (
+                        <div
+                          key={cosmetic.name}
+                          className="dropdown-option"
+                          onClick={() => {
+                            setCosmeticDropdownOpen(false);
+                            setCosmeticFilterText('');
+                            handleCosmeticGuess(cosmetic);
+                          }}
+                        >
+                          <img
+                            src={cosmetic.imagePath ? cosmeticPath + cosmetic.imagePath : null}
+                            alt={cosmetic.name}
+                          />
+                          <span>{cosmetic.name}</span>
+                          <span></span>
+                        </div>
+                      ))}
+                      {getFilteredCosmetics().length === 0 && cosmeticFilterText.trim() && (
+                        <div className="no-results-message">
+                          No cosmetics found matching "{cosmeticFilterText}"
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
 
@@ -355,6 +430,11 @@ const BadgesGame = ({ onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the cosmetic!</h3>
             <p>You guessed {targetBadge.cosmeticReward.join(', ')} in {cosmeticGuesses.length} tries!</p>
+            <Share
+              buttonText="Share Cosmetics Guesses"
+              message={cosmeticWonShareMessage()}
+              statsGrid={getCosmeticsStatsGrid()}
+            />
             <button className="new-game-btn" onClick={onBack}>
               Main Menu
             </button>

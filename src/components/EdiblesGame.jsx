@@ -4,6 +4,10 @@ import ediblesCooked from '../data/edibles/edibles-cooked.json';
 import ediblesWellDone from '../data/edibles/edibles-well-done.json';
 import ediblesBurnt from '../data/edibles/edibles-burnt.json';
 import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
+import Share from './Share';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
@@ -17,6 +21,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
   const [availableEdibles, setAvailableEdibles] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
+  const [hasPlayedCurrentLevel, setHasPlayedCurrentLevel] = useState(false);
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -61,15 +66,32 @@ const EdiblesGame = ({ onComplete, onBack }) => {
 
     setAvailableEdibles(allEdibles);
     
-    // Select a new random edible from the updated pool
-    const randomIndex = Math.floor(Math.random() * allEdibles.length);
+    const key = "edibles-" + cookingLevel;
+    // Check if player has already played this cooking level today
+    const playedToday = hasPlayedToday(key);
+    setHasPlayedCurrentLevel(playedToday);
+
+    // Select a deterministic edible
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, allEdibles.length);
     setTargetEdible(allEdibles[randomIndex]);
-    
-    // Reset game state
-    setGuesses([]);
-    setMaxGuesses(defaultNumGuesses+cookingLevel);
-    setGameWon(false);
-    setGameLost(false);
+
+    if (playedToday) {
+      setGuesses(getPrimaryGuessesToday(key))
+      const result = getResultToday(key);
+      if (result === 1) {
+        setGameWon(true);
+        setGameLost(false);
+      } else if (result === 0) {
+        setGameWon(false);
+        setGameLost(true);
+      }
+    } else {
+      // Reset game state
+      setGuesses([]);
+      setMaxGuesses(defaultNumGuesses+cookingLevel);
+      setGameWon(false);
+      setGameLost(false);
+    }
   }, [cookingLevel]);
 
   const handleGuess = (currentGuess) => {
@@ -82,6 +104,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     // Check if won
     if (currentGuess.name === targetEdible.name) {
       setGameWon(true);
+      // Mark current cooking level as played
+      markAsPlayed('edibles-' + cookingLevel, 1, newGuesses);
+      setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
         won: true,
@@ -90,6 +115,9 @@ const EdiblesGame = ({ onComplete, onBack }) => {
       });
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
+      // Mark current cooking level as played
+      markAsPlayed('edibles-' + cookingLevel, 0, newGuesses);
+      setHasPlayedCurrentLevel(true);
       onComplete({
         mode: 'edibles',
         won: false,
@@ -127,7 +155,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
   };
 
   const getStatHint = (guessedValue, targetValue, statType) => {
-    if (guessedValue === targetValue) return 'Correct!';
+    if (guessedValue === targetValue) return 'Correct';
     
     if (statType === 'hunger' || statType === 'stamina') {
       if (guessedValue > targetValue) return 'Too high';
@@ -155,6 +183,21 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     }
     
     return 'Incorrect';
+  };
+
+  const getStatsGrid = () => {
+    let grid = guesses.map((guess) => 
+      [
+        getStatClass(guess.name, targetEdible.name, null),
+        getStatClass(guess.hunger, targetEdible.hunger, 'hunger'),
+        getStatClass(guess.weight, targetEdible.weight, 'weight'),
+        getStatClass(guess.stamina, targetEdible.stamina, 'stamina'),
+        getStatClass(guess.statusEffect, targetEdible.statusEffect, 'statusEffect'),
+        getStatClass(guess.location, targetEdible.location, 'location')
+      ]
+    );
+
+    return grid;
   };
 
   const formatArrayValue = (value) => {
@@ -195,6 +238,34 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     );
   };
 
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedCurrentLevel(false);
+    // Reset game state for new day
+    setGuesses([]);
+    setGameWon(false);
+    setGameLost(false);
+  };
+
+  const gameWonShareMessage = () => {
+    const message = "😎 I figured out what I was eating in " +
+      guesses.length + 
+      (guesses.length > 1 ? " attempts" : " attempt") +
+      " on PEAKdle (" + 
+      getCookingLevelLabel(cookingLevel) +
+      ")!";
+    
+    return message;
+  }
+
+  const gameLostShareMessage = () => {
+    const message = "😵 I didn't know what edibles I was consuming on PEAKdle (" + 
+      getCookingLevelLabel(cookingLevel) +
+      ")!";
+
+    return message;
+  }
+
   if (!targetEdible) return <div>Loading...</div>;
 
   return (
@@ -218,7 +289,15 @@ const EdiblesGame = ({ onComplete, onBack }) => {
       </div>
 
       <div className="game-board">
-        {!gameWon && !gameLost && (
+        {hasPlayedCurrentLevel && (
+          <div className="daily-play-completed">
+            <h2>You've completed today's {getCookingLevelLabel(cookingLevel).toLowerCase()} edibles challenge!</h2>
+            <p>The next challenge will be available in:</p>
+            <CountdownTimer onReset={handleTimerReset} />
+          </div>
+        )}
+
+        {!gameWon && !gameLost && !hasPlayedCurrentLevel && (
           <div className="guess-input">
             <div className="custom-dropdown" ref={dropdownRef}>
               <div
@@ -285,10 +364,12 @@ const EdiblesGame = ({ onComplete, onBack }) => {
         {gameWon && (
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the edible!</h3>
-            <p>You guessed {targetEdible.name} in {guesses.length} tries!</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <p>You guessed {targetEdible.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
+            <Share
+              buttonText="Share Edibles Guesses"
+              message={gameWonShareMessage()}
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 
@@ -296,9 +377,11 @@ const EdiblesGame = ({ onComplete, onBack }) => {
           <div className="game-result lose">
             <h3>😔 Game Over!</h3>
             <p>The edible was: {targetEdible.name}</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <Share
+              buttonText="Share Edibles Guesses"
+              message={gameLostShareMessage()}
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 

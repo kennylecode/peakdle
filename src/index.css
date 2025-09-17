@@ -230,27 +230,9 @@ body {
   text-align: center;
 }
 
-/* .badge-image {
-  width: 50vw;
-  margin: 20px auto;
-
-} */
-
-.outfit-guess {
-  margin-top: 30px;
-  padding: 20px;
-  background: #f7fafc;
-  border-radius: 10px;
-}
-
-.outfit-guess h4 {
-  margin-bottom: 15px;
-  color: #2d3748;
-}
-
 .game-result {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px;
   padding: 20px;
   border-radius: 10px;
 }
@@ -268,7 +250,7 @@ body {
 }
 
 .new-game-btn {
-  margin-top: 20px;
+  margin: 10px;
   padding: 12px 25px;
   background: #667eea;
   color: white;
@@ -283,12 +265,41 @@ body {
   background: #5a67d8;
 }
 
-/* EdiblesGame Specific Styles */
+.share-game-container {
+  margin: 10px;
+}
+
+.share-game-message {
+  font-weight: lighter;
+}
+
+.share-game-grid {
+  white-space: pre-line;
+  padding: 10px;
+}
+
+.share-game-btn {
+  margin: 10px;
+  padding: 12px 25px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.share-game-btn:hover {
+  background: #5a67d8;
+}
+
 .center-content {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* EdiblesGame Specific Styles */
 .cooking-level-container {
   margin: 10px 0;
   padding: 20px;
@@ -348,7 +359,6 @@ body {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin-right: 15px;
 }
 
 .back-button:hover {
@@ -489,5 +499,77 @@ body {
 
   .guess-input input {
     width: 100%;
+  }
+}
+
+/* Daily Play Completed Styles */
+.daily-play-completed {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.daily-play-completed h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.daily-play-completed p {
+  color: #4a5568;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-display {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+  min-width: 200px;
+}
+
+.countdown-time {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.countdown-text {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Responsive countdown timer */
+@media (max-width: 768px) {
+  .countdown-display {
+    padding: 15px 20px;
+  }
+
+  .countdown-time {
+    font-size: 1.5rem;
+  }
+
+  .daily-play-completed {
+    padding: 20px 15px;
+  }
+
+  .daily-play-completed h2 {
+    font-size: 1.2rem;
   }
 }

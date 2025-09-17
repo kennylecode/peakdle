@@ -1,20 +1,128 @@
 [
   {
-    "name": "Cooked Yellow Crispberry",
-    "imagePath": "yellow-crispberry.png",
+    "name": "Cooked Airline Food",
+    "imagePath": "airline-food.png",
     "type": "Cooked",
-    "hunger": 10,
-    "weight": 2.5,
-    "stamina": 15,
+    "hunger": 80,
+    "weight": 5,
+    "stamina": 60,
     "statusEffect": [],
     "location": [
       "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Cooked Aloe Vera",
+    "imagePath": "aloe-vera.png",
+    "type": "Cooked",
+    "hunger": 0,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Black Clusterberry",
+    "imagePath": "black-clusterberry.png",
+    "type": "Cooked",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
       "Tropics"
     ]
   },
   {
-    "name": "Cooked Red Crispberry",
-    "imagePath": "red-crispberry.png",
+    "name": "Cooked Blue Berrynana",
+    "imagePath": "blue-berrynana.png",
+    "type": "Cooked",
+    "hunger": 60,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Brown Berrynana",
+    "imagePath": "brown-berrynana.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 15,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Bugle Shroom",
+    "imagePath": "bugle-shroom.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Button Shroom",
+    "imagePath": "button-shroom.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Bird",
+    "imagePath": "cooked-bird.png",
+    "type": "Cooked",
+    "hunger": 40,
+    "weight": 10,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Caldera"
+    ]
+  },
+  {
+    "name": "Cooked Chubby Shroom",
+    "imagePath": "chubby-shroom.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Cluster Shroom",
+    "imagePath": "cluster-shroom.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
@@ -22,6 +130,66 @@
     "statusEffect": [],
     "location": [
       "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Egg",
+    "imagePath": "egg.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Caldera"
+    ]
+  },
+  {
+    "name": "Cooked Gold Prickleberry",
+    "imagePath": "gold-prickleberry.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot",
+      "+Thorned",
+      "-Injury"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Granola Bar",
+    "imagePath": "granola-bar.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 30,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Cooked Green Clusterberry",
+    "imagePath": "green-clusterberry.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Poison"
+    ],
+    "location": [
       "Tropics"
     ]
   },
@@ -41,86 +209,6 @@
     ]
   },
   {
-    "name": "Cooked Scorchberry",
-    "imagePath": "scorchberry.png",
-    "type": "Cooked",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Hot"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Yellow Clusterberry",
-    "imagePath": "yellow-clusterberry.png",
-    "type": "Cooked",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 15,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Black Clusterberry",
-    "imagePath": "black-clusterberry.png",
-    "type": "Cooked",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Red Clusterberry",
-    "imagePath": "red-clusterberry.png",
-    "type": "Cooked",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Injury"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Green Clusterberry",
-    "imagePath": "green-clusterberry.png",
-    "type": "Cooked",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Yellow Kingberry",
-    "imagePath": "yellow-kingberry.png",
-    "type": "Cooked",
-    "hunger": 60,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
     "name": "Cooked Green Kingberry",
     "imagePath": "green-kingberry.png",
     "type": "Cooked",
@@ -132,181 +220,6 @@
     ],
     "location": [
       "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Purple Kingberry",
-    "imagePath": "purple-kingberry.png",
-    "type": "Cooked",
-    "hunger": 60,
-    "weight": 5,
-    "stamina": 52.5,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Brown Berrynana",
-    "imagePath": "brown-berrynana.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 15,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Blue Berrynana",
-    "imagePath": "blue-berrynana.png",
-    "type": "Cooked",
-    "hunger": 60,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Pink Berrynana",
-    "imagePath": "pink-berrynana.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Yellow Berrynana",
-    "imagePath": "yellow-berrynana.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Yellow Winterberry",
-    "imagePath": "yellow-winterberry.png",
-    "type": "Cooked",
-    "hunger": 60,
-    "weight": 2.5,
-    "stamina": 52.5,
-    "statusEffect": [
-      "-Hot",
-      "-Injury"
-    ],
-    "location": [
-      "Alpine",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Cooked Orange Winterberry",
-    "imagePath": "orange-winterberry.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Hot"
-    ],
-    "location": [
-      "Alpine"
-    ]
-  },
-  {
-    "name": "Cooked Napberry",
-    "imagePath": "napberry.png",
-    "type": "Cooked",
-    "hunger": 200,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Drowsy"
-    ],
-    "location": [
-      "Alpine"
-    ]
-  },
-  {
-    "name": "Cooked Medicinal Root",
-    "imagePath": "medicinal-root.png",
-    "type": "Cooked",
-    "hunger": 10,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Poison",
-      "-Injury"
-    ],
-    "location": [
-      "Shore",
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Tick",
-    "imagePath": "tick.png",
-    "type": "Cooked",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Cooked Egg",
-    "imagePath": "egg.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Caldera"
-    ]
-  },
-  {
-    "name": "Cooked Chicken",
-    "imagePath": "chicken.png",
-    "type": "Cooked",
-    "hunger": 90,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Caldera"
-    ]
-  },
-  {
-    "name": "Cooked Marshmallow",
-    "imagePath": "marshmallow.png",
-    "type": "Cooked",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
     ]
   },
   {
@@ -337,80 +250,71 @@
     ]
   },
   {
-    "name": "Cooked Weird Shroom",
-    "imagePath": "weird-shroom.png",
+    "name": "Cooked Marshmallow",
+    "imagePath": "marshmallow.png",
     "type": "Cooked",
-    "hunger": 20,
+    "hunger": 40,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
     "location": [
       "Shore",
       "Tropics",
-      "Mesa"
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
     ]
   },
   {
-    "name": "Cooked Button Shroom",
-    "imagePath": "button-shroom.png",
-    "type": "Cooked",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Cooked Bugle Shroom",
-    "imagePath": "bugle-shroom.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Cooked Cluster Shroom",
-    "imagePath": "cluster-shroom.png",
+    "name": "Cooked Medicinal Root",
+    "imagePath": "medicinal-root.png",
     "type": "Cooked",
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
+    "statusEffect": [
+      "-Poison",
+      "-Injury"
+    ],
     "location": [
       "Shore",
-      "Tropics",
-      "Mesa"
+      "Tropics"
     ]
   },
   {
-    "name": "Cooked Chubby Shroom",
-    "imagePath": "chubby-shroom.png",
+    "name": "Cooked Orange Winterberry",
+    "imagePath": "orange-winterberry.png",
     "type": "Cooked",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
+    "statusEffect": [
+      "-Hot"
+    ],
     "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
+      "Alpine"
     ]
   },
   {
-    "name": "Cooked Poisonous Button Shroom",
-    "imagePath": "poisonous-button-shroom.png",
+    "name": "Cooked Pink Berrynana",
+    "imagePath": "pink-berrynana.png",
     "type": "Cooked",
-    "hunger": 20,
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Poisonous Bugle Shroom",
+    "imagePath": "poisonous-bugle-shroom.png",
+    "type": "Cooked",
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [
@@ -423,10 +327,10 @@
     ]
   },
   {
-    "name": "Cooked Poisonous Bugle Shroom",
-    "imagePath": "poisonous-bugle-shroom.png",
+    "name": "Cooked Poisonous Button Shroom",
+    "imagePath": "poisonous-button-shroom.png",
     "type": "Cooked",
-    "hunger": 30,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [
@@ -455,6 +359,115 @@
     ]
   },
   {
+    "name": "Cooked Purple Kingberry",
+    "imagePath": "purple-kingberry.png",
+    "type": "Cooked",
+    "hunger": 60,
+    "weight": 5,
+    "stamina": 52.5,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Red Clusterberry",
+    "imagePath": "red-clusterberry.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Injury"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Red Crispberry",
+    "imagePath": "red-crispberry.png",
+    "type": "Cooked",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Red Prickleberry",
+    "imagePath": "red-prickleberry.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot",
+      "+Thorned"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Scorchberry",
+    "imagePath": "scorchberry.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "+Hot"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Scorpion",
+    "imagePath": "cooked-scorpion.png",
+    "type": "Cooked",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Cooked Scout Cookies",
+    "imagePath": "scout-cookies.png",
+    "type": "Cooked",
+    "hunger": 80,
+    "weight": 5,
+    "stamina": 60,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Cooked Tick",
+    "imagePath": "tick.png",
+    "type": "Cooked",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
     "name": "Cooked Trail Mix",
     "imagePath": "trail-mix.png",
     "type": "Cooked",
@@ -472,108 +485,83 @@
     ]
   },
   {
-    "name": "Cooked Granola Bar",
-    "imagePath": "granola-bar.png",
-    "type": "Cooked",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 30,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Cooked Airline Food",
-    "imagePath": "airline-food.png",
-    "type": "Cooked",
-    "hunger": 80,
-    "weight": 2.5,
-    "stamina": 60,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Cooked Scout Cookies",
-    "imagePath": "scout-cookies.png",
-    "type": "Cooked",
-    "hunger": 80,
-    "weight": 2.5,
-    "stamina": 60,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Cooked Scorpion",
-    "imagePath": "cooked-scorpion.png",
-    "type": "Cooked",
-    "hunger": 15,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Cooked Aloe Vera",
-    "imagePath": "aloe-vera.png",
+    "name": "Cooked Weird Shroom",
+    "imagePath": "weird-shroom.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [
-      "-Hot"
-    ],
+    "statusEffect": [],
     "location": [
+      "Shore",
+      "Tropics",
       "Mesa"
     ]
   },
   {
-    "name": "Cooked Red Prickleberry",
-    "imagePath": "red-prickleberry.png",
+    "name": "Cooked Yellow Berrynana",
+    "imagePath": "yellow-berrynana.png",
+    "type": "Cooked",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Yellow Clusterberry",
+    "imagePath": "yellow-clusterberry.png",
     "type": "Cooked",
     "hunger": 20,
     "weight": 2.5,
     "stamina": 15,
-    "statusEffect": [
-      "+Thorned"
-    ],
+    "statusEffect": [],
     "location": [
-      "Mesa"
+      "Tropics"
     ]
   },
   {
-    "name": "Cooked Golden Prickleberry",
-    "imagePath": "golden-prickleberry.png",
+    "name": "Cooked Yellow Crispberry",
+    "imagePath": "yellow-crispberry.png",
     "type": "Cooked",
-    "hunger": 40,
+    "hunger": 10,
     "weight": 2.5,
+    "stamina": 15,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Yellow Kingberry",
+    "imagePath": "yellow-kingberry.png",
+    "type": "Cooked",
+    "hunger": 60,
+    "weight": 5,
     "stamina": 10,
     "statusEffect": [
-      "+Thorned",
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Cooked Yellow Winterberry",
+    "imagePath": "yellow-winterberry.png",
+    "type": "Cooked",
+    "hunger": 60,
+    "weight": 2.5,
+    "stamina": 52.5,
+    "statusEffect": [
+      "-Hot",
       "-Injury"
     ],
     "location": [
+      "Alpine",
       "Mesa"
     ]
   }

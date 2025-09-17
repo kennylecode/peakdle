@@ -235,7 +235,7 @@
     "statusEffect": [],
     "type": "Traversal",
     "rarity": "Common",
-    "range": 0
+    "range": 100
   },
   {
     "name": "Scroll",
@@ -285,7 +285,7 @@
   {
     "name": "Anti-Rope Cannon",
     "imagePath": "anti-rope-cannon.png",
-    "weight": -2.5,
+    "weight": 0,
     "statusEffect": [],
     "type": "Traversal",
     "rarity": "Mystical",
@@ -314,14 +314,16 @@
   {
     "name": "Cure-All",
     "imagePath": "cure-all.png",
-    "weight": 2.5,
+    "weight": 5,
     "statusEffect": [
-      "-Poison",
-      "-Injury",
-      "-Drowsy",
-      "-Cold",
+      "-Hunger",
       "-Hot",
-      "-Curse"
+      "-Cold",
+      "-Poison",
+      "-Drowsy",
+      "-Injury",
+      "-Curse",
+      "-Thorned"
     ],
     "type": "Status Effect",
     "rarity": "Mystical",

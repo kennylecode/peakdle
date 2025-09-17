@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import equipmentsData from '../data/equipments.json';
+import dateTextToNumberDJB2 from '../dateTextToNumber';
+import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
+import CountdownTimer from './CountdownTimer';
+import Share from './Share';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
   const maxGuesses = 6;
@@ -11,6 +15,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   const [availableEquipment, setAvailableEquipment] = useState([]);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [filterText, setFilterText] = useState('');
+  const [hasPlayedEquipments, setHasPlayedEquipments] = useState(false);
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
@@ -40,10 +45,29 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     const allEquipment = sortByEquipmentName(equipmentsData);
 
     setAvailableEquipment(allEquipment);
-    
-    // Select a new random equipment from the updated pool
-    const randomIndex = Math.floor(Math.random() * allEquipment.length);
+
+    const key = "equipments";
+    // Check if player has already played today
+    const playedToday = hasPlayedToday(key);
+    setHasPlayedEquipments(playedToday);
+
+    // Select a deterministic equipment
+    const randomIndex = dateTextToNumberDJB2(new Date(), key, allEquipment.length);
     setTargetEquipment(allEquipment[randomIndex]);
+
+    if (playedToday) {
+      const result = getResultToday(key);
+
+      setGuesses(getPrimaryGuessesToday(key));
+
+      if (result === 1) {
+        setGameWon(true);
+        setGameLost(false);
+      } else if (result === 0) {
+        setGameWon(false);
+        setGameLost(true);
+      }
+    }
   }, []);
 
   const handleGuess = (currentGuess) => {
@@ -56,6 +80,9 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     // Check if won
     if (currentGuess.name === targetEquipment.name) {
       setGameWon(true);
+      // Mark as played today
+      markAsPlayed('equipments', 1, newGuesses);
+      setHasPlayedEquipments(true);
       onComplete({
         mode: 'equipments',
         won: true,
@@ -64,8 +91,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
       });
     } else if (newGuesses.length >= maxGuesses) {
       setGameLost(true);
+      // Mark as played today
+      markAsPlayed('equipments', 0, newGuesses);
+      setHasPlayedEquipments(true);
       onComplete({
-        mode: 'equipment',
+        mode: 'equipments',
         won: false,
         guesses: maxGuesses,
         target: targetEquipment.name
@@ -102,7 +132,7 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
   };
 
   const getStatHint = (guessedValue, targetValue, statType) => {
-    if (guessedValue === targetValue) return 'Correct!';
+    if (guessedValue === targetValue) return 'Correct';
     
     if (statType === 'weight') {
       if (guessedValue > targetValue) return 'Too heavy';
@@ -133,6 +163,21 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     return 'Incorrect';
   };
 
+  const getStatsGrid = () => {
+    let grid = guesses.map((guess) => 
+      [
+        getStatClass(guess.name, targetEquipment.name, null),
+        getStatClass(guess.weight, targetEquipment.weight, 'weight'),
+        getStatClass(guess.statusEffect, targetEquipment.statusEffect, 'statusEffect'),
+        getStatClass(guess.type, targetEquipment.type, 'type'),
+        getStatClass(guess.rarity, targetEquipment.rarity, 'rarity'),
+        getStatClass(guess.range, targetEquipment.range, 'range')
+      ]
+    );
+
+    return grid;
+  };
+
   const formatArrayValue = (value) => {
     if (Array.isArray(value)) {
       return value.length > 0 ? value.join(', ') : 'None';
@@ -155,12 +200,46 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
     );
   };
 
+  // Handle timer reset (when new day begins)
+  const handleTimerReset = () => {
+    setHasPlayedEquipments(false);
+    // Reset game state for new day
+    setGuesses([]);
+    setGameWon(false);
+    setGameLost(false);
+  };
+
+  const gameWonShareMessage = () => {
+    const message = "😎 I used" + 
+      (guesses.length > 1 ? " all the right equipments" : " the right equipment") + 
+      " to PEAKdle in  " +
+      guesses.length + 
+      (guesses.length > 1 ? " attempts" : " attempt") +
+      "!";
+    
+    return message;
+  }
+
+  const gameLostShareMessage = () => {
+    const message = "😵 I didn't know what tools would aid me on PEAKdle!";
+    
+    return message;
+  }
+
   if (!targetEquipment) return <div>Loading...</div>;
 
   return (
     <div>
       <div className="game-board">
-        {!gameWon && !gameLost && (
+        {hasPlayedEquipments && (
+          <div className="daily-play-completed">
+            <h2>You've completed today's equipments challenge!</h2>
+            <p>The next challenge will be available in:</p>
+            <CountdownTimer onReset={handleTimerReset} />
+          </div>
+        )}
+
+        {!gameWon && !gameLost && !hasPlayedEquipments && (
           <div className="guess-input">
             <div className="custom-dropdown" ref={dropdownRef}>
               <div
@@ -227,10 +306,12 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
         {gameWon && (
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the equipment!</h3>
-            <p>You guessed {targetEquipment.name} in {guesses.length} tries!</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <p>You guessed {targetEquipment.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
+            <Share
+              buttonText="Share Equipments Guesses"
+              message={gameWonShareMessage()}
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 
@@ -238,9 +319,11 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           <div className="game-result lose">
             <h3>😞 Game Over!</h3>
             <p>The equipment was: {targetEquipment.name}</p>
-            <button className="new-game-btn" onClick={onBack}>
-              Main Menu
-            </button>
+            <Share
+              buttonText="Share Equipments Guesses"
+              message={gameLostShareMessage()}
+              statsGrid={getStatsGrid()}
+            />
           </div>
         )}
 
