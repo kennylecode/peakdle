@@ -1,20 +1,128 @@
 [
   {
-    "name": "Well-Done Yellow Crispberry",
-    "imagePath": "yellow-crispberry.png",
+    "name": "Well-Done Airline Food",
+    "imagePath": "airline-food.png",
     "type": "Well-Done",
-    "hunger": 10,
-    "weight": 2.5,
-    "stamina": 15,
+    "hunger": 80,
+    "weight": 5,
+    "stamina": 60,
     "statusEffect": [],
     "location": [
       "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Well-Done Aloe Vera",
+    "imagePath": "aloe-vera.png",
+    "type": "Well-Done",
+    "hunger": 0,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Black Clusterberry",
+    "imagePath": "black-clusterberry.png",
+    "type": "Well-Done",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
       "Tropics"
     ]
   },
   {
-    "name": "Well-Done Red Crispberry",
-    "imagePath": "red-crispberry.png",
+    "name": "Well-Done Blue Berrynana",
+    "imagePath": "blue-berrynana.png",
+    "type": "Well-Done",
+    "hunger": 60,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Brown Berrynana",
+    "imagePath": "brown-berrynana.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 15,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Bugle Shroom",
+    "imagePath": "bugle-shroom.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Button Shroom",
+    "imagePath": "button-shroom.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Bird",
+    "imagePath": "cooked-bird.png",
+    "type": "Well-Done",
+    "hunger": 40,
+    "weight": 10,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Caldera"
+    ]
+  },
+  {
+    "name": "Well-Done Chubby Shroom",
+    "imagePath": "chubby-shroom.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Cluster Shroom",
+    "imagePath": "cluster-shroom.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
@@ -22,6 +130,66 @@
     "statusEffect": [],
     "location": [
       "Shore",
+      "Tropics",
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Egg",
+    "imagePath": "egg.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Caldera"
+    ]
+  },
+  {
+    "name": "Well-Done Gold Prickleberry",
+    "imagePath": "gold-prickleberry.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot",
+      "+Thorned",
+      "-Injury"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Granola Bar",
+    "imagePath": "granola-bar.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 30,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Well-Done Green Clusterberry",
+    "imagePath": "green-clusterberry.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Poison"
+    ],
+    "location": [
       "Tropics"
     ]
   },
@@ -41,86 +209,6 @@
     ]
   },
   {
-    "name": "Well-Done Scorchberry",
-    "imagePath": "scorchberry.png",
-    "type": "Well-Done",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Hot"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Yellow Clusterberry",
-    "imagePath": "yellow-clusterberry.png",
-    "type": "Well-Done",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 15,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Black Clusterberry",
-    "imagePath": "black-clusterberry.png",
-    "type": "Well-Done",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Red Clusterberry",
-    "imagePath": "red-clusterberry.png",
-    "type": "Well-Done",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Injury"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Green Clusterberry",
-    "imagePath": "green-clusterberry.png",
-    "type": "Well-Done",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Yellow Kingberry",
-    "imagePath": "yellow-kingberry.png",
-    "type": "Well-Done",
-    "hunger": 60,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
     "name": "Well-Done Green Kingberry",
     "imagePath": "green-kingberry.png",
     "type": "Well-Done",
@@ -132,181 +220,6 @@
     ],
     "location": [
       "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Purple Kingberry",
-    "imagePath": "purple-kingberry.png",
-    "type": "Well-Done",
-    "hunger": 60,
-    "weight": 5,
-    "stamina": 52.5,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Brown Berrynana",
-    "imagePath": "brown-berrynana.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 15,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Blue Berrynana",
-    "imagePath": "blue-berrynana.png",
-    "type": "Well-Done",
-    "hunger": 60,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Pink Berrynana",
-    "imagePath": "pink-berrynana.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Poison"
-    ],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Yellow Berrynana",
-    "imagePath": "yellow-berrynana.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Yellow Winterberry",
-    "imagePath": "yellow-winterberry.png",
-    "type": "Well-Done",
-    "hunger": 60,
-    "weight": 2.5,
-    "stamina": 52.5,
-    "statusEffect": [
-      "-Hot",
-      "-Injury"
-    ],
-    "location": [
-      "Alpine",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Well-Done Orange Winterberry",
-    "imagePath": "orange-winterberry.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Hot"
-    ],
-    "location": [
-      "Alpine"
-    ]
-  },
-  {
-    "name": "Well-Done Napberry",
-    "imagePath": "napberry.png",
-    "type": "Well-Done",
-    "hunger": 200,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "+Drowsy"
-    ],
-    "location": [
-      "Alpine"
-    ]
-  },
-  {
-    "name": "Well-Done Medicinal Root",
-    "imagePath": "medicinal-root.png",
-    "type": "Well-Done",
-    "hunger": 10,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [
-      "-Poison",
-      "-Injury"
-    ],
-    "location": [
-      "Shore",
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Tick",
-    "imagePath": "tick.png",
-    "type": "Well-Done",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Tropics"
-    ]
-  },
-  {
-    "name": "Well-Done Egg",
-    "imagePath": "egg.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Caldera"
-    ]
-  },
-  {
-    "name": "Well-Done Chicken",
-    "imagePath": "chicken.png",
-    "type": "Well-Done",
-    "hunger": 90,
-    "weight": 5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Caldera"
-    ]
-  },
-  {
-    "name": "Well-Done Marshmallow",
-    "imagePath": "marshmallow.png",
-    "type": "Well-Done",
-    "hunger": 40,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
     ]
   },
   {
@@ -337,80 +250,71 @@
     ]
   },
   {
-    "name": "Well-Done Weird Shroom",
-    "imagePath": "weird-shroom.png",
+    "name": "Well-Done Marshmallow",
+    "imagePath": "marshmallow.png",
     "type": "Well-Done",
-    "hunger": 20,
+    "hunger": 40,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [],
     "location": [
       "Shore",
       "Tropics",
-      "Mesa"
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
     ]
   },
   {
-    "name": "Well-Done Button Shroom",
-    "imagePath": "button-shroom.png",
-    "type": "Well-Done",
-    "hunger": 20,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Well-Done Bugle Shroom",
-    "imagePath": "bugle-shroom.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Well-Done Cluster Shroom",
-    "imagePath": "cluster-shroom.png",
+    "name": "Well-Done Medicinal Root",
+    "imagePath": "medicinal-root.png",
     "type": "Well-Done",
     "hunger": 10,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
+    "statusEffect": [
+      "-Poison",
+      "-Injury"
+    ],
     "location": [
       "Shore",
-      "Tropics",
-      "Mesa"
+      "Tropics"
     ]
   },
   {
-    "name": "Well-Done Chubby Shroom",
-    "imagePath": "chubby-shroom.png",
+    "name": "Well-Done Orange Winterberry",
+    "imagePath": "orange-winterberry.png",
     "type": "Well-Done",
-    "hunger": 20,
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [],
+    "statusEffect": [
+      "-Hot"
+    ],
     "location": [
-      "Shore",
-      "Tropics",
-      "Mesa"
+      "Alpine"
     ]
   },
   {
-    "name": "Well-Done Poisonous Button Shroom",
-    "imagePath": "poisonous-button-shroom.png",
+    "name": "Well-Done Pink Berrynana",
+    "imagePath": "pink-berrynana.png",
     "type": "Well-Done",
-    "hunger": 20,
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Poisonous Bugle Shroom",
+    "imagePath": "poisonous-bugle-shroom.png",
+    "type": "Well-Done",
+    "hunger": 30,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [
@@ -423,10 +327,10 @@
     ]
   },
   {
-    "name": "Well-Done Poisonous Bugle Shroom",
-    "imagePath": "poisonous-bugle-shroom.png",
+    "name": "Well-Done Poisonous Button Shroom",
+    "imagePath": "poisonous-button-shroom.png",
     "type": "Well-Done",
-    "hunger": 30,
+    "hunger": 20,
     "weight": 2.5,
     "stamina": 10,
     "statusEffect": [
@@ -455,6 +359,115 @@
     ]
   },
   {
+    "name": "Well-Done Purple Kingberry",
+    "imagePath": "purple-kingberry.png",
+    "type": "Well-Done",
+    "hunger": 60,
+    "weight": 5,
+    "stamina": 52.5,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Red Clusterberry",
+    "imagePath": "red-clusterberry.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Injury"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Red Crispberry",
+    "imagePath": "red-crispberry.png",
+    "type": "Well-Done",
+    "hunger": 10,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Red Prickleberry",
+    "imagePath": "red-prickleberry.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "-Hot",
+      "+Thorned"
+    ],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Scorchberry",
+    "imagePath": "scorchberry.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [
+      "+Hot"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Scorpion",
+    "imagePath": "cooked-scorpion.png",
+    "type": "Well-Done",
+    "hunger": 20,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Mesa"
+    ]
+  },
+  {
+    "name": "Well-Done Scout Cookies",
+    "imagePath": "scout-cookies.png",
+    "type": "Well-Done",
+    "hunger": 80,
+    "weight": 5,
+    "stamina": 60,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics",
+      "Alpine",
+      "Mesa",
+      "Caldera",
+      "Kiln"
+    ]
+  },
+  {
+    "name": "Well-Done Tick",
+    "imagePath": "tick.png",
+    "type": "Well-Done",
+    "hunger": 40,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
     "name": "Well-Done Trail Mix",
     "imagePath": "trail-mix.png",
     "type": "Well-Done",
@@ -472,108 +485,83 @@
     ]
   },
   {
-    "name": "Well-Done Granola Bar",
-    "imagePath": "granola-bar.png",
-    "type": "Well-Done",
-    "hunger": 30,
-    "weight": 2.5,
-    "stamina": 30,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Well-Done Airline Food",
-    "imagePath": "airline-food.png",
-    "type": "Well-Done",
-    "hunger": 80,
-    "weight": 2.5,
-    "stamina": 60,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Well-Done Scout Cookies",
-    "imagePath": "scout-cookies.png",
-    "type": "Well-Done",
-    "hunger": 80,
-    "weight": 2.5,
-    "stamina": 60,
-    "statusEffect": [],
-    "location": [
-      "Shore",
-      "Tropics",
-      "Alpine",
-      "Mesa",
-      "Caldera",
-      "Kiln"
-    ]
-  },
-  {
-    "name": "Well-Done Scorpion",
-    "imagePath": "cooked-scorpion.png",
-    "type": "Well-Done",
-    "hunger": 15,
-    "weight": 2.5,
-    "stamina": 10,
-    "statusEffect": [],
-    "location": [
-      "Mesa"
-    ]
-  },
-  {
-    "name": "Well-Done Aloe Vera",
-    "imagePath": "aloe-vera.png",
+    "name": "Well-Done Weird Shroom",
+    "imagePath": "weird-shroom.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
     "stamina": 10,
-    "statusEffect": [
-      "-Hot"
-    ],
+    "statusEffect": [],
     "location": [
+      "Shore",
+      "Tropics",
       "Mesa"
     ]
   },
   {
-    "name": "Well-Done Red Prickleberry",
-    "imagePath": "red-prickleberry.png",
+    "name": "Well-Done Yellow Berrynana",
+    "imagePath": "yellow-berrynana.png",
+    "type": "Well-Done",
+    "hunger": 30,
+    "weight": 2.5,
+    "stamina": 10,
+    "statusEffect": [],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Yellow Clusterberry",
+    "imagePath": "yellow-clusterberry.png",
     "type": "Well-Done",
     "hunger": 20,
     "weight": 2.5,
     "stamina": 15,
-    "statusEffect": [
-      "+Thorned"
-    ],
+    "statusEffect": [],
     "location": [
-      "Mesa"
+      "Tropics"
     ]
   },
   {
-    "name": "Well-Done Golden Prickleberry",
-    "imagePath": "golden-prickleberry.png",
+    "name": "Well-Done Yellow Crispberry",
+    "imagePath": "yellow-crispberry.png",
     "type": "Well-Done",
-    "hunger": 40,
+    "hunger": 10,
     "weight": 2.5,
+    "stamina": 15,
+    "statusEffect": [],
+    "location": [
+      "Shore",
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Yellow Kingberry",
+    "imagePath": "yellow-kingberry.png",
+    "type": "Well-Done",
+    "hunger": 60,
+    "weight": 5,
     "stamina": 10,
     "statusEffect": [
-      "+Thorned",
+      "+Poison"
+    ],
+    "location": [
+      "Tropics"
+    ]
+  },
+  {
+    "name": "Well-Done Yellow Winterberry",
+    "imagePath": "yellow-winterberry.png",
+    "type": "Well-Done",
+    "hunger": 60,
+    "weight": 2.5,
+    "stamina": 52.5,
+    "statusEffect": [
+      "-Hot",
       "-Injury"
     ],
     "location": [
+      "Alpine",
       "Mesa"
     ]
   }

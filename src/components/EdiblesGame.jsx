@@ -251,15 +251,18 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     const message = "😎 I figured out what I was eating in " +
       guesses.length + 
       (guesses.length > 1 ? " attempts" : " attempt") +
-      " on PEAKdle!";
-
+      " on PEAKdle (" + 
+      getCookingLevelLabel(cookingLevel) +
+      ")!";
     
     return message;
   }
 
   const gameLostShareMessage = () => {
-    const message = "😵 I didn't know what edibles I was consuming on PEAKdle!";
-    
+    const message = "😵 I didn't know what edibles I was consuming on PEAKdle (" + 
+      getCookingLevelLabel(cookingLevel) +
+      ")!";
+
     return message;
   }
 
