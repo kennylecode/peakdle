@@ -7,7 +7,7 @@ import ediblesIncinerated from '../data/edibles/edibles-incinerated.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
 import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
-import Share from './Share';
+import CopyButton from './CopyButton';
 
 const EdiblesGame = ({ onComplete, onBack }) => {
   const defaultNumGuesses = 6;
@@ -365,8 +365,8 @@ const EdiblesGame = ({ onComplete, onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the edible!</h3>
             <p>You guessed {targetEdible.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
-            <Share
-              buttonText="Share Edibles Guesses"
+            <CopyButton
+              buttonText="Copy Edibles Guesses"
               message={gameWonShareMessage()}
               statsGrid={getStatsGrid()}
             />
@@ -377,8 +377,8 @@ const EdiblesGame = ({ onComplete, onBack }) => {
           <div className="game-result lose">
             <h3>😔 Game Over!</h3>
             <p>The edible was: {targetEdible.name}</p>
-            <Share
-              buttonText="Share Edibles Guesses"
+            <CopyButton
+              buttonText="Copy Edibles Guesses"
               message={gameLostShareMessage()}
               statsGrid={getStatsGrid()}
             />

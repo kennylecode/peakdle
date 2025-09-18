@@ -18,11 +18,12 @@ const getEmojiGrid = (statsGrid) => {
 };
 
 const copyShareGrid = async (message, gridText) => {
-  const copiedText = `${message}\n${gridText}\n${window.location.href}`;
+  const dateStr = new Date().toISOString().split('T')[0];
+  const copiedText = `${dateStr}\n${message}\n${gridText}\n${window.location.href}`;
   try {
     if (navigator.clipboard) {
       await navigator.clipboard.writeText(copiedText);
-      console.log('Text copied to clipboard!');
+      // console.log('Text copied to clipboard!');
     } else {
       // fallback for older browsers
       const textarea = document.createElement('textarea');
@@ -31,23 +32,24 @@ const copyShareGrid = async (message, gridText) => {
       textarea.select();
       document.execCommand('copy');
       document.body.removeChild(textarea);
-      console.log('Text copied to clipboard! (fallback)');
+      // console.log('Text copied to clipboard! (fallback)');
     }
   } catch (err) {
     console.error('Failed to copy text: ', err);
   }
 };
 
-const Share = ({ buttonText, message, statsGrid }) => {
+const CopyButton = ({ buttonText, message, statsGrid }) => {
   const grid = getEmojiGrid(statsGrid);
-
+  const dateStr = new Date().toISOString().split('T')[0];
   const handleCopyClick = () => copyShareGrid(message, grid);
-
-  console.log(grid);
   
   return (
     <div className = "share-game-container">
         <div>
+          <div className = "share-game-message">
+            {dateStr}
+          </div>
           <div className = "share-game-message">
             {message}
           </div>
@@ -65,4 +67,4 @@ const Share = ({ buttonText, message, statsGrid }) => {
   );
 };
 
-export default Share;
+export default CopyButton;

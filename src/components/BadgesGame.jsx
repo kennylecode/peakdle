@@ -4,7 +4,7 @@ import cosmeticsData from '../data/cosmetics.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
 import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
-import Share from './Share';
+import CopyButton from './CopyButton';
 
 const BadgesGame = ({ onBack }) => {
   const badgePath = "images/badges/";
@@ -337,8 +337,8 @@ const BadgesGame = ({ onBack }) => {
           <div className="game-result win">
             <h4>🎉 Great! You found the badge! Now guess the cosmetic reward:</h4>
             <p className="cosmetic-description">Which cosmetic goes with the {targetBadge.name}?</p>
-            <Share
-              buttonText="Share Badges Guesses"
+            <CopyButton
+              buttonText="Copy Badges Guesses"
               message={badgeWonShareMessage()}
               statsGrid={getBadgesStatsGrid()}
             />
@@ -430,8 +430,8 @@ const BadgesGame = ({ onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the cosmetic!</h3>
             <p>You guessed {targetBadge.cosmeticReward.join(', ')} in {cosmeticGuesses.length} tries!</p>
-            <Share
-              buttonText="Share Cosmetics Guesses"
+            <CopyButton
+              buttonText="Copy Cosmetics Guesses"
               message={cosmeticWonShareMessage()}
               statsGrid={getCosmeticsStatsGrid()}
             />
