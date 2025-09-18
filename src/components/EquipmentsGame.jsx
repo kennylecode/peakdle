@@ -3,7 +3,7 @@ import equipmentsData from '../data/equipments.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
 import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
-import Share from './Share';
+import CopyButton from './CopyButton';
 
 const EquipmentsGame = ({ onComplete, onBack }) => {
   const maxGuesses = 6;
@@ -307,8 +307,8 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           <div className="game-result win">
             <h3>🎉 Congratulations! You found the equipment!</h3>
             <p>You guessed {targetEquipment.name} in {guesses.length} {(guesses.length > 1 ? "tries" : "try")}!</p>
-            <Share
-              buttonText="Share Equipments Guesses"
+            <CopyButton
+              buttonText="Copy Equipments Guesses"
               message={gameWonShareMessage()}
               statsGrid={getStatsGrid()}
             />
@@ -319,8 +319,8 @@ const EquipmentsGame = ({ onComplete, onBack }) => {
           <div className="game-result lose">
             <h3>😞 Game Over!</h3>
             <p>The equipment was: {targetEquipment.name}</p>
-            <Share
-              buttonText="Share Equipments Guesses"
+            <CopyButton
+              buttonText="Copy Equipments Guesses"
               message={gameLostShareMessage()}
               statsGrid={getStatsGrid()}
             />
