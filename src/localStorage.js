@@ -16,9 +16,9 @@
 // }
 const STORAGE_KEY = 'peakdle-daily-plays';
 
-// Get date string in YYYY-MM-DD format
-function getISOString(date) {
-  return date.toISOString().split('T')[0];
+// Get date string in locale format. ex. 9/19/2025
+function getDateString(date) {
+  return date.toLocaleDateString();
 }
 
 // Get stored daily plays data
@@ -48,7 +48,7 @@ function saveDailyPlays(data) {
 // Check if player has already played today for a specific game mode
 export function hasPlayedToday(gameModeStr) {
   const dailyPlays = getDailyPlays();
-  const todayDateISO = getISOString(new Date());
+  const todayDateStr = getDateString(new Date());
 
   if (dailyPlays[gameModeStr] == null) {
     return false;
@@ -58,9 +58,9 @@ export function hasPlayedToday(gameModeStr) {
     return false;
   }
 
-  const prevDateISO = dailyPlays[gameModeStr]["date"];
+  const prevDateStr = dailyPlays[gameModeStr]["date"];
 
-  return prevDateISO === todayDateISO;
+  return prevDateStr === todayDateStr;
 }
 
 // check result of today for a specific game mode
@@ -109,12 +109,12 @@ export function getSecondaryGuessesToday(gameModeStr) {
 }
 
 // Mark a game mode as played today
-export function markAsPlayed(gameModeStr, result = {}, primaryGuesses = {}, secondaryGuesses = {}) {
+export function markAsPlayed(gameModeStr, result, primaryGuesses = {}, secondaryGuesses = {}) {
   const dailyPlays = getDailyPlays();
-  const todayDateISO = getISOString(new Date());
+  const todayDateStr = getDateString(new Date());
 
   const json = {
-    "date": todayDateISO,
+    "date": todayDateStr,
     "result": result ,
     "primaryGuesses": primaryGuesses,
     "secondaryGuesses": secondaryGuesses
@@ -123,14 +123,4 @@ export function markAsPlayed(gameModeStr, result = {}, primaryGuesses = {}, seco
   dailyPlays[gameModeStr] = json;
 
   saveDailyPlays(dailyPlays);
-}
-
-// Get time until next daily reset (tomorrow at midnight)
-export function getTimeUntilReset() {
-  const now = new Date();
-  const tomorrow = new Date(now);
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  tomorrow.setHours(0, 0, 0, 0);
-
-  return tomorrow.getTime() - now.getTime();
 }

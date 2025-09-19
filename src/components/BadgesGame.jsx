@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import badgesData from '../data/badges.json';
 import cosmeticsData from '../data/cosmetics.json';
 import dateTextToNumberDJB2 from '../dateTextToNumber';
-import { hasPlayedToday, getResultToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
+import { hasPlayedToday, getPrimaryGuessesToday, getSecondaryGuessesToday, markAsPlayed } from '../localStorage';
 import CountdownTimer from './CountdownTimer';
 import CopyButton from './CopyButton';
 
