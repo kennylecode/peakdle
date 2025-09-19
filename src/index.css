@@ -271,6 +271,7 @@ body {
 
 .share-game-message {
   font-weight: lighter;
+  text-wrap: wrap;
 }
 
 .share-game-grid {

@@ -72,7 +72,7 @@ const EdiblesGame = ({ onComplete, onBack }) => {
     setHasPlayedCurrentLevel(playedToday);
 
     // Select a deterministic edible
-    const randomIndex = dateTextToNumberDJB2(new Date(), key, allEdibles.length);
+    const randomIndex = dateTextToNumberDJB2(new Date(), key + getCookingLevelLabel(cookingLevel), allEdibles.length);
     setTargetEdible(allEdibles[randomIndex]);
 
     if (playedToday) {
