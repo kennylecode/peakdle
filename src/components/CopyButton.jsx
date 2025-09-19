@@ -18,7 +18,7 @@ const getEmojiGrid = (statsGrid) => {
 };
 
 const copyShareGrid = async (message, gridText) => {
-  const dateStr = new Date().toISOString().split('T')[0];
+  const dateStr = new Date().toLocaleDateString();
   const copiedText = `${dateStr}\n${message}\n${gridText}\n${window.location.href}`;
   try {
     if (navigator.clipboard) {
@@ -41,23 +41,21 @@ const copyShareGrid = async (message, gridText) => {
 
 const CopyButton = ({ buttonText, message, statsGrid }) => {
   const grid = getEmojiGrid(statsGrid);
-  const dateStr = new Date().toISOString().split('T')[0];
+  const dateStr = new Date().toLocaleDateString();
   const handleCopyClick = () => copyShareGrid(message, grid);
   
   return (
     <div className = "share-game-container">
         <div>
-          <div className = "share-game-message">
-            {dateStr}
-          </div>
+          {dateStr}
           <div className = "share-game-message">
             {message}
           </div>
           <div className = "share-game-grid">
             {grid}
           </div>
-          <div className = "share-game-message">
-            {window.location.href}
+          <div className = "share-game-url">
+            {document.location.href}
           </div>
         </div>
         <button className="share-game-btn" onClick={handleCopyClick} title="Copy results to clipboard" >
