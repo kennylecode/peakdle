@@ -274,5 +274,14 @@
       "Tropical Outfit Shorts",
       "Tropical Outfit Skirt"
     ]
+  },
+  {
+    "name": "Bundled Up Badge",
+    "imagePath": "bundled-up-badge.png",
+    "description": "Climb past the ALPINE without ever having more than 20% Cold.",
+    "cosmeticReward": [
+      "Ice Blue",
+      "Ice Pink"
+    ]
   }
 ]
