@@ -402,5 +402,13 @@
     {
       "name": "Wolf Ears",
       "imagePath": "wolf-ears.png"
+    },
+    {
+      "name": "Ice Blue",
+      "imagePath": "ice-blue.png"
+    },
+    {
+      "name": "Ice Pink",
+      "imagePath": "ice-pink.png"
     }
   ]
